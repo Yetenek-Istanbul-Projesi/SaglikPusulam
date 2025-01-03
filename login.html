@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <!-- UTF-8: Türkçe karakterler dahil tüm karakterleri destekler -->
+    <meta charset="UTF-8">
+    <!-- Responsive tasarım için viewport ayarı
+         width=device-width: Cihaz genişliğine göre uyum sağlar
+         initial-scale=1.0: Başlangıç zoom seviyesi -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+    <!-- Bootstrap CSS - Temel stil ve grid sistemini sağlar -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome - Sosyal medya ikonları için -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Özel CSS Stilleri -->
+    <link rel="stylesheet" href="style/login_Register.css">
+</head>
+<!-- bg-whites: Beyaz arka plan rengi -->
+<body class="bg-whites">
+
+    <!-- Navbar -->
+    
+
+
+
+
+    <!-- Navbar bitiş -->
+    
+
+    <!-- Resim -->
+    
+
+
+    <!-- resim bitiş -->
+
+    <!-- Ana container
+         min-vh-100: Minimum viewport height 100%
+         d-flex: Flexbox kullanımı
+         align-items-center: Dikey ortalama
+         justify-content-center: Yatay ortalama -->
+    <div class="container min-vh-100 d-flex align-items-center justify-content-center">
+        <!-- Login formu container'ı - minimum ve maximum genişlik sınırlaması -->
+        <div style="min-width: 400px; max-width: 1000px;">
+            <!-- İç padding: 5 birim -->
+            <div class="p-5">
+                <!-- Form başlığı -->
+                <h2 class="text-center text-primary fw-bold mb-4">Giriş Yap</h2>
+                <form>
+                    <!-- Ad Soyad input grubu
+                         mb-3: Alt margin 3 birim -->
+                    <div class="mb-3">
+                        <label for="nameSurname" class="form-label">Ad Soyad</label>
+                        <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="nameSurname" placeholder="Adınız ve Soyadınız">
+                    </div>
+
+                    <!-- E-posta/Telefon input grubu -->
+                    <div class="mb-3">
+                        <label for="emailPhone" class="form-label">E-posta / Telefon Numarası</label>
+                        <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="emailPhone" placeholder="E-posta veya telefon numaranız">
+                    </div>
+
+                    <!-- Şifre input grubu -->
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Şifre</label>
+                        <input type="password" class="form-control border-0 bg-secondary-subtle text-secondary w-100" id="password" placeholder="Şifreniz">
+                    </div>
+
+                    <!-- Şifremi unuttum linki
+                         text-end: Sağa hizalama -->
+                    <div class="text-end mb-3 mt-5">
+                        <a href="#" class="text-decoration-none text-primary">Şifremi Unuttum</a>
+                    </div>
+
+                    <!-- Giriş yap butonu
+                         w-100: Tam genişlik -->
+                    <button type="submit" class="btn btn-primary w-100 mb-3">Giriş Yap</button>
+
+                    <!-- Kayıt ol yönlendirmesi -->
+                    <div class="text-center mb-3">
+                        <span class="text-muted">Hesabınız yok mu?</span>
+                        <a href="#" class="text-decoration-none">Hemen Kaydolun</a>
+                    </div>
+
+                    <!-- Sosyal medya butonları bölümü -->
+                    <div class="text-center mt-5">
+                        <!-- Sosyal medya butonları container'ı
+                             d-flex: Flexbox kullanımı
+                             justify-content-center: Yatay ortalama -->
+                        <div class="d-flex justify-content-center">
+                            <!-- LinkedIn butonu -->
+                            <a href="#" class="social-btn linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <!-- Google butonu -->
+                            <a href="#" class="social-btn google">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <!-- Facebook butonu -->
+                            <a href="#" class="social-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Footer Başlangıç-->
+
+
+    <!-- Footer Bitiş  -->
+    
+
+    <!-- Bootstrap JavaScript kütüphanesi - Interaktif özellikler için -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
