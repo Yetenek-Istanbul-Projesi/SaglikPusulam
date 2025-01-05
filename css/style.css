@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Inter Family';
+    src: url('/assets/fonts/Inter_28pt-Medium.ttf') format('truetype'),
+  }
+
+  body{
+    font-family: 'Inter Family';
+  }
+
+  .nav-link {
+    font-size: large;
+  }
+  .nav-link:hover{
+    color: rgb(0, 89, 255) !important;
+  }
+  .nav-item{
+    margin-top: 5px;
+  }
+  .navbar-brand{
+    font-family: 'Inter Family'; 
+    font-size: x-large;
+  }
+  .no-style{
+    color: inherit;
+
+  }
+  .no-style:hover{
+    color: inherit !important;
+  }
+
+  .hover-effect img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hover-effect img:hover {
+    transform: scale(1.1); /* Hafif büyütme */
+    opacity: 0.8; /* Şeffaflık */
+}
+a{
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(179, 179, 179) !important;
+}
+
+
+
+
+
+
+/* 
+   ANASAYFA SECTION 2 - KART STİLLERİ
+  */
+
+/* Ana kart container */
+.section2-cards .card {
+    height: 100%;              /* Her kartın container yüksekliğini doldurmasını sağlar */
+    display: flex;             /* Flexbox düzeni kullanır */
+    flex-direction: column;    /* İçerikleri dikey olarak sıralar (resim üstte, yazı altta) */
+    border: none;             /* Kartların kenar çizgilerini kaldırır */
+}
+
+/* Kart içindeki resimlerin düzeni */
+.section2-cards .card-img-top {
+    height: 200px;            /* Tüm kart resimlerini aynı yükseklikte tutar */
+    object-fit: contain;      /* Resimleri boyutlarını ve oranlarını koruyarak container'a yerleştirir */
+    padding: 20px;           /* Resimlerin etrafında boşluk bırakır */
+}
+
+
+/* Kart başlıklarının düzeni */
+.section2-cards .card-title {
+    margin-bottom: 15px;      /* Başlık ile metin arasında boşluk bırakır */
+    min-height: 48px;         /* Tüm başlıkları aynı minimum yükseklikte tutar */
+    display: flex;            /* Flexbox düzeni kullanır */
+    align-items: center;      /* İçeriği dikeyde ortalar */
+    justify-content: center;  /* İçeriği yatayda ortalar */
+    font-weight: bold;        /* Başlık yazısını kalın yapar */
+}
+
+/* Kart içindeki açıklama metinlerinin düzeni */
+.section2-cards .card-text {        
+    font-family: 'Inter Family'; 
+}
+
+
+
+
+
