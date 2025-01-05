@@ -3,8 +3,27 @@
     src: url('/assets/fonts/Inter_28pt-Medium.ttf') format('truetype'),
   }
 
-  body{
+
+  * {
+    max-width: 100%;      /* Görsellerin ekranın dışına taşmasını engeller */
+    height: auto;         /* Görsellerin boyutunu orantılı olarak ayarlar */
+    box-sizing: border-box;  /* Tüm öğelerin genişlik ve yükseklik hesaplamalarında padding ve border'ı dahil eder */
+    
+  }
+  html,body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
     font-family: 'Inter Family';
+  }
+  img {
+    max-width: 100%;  /* Resimler ekran genişliğine göre ölçeklendir */
+    height: auto;
+  }
+  
+  .container {
+    max-width: 100%;
   }
 
   .nav-link {
@@ -40,6 +59,80 @@ a{
     transition: color 0.2s ease;
     text-decoration: none;
 }
-a:hover{
-    color: rgb(179, 179, 179) !important;
+
+footer a:hover{
+    color: rgb(136, 136, 136) !important;
 }
+
+/* 
+   Login Panel - Sosyal medya butonları için temel stiller
+  */
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: all 0.3s;
+ 
+}
+
+/* Hover efekti - butonu yukarı kaldırır */
+.social-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Sosyal medya butonlarının marka renkleri */
+.linkedin {
+  border: 1px solid rgb(100, 98, 98);
+   }
+.google {  
+  border: 1px solid rgb(100, 98, 98);
+  }
+.facebook { 
+  border: 1px solid rgb(100, 98, 98);
+  }
+
+
+/* 
+   ANASAYFA SECTION 2 - KART STİLLERİ
+  */
+
+/* Ana kart container */
+.section2-cards .card {
+    height: 100%;              /* Her kartın container yüksekliğini doldurmasını sağlar */
+    display: flex;             /* Flexbox düzeni kullanır */
+    flex-direction: column;    /* İçerikleri dikey olarak sıralar (resim üstte, yazı altta) */
+    border: none;             /* Kartların kenar çizgilerini kaldırır */
+}
+
+/* Kart içindeki resimlerin düzeni */
+.section2-cards .card-img-top {
+    height: 200px;            /* Tüm kart resimlerini aynı yükseklikte tutar */
+    object-fit: contain;      /* Resimleri boyutlarını ve oranlarını koruyarak container'a yerleştirir */
+    padding: 20px;           /* Resimlerin etrafında boşluk bırakır */
+}
+
+
+/* Kart başlıklarının düzeni */
+.section2-cards .card-title {
+    margin-bottom: 15px;      /* Başlık ile metin arasında boşluk bırakır */
+    min-height: 48px;         /* Tüm başlıkları aynı minimum yükseklikte tutar */
+    display: flex;            /* Flexbox düzeni kullanır */
+    align-items: center;      /* İçeriği dikeyde ortalar */
+    justify-content: center;  /* İçeriği yatayda ortalar */
+    font-weight: bold;        /* Başlık yazısını kalın yapar */
+}
+
+/* Kart içindeki açıklama metinlerinin düzeni */
+.section2-cards .card-text {        
+    font-family: 'Inter Family'; 
+}
+
+
+
+
+

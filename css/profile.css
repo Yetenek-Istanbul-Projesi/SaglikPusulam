@@ -1,0 +1,61 @@
+.card {
+    margin: 100px 0px 0px 200px;
+    border: none;
+}
+
+.card-img-top {
+    border: none;
+}
+
+/* Inputa stil ekleme */
+input[type="text"] {
+    background-color: #EEEFF1;
+    padding: 10px;
+    /* İçerideki boşluk değeri */
+    border: 1px solid #EEEFF1;
+    /* Kenarlık rengi */
+    border-radius: 5px;
+    /* Köşeleri yuvarlatma değeri */
+    width: 250px;
+    /* Genişlik */
+}
+
+/* Butonun stilini düzenleme */
+.btn-extra {
+    padding: 5px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 180px;
+    height: 40px;
+    font-size: 15px;
+    font-family: "Inter Family";
+}
+
+.btn-extra:hover {
+    background-color: #0056b3;
+    /* Butona hover efekti */
+}
+
+#wrapper {
+    display: flex;     /* Flexbox kullanma */
+}
+#left-content {
+    width: 50%;
+}
+
+/* Section öğesini sağa yaslamak için */
+#right-content {
+    margin-top: 40px;
+    /* Yarı genişlik */
+    /* Sağdan sıfır boşluk */
+    text-align: left;
+    /* İçeriği sola yasla */
+    padding: 10px;
+    border: 1px solid white;
+    /* Kenarlık */
+    border-radius: 5px;
+    /* Köşe yuvarlama */
+}
+

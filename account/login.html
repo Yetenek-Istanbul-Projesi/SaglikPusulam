@@ -1,28 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-  <link rel="stylesheet" href="css/style.css">
+  <title>Giriş Yap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
+<!-- bg-whites: Beyaz arka plan rengi -->
 
-<body>
+<body class="bg-whites">
 
-  <!--header-->
   <header>
     <nav class="navbar navbar-expand-lg bg-body-white p-4" style="border-bottom: 5px solid hsla(0, 0%, 80%, 0.2);">
       <div class="container-fluid mb-3">
-        <img src="assets/img/LOGO.svg" width="70px;" height="70px">
+        <img src="/assets/img/LOGO.svg" width="70px;" height="70px">
         <a class="navbar-brand p-2 no-style" style="color: black;" href="#"><b>Sağlık</b>Pusulam</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,137 +31,84 @@
             <li class="nav-item">
               <a class="nav-link fw-bold text-dark" href="#">Hakkımızda</a>
             </li>
-            <img src="assets/img/user-icon.jpg" width="50px;" height="50px" style="opacity: 0.9;">
+            <img src="/assets/img/user-icon.jpg" width="50px;" height="50px" style="opacity: 0.9;">
             <button type="button" class="btn btn-primary rounded-4 shadow">Hemen Katılın</button>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-
-  <main> <!--İçerik Kısmı-->
-
-    <section id="features">
-      <div class="container-fluid py-5">
-
-        <div class="row justify-content-center">
-
-          <div class="col-10">
-            <div class="row row-cols-1 row-cols-md-5 g-4 section2-cards">
-              <!-- Kart 1 -->
-
-              <div class="col">
-
-                <div class="card h-100">
-
-                  <img src="assets/img/HizmetiBul.png" class="card-img-top" alt="...">
-
-                  <div class="card-body text-center">
-
-                    <h5 class="card-title">Hizmeti Bul</h5>
-
-                    <p class="card-text">Çevrenizdeki en iyi sağlık hizmetini kolayca keşfedin</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-
-
-              <!-- Kart 2 -->
-
-              <div class="col">
-                <div class="card h-100">              
-                  <img src="assets/img/detaylaraBak.png" class="card-img-top" alt="...">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Detaylara Bak</h5>
-                    <p class="card-text">Sağlık hizmetlerinin hizmet detaylarını, yorumlarını ve konum
-                      bilgilerini inceleyin</p>    
-                  </div>
-                </div>   
-              </div>
-
-              <!-- Kart 3 -->
-
-              <div class="col">
-
-                <div class="card h-100">
-
-                  <img src="assets/img/iletisimeGec.png" class="card-img-top" alt="...">
-
-                  <div class="card-body text-center">
-
-                    <h5 class="card-title">İletişime Geçin</h5>
-
-                    <p class="card-text">Sağlık hizmetleriyle hızlıca iletişim kurabileceğiniz bilgileri
-                      bulun. </p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-
-
-              <!-- Kart 4 -->
-
-              <div class="col">
-
-                <div class="card h-100">
-
-                  <img src="assets/img/HizmetleriKarsılastırn.png" class="card-img-top" alt="...">
-
-                  <div class="card-body text-center">
-
-                    <h5 class="card-title">Hizmetleri Karşılaştırın</h5>
-
-                    <p class="card-text">Sağlık hizmetlerinin sunduğu hizmetleri kıyaslayarak en iyi seçimi
-                      yapın.</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-
-
-              <!-- Kart 5 -->
-
-              <div class="col">
-
-                <div class="card h-100">
-
-                  <img src="assets/img/gorüsBildir.png" class="card-img-top" alt="...">
-
-                  <div class="card-body text-center">
-
-                    <h5 class="card-title">Görüş Bildir</h5>
-
-                    <p class="card-text">Sağlık hizmetleri hakkında deneyimlerinizi ve yorumlarınızı
-                      paylaşarak görüşlerinizi bildirebilirsiniz.</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
+  <main>
+    <div class="container d-flex justify-content-center">
+      <!-- Login formu container'ı - minimum ve maximum genişlik sınırlaması -->
+      <div style="min-width: 400px; max-width: 1000px;">
+        <div class="p-5">
+          <!-- Form başlığı -->
+          <h2 class="text-center text-primary fw-bold mb-4">Giriş Yap</h2>
+          <form>
+            <!-- Ad Soyad input grubu-->
+            <div class="mb-3">
+              <label for="nameSurname" class="form-label">Ad Soyad</label>
+              <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="nameSurname"
+                placeholder="Adınız ve Soyadınız">
             </div>
 
-          </div>
+            <!-- E-posta/Telefon input grubu -->
+            <div class="mb-3">
+              <label for="emailPhone" class="form-label">E-posta / Telefon Numarası</label>
+              <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="emailPhone"
+                placeholder="E-posta veya telefon numaranız">
+            </div>
 
+            <!-- Şifre input grubu -->
+            <div class="mb-3">
+              <label for="password" class="form-label">Şifre</label>
+              <input type="password" class="form-control border-0 bg-secondary-subtle text-secondary w-100"
+                id="password" placeholder="Şifreniz">
+            </div>
+
+            <!-- Şifremi unuttum linki
+                         text-end: Sağa hizalama -->
+            <div class="text-end mb-3 mt-5">
+              <a href="#" class="text-decoration-none text-primary">Şifremi Unuttum</a>
+            </div>
+
+            <!-- Giriş yap butonu
+                         w-100: Tam genişlik -->
+            <button type="submit" class="btn btn-primary w-100 mb-3">Giriş Yap</button>
+
+            <!-- Kayıt ol yönlendirmesi -->
+            <div class="text-center mb-3">
+              <span class="text-muted">Hesabınız yok mu?</span>
+              <a href="#" class="text-decoration-none">Hemen Kaydolun</a>
+            </div>
+
+            <!-- Sosyal medya butonları bölümü -->
+            <div class="text-center mt-5">
+              <!-- Sosyal medya butonları container'ı
+                             d-flex: Flexbox kullanımı
+                             justify-content-center: Yatay ortalama -->
+              <div class="d-flex justify-content-center">
+                <!-- LinkedIn butonu -->
+                <a href="#" class="social-btn linkedin">
+                  <img src="/assets/img/devicon_linkedin.png" alt="LinkedIn" style="width: 20px; height: 20px;">
+                </a>
+                <!-- Google butonu -->
+                <a href="#" class="social-btn google">
+                  <img src="/assets/img/flat-color-icons_google.png" alt="Google" style="width: 20px; height: 20px;">
+                </a>
+                <!-- Facebook butonu -->
+                <a href="#" class="social-btn facebook">
+                  <img src="/assets/img/logos_facebook.png" alt="Facebook" style="width: 20px; height: 20px;">
+                </a>
+              </div>
+            </div>
+          </form>
         </div>
-
       </div>
-    </section>
-
+    </div>
   </main>
 
-  <!--footer-->
   <footer style="background-color:#3465FD;">
     <div class="container-fluid">
       <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
@@ -220,11 +160,11 @@
 
               <!-- Simgelerin yer aldığı listeyi sola hizalamak için flex kullanıyoruz -->
               <div class="d-flex justify-content-start align-items-center gap-3">
-                <a href="#" class="hover-effect"><img src="assets/img/mdi_linkedin.png" alt="linkedin"
+                <a href="#" class="hover-effect"><img src="/assets/img/mdi_linkedin.png" alt="linkedin"
                     style="width: 30px; height: 30px;"></a>
-                <a href="#" class="hover-effect"><img src="assets/img/mdi_twitter.png" alt="twitter"
+                <a href="#" class="hover-effect"><img src="/assets/img/mdi_twitter.png" alt="twitter"
                     style="width: 30px; height: 30px;"></a>
-                <a href="#" class="hover-effect"><img src="assets/img/line-md_facebook.png" alt="facebook"
+                <a href="#" class="hover-effect"><img src="/assets/img/line-md_facebook.png" alt="facebook"
                     style="width: 30px; height: 30px;"></a>
               </div>
             </li>
@@ -247,11 +187,9 @@
     </div>
   </footer>
 
-  <!-- Hem js hem js bağımlılıklarını (popper vs) yükler. -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
