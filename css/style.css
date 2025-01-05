@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Inter Family';
+    src: url('/assets/fonts/Inter_28pt-Medium.ttf') format('truetype'),
+  }
+
+  body{
+    font-family: 'Inter Family';
+  }
+
+  .nav-link {
+    font-size: large;
+  }
+  .nav-link:hover{
+    color: rgb(0, 89, 255) !important;
+  }
+  .nav-item{
+    margin-top: 5px;
+  }
+  .navbar-brand{
+    font-family: 'Inter Family'; 
+    font-size: x-large;
+  }
+  .no-style{
+    color: inherit;
+
+  }
+  .no-style:hover{
+    color: inherit !important;
+  }
+
+  .hover-effect img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hover-effect img:hover {
+    transform: scale(1.1); /* Hafif büyütme */
+    opacity: 0.8; /* Şeffaflık */
+}
+a{
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(179, 179, 179) !important;
+}
