@@ -43,3 +43,48 @@ a{
 a:hover{
     color: rgb(179, 179, 179) !important;
 }
+
+
+
+
+
+
+/* 
+   ANASAYFA SECTION 2 - KART STİLLERİ
+  */
+
+/* Ana kart container */
+.section2-cards .card {
+    height: 100%;              /* Her kartın container yüksekliğini doldurmasını sağlar */
+    display: flex;             /* Flexbox düzeni kullanır */
+    flex-direction: column;    /* İçerikleri dikey olarak sıralar (resim üstte, yazı altta) */
+    border: none;             /* Kartların kenar çizgilerini kaldırır */
+}
+
+/* Kart içindeki resimlerin düzeni */
+.section2-cards .card-img-top {
+    height: 200px;            /* Tüm kart resimlerini aynı yükseklikte tutar */
+    object-fit: contain;      /* Resimleri boyutlarını ve oranlarını koruyarak container'a yerleştirir */
+    padding: 20px;           /* Resimlerin etrafında boşluk bırakır */
+}
+
+
+/* Kart başlıklarının düzeni */
+.section2-cards .card-title {
+    margin-bottom: 15px;      /* Başlık ile metin arasında boşluk bırakır */
+    min-height: 48px;         /* Tüm başlıkları aynı minimum yükseklikte tutar */
+    display: flex;            /* Flexbox düzeni kullanır */
+    align-items: center;      /* İçeriği dikeyde ortalar */
+    justify-content: center;  /* İçeriği yatayda ortalar */
+    font-weight: bold;        /* Başlık yazısını kalın yapar */
+}
+
+/* Kart içindeki açıklama metinlerinin düzeni */
+.section2-cards .card-text {        
+    font-family: 'Inter Family'; 
+}
+
+
+
+
+
