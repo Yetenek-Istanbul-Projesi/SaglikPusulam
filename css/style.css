@@ -125,6 +125,7 @@ footer a:hover{
     align-items: center;      /* İçeriği dikeyde ortalar */
     justify-content: center;  /* İçeriği yatayda ortalar */
     font-weight: bold;        /* Başlık yazısını kalın yapar */
+    font-family: 'Inter Family';
 }
 
 /* Kart içindeki açıklama metinlerinin düzeni */
