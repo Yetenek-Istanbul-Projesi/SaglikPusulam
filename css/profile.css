@@ -59,3 +59,8 @@ input[type="text"] {
     /* Köşe yuvarlama */
 }
 
+/*Profile Index.Html */
+
+.bgc{ /* form elemanları arkaplan rengi*/
+    background-color:rgb(238,239,241);
+}
