@@ -1,67 +1,82 @@
 @font-face {
     font-family: 'Inter Family';
-    src: url('/assets/fonts/Inter_28pt-Medium.ttf') format('truetype'),
+    src: url('../assets/fonts/Inter_28pt-Medium.ttf') format('truetype'),
   }
 
 
-  * {
-    max-width: 100%;      /* Görsellerin ekranın dışına taşmasını engeller */
-    height: auto;         /* Görsellerin boyutunu orantılı olarak ayarlar */
-    box-sizing: border-box;  /* Tüm öğelerin genişlik ve yükseklik hesaplamalarında padding ve border'ı dahil eder */
-    
-  }
-  html,body{
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    font-family: 'Inter Family';
-  }
-  img {
-    max-width: 100%;  /* Resimler ekran genişliğine göre ölçeklendir */
-    height: auto;
-  }
-  
-  .container {
-    max-width: 100%;
-  }
+* {
+  max-width: 100%;
+  /* Görsellerin ekranın dışına taşmasını engeller */
+  height: auto;
+  /* Görsellerin boyutunu orantılı olarak ayarlar */
+  box-sizing: border-box;
+  /* Tüm öğelerin genişlik ve yükseklik hesaplamalarında padding ve border'ı dahil eder */
 
-  .nav-link {
-    font-size: large;
-  }
-  .nav-link:hover{
-    color: rgb(0, 89, 255) !important;
-  }
-  .nav-item{
-    margin-top: 5px;
-  }
-  .navbar-brand{
-    font-family: 'Inter Family'; 
-    font-size: x-large;
-  }
-  .no-style{
-    color: inherit;
+}
 
-  }
-  .no-style:hover{
-    color: inherit !important;
-  }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter Family';
+}
 
-  .hover-effect img {
-    transition: transform 0.3s ease, opacity 0.3s ease;
+img {
+  max-width: 100%;
+  /* Resimler ekran genişliğine göre ölçeklendir */
+  height: auto;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.nav-link {
+  font-size: large;
+}
+
+.nav-link:hover {
+  color: rgb(0, 89, 255) !important;
+}
+
+.nav-item {
+  margin-top: 5px;
+}
+
+.navbar-brand {
+  font-family: 'Inter Family';
+  font-size: x-large;
+}
+
+.no-style {
+  color: inherit;
+
+}
+
+.no-style:hover {
+  color: inherit !important;
+}
+
+.hover-effect img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .hover-effect img:hover {
-    transform: scale(1.1); /* Hafif büyütme */
-    opacity: 0.8; /* Şeffaflık */
-}
-a{
-    transition: color 0.2s ease;
-    text-decoration: none;
+  transform: scale(1.1);
+  /* Hafif büyütme */
+  opacity: 0.8;
+  /* Şeffaflık */
 }
 
-footer a:hover{
-    color: rgb(136, 136, 136) !important;
+a {
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: rgb(136, 136, 136) !important;
 }
 
 /* 
@@ -77,7 +92,7 @@ footer a:hover{
   text-decoration: none;
   margin: 0 10px;
   transition: all 0.3s;
- 
+
 }
 
 /* Hover efekti - butonu yukarı kaldırır */
@@ -88,96 +103,167 @@ footer a:hover{
 /* Sosyal medya butonlarının marka renkleri */
 .linkedin {
   border: 1px solid rgb(100, 98, 98);
-   }
-.google {  
+}
+
+.google {
   border: 1px solid rgb(100, 98, 98);
-  }
-.facebook { 
+}
+
+.facebook {
   border: 1px solid rgb(100, 98, 98);
-  }
+}
 
 
 /* 
-   ANASAYFA SECTION 2 - KART STİLLERİ
+   ANASAYFA 
   */
 
+  
 /* Ana kart container */
 .section2-cards .card {
-    height: 100%;              /* Her kartın container yüksekliğini doldurmasını sağlar */
-    display: flex;             /* Flexbox düzeni kullanır */
-    flex-direction: column;    /* İçerikleri dikey olarak sıralar (resim üstte, yazı altta) */
-    border: none;             /* Kartların kenar çizgilerini kaldırır */
+  height: 100%;
+  /* Her kartın container yüksekliğini doldurmasını sağlar */
+  display: flex;
+  /* Flexbox düzeni kullanır */
+  flex-direction: column;
+  /* İçerikleri dikey olarak sıralar (resim üstte, yazı altta) */
+  border: none;
+  /* Kartların kenar çizgilerini kaldırır */
 }
 
 /* Kart içindeki resimlerin düzeni */
 .section2-cards .card-img-top {
-    height: 200px;            /* Tüm kart resimlerini aynı yükseklikte tutar */
-    object-fit: contain;      /* Resimleri boyutlarını ve oranlarını koruyarak container'a yerleştirir */
-    padding: 20px;           /* Resimlerin etrafında boşluk bırakır */
+  height: 200px;
+  /* Tüm kart resimlerini aynı yükseklikte tutar */
+  object-fit: contain;
+  /* Resimleri boyutlarını ve oranlarını koruyarak container'a yerleştirir */
+  padding: 20px;
+  /* Resimlerin etrafında boşluk bırakır */
 }
 
 
 /* Kart başlıklarının düzeni */
 .section2-cards .card-title {
-    margin-bottom: 15px;      /* Başlık ile metin arasında boşluk bırakır */
-    min-height: 48px;         /* Tüm başlıkları aynı minimum yükseklikte tutar */
-    display: flex;            /* Flexbox düzeni kullanır */
-    align-items: center;      /* İçeriği dikeyde ortalar */
-    justify-content: center;  /* İçeriği yatayda ortalar */
-    font-weight: bold;        /* Başlık yazısını kalın yapar */
+  margin-bottom: 15px;
+  /* Başlık ile metin arasında boşluk bırakır */
+  min-height: 48px;
+  /* Tüm başlıkları aynı minimum yükseklikte tutar */
+  display: flex;
+  /* Flexbox düzeni kullanır */
+  align-items: center;
+  /* İçeriği dikeyde ortalar */
+  justify-content: center;
+  /* İçeriği yatayda ortalar */
+  font-weight: bold;
+  /* Başlık yazısını kalın yapar */
 }
 
 /* Kart içindeki açıklama metinlerinin düzeni */
-.section2-cards .card-text {        
-    font-family: 'Inter Family'; 
+.section2-cards .card-text {
+  font-family: 'Inter Family';
 }
 
+/*Section 4 */
+.contact-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+.contact-section a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.contact-section a:hover {
+  text-decoration: underline;
+}
 
 
 
 /* Yorum bölümü Yıldızlı puanlama sistemi için CSS stilleri */
-      .rating {
-        float: left;
-        border: none;
-      }
-      .rating:not(:checked) > input {
-        position: absolute;
-        top: -9999px;
-        clip: rect(0, 0, 0, 0);
-      }
-      .rating:not(:checked) > label {
-        float: right;
-        width: 1em;
-        padding: 0 0.1em;
-        overflow: hidden;
-        white-space: nowrap;
-        cursor: pointer;
-        font-size: 200%;
-        line-height: 1.2;
-        color: #ddd;
-      }
-      .rating:not(:checked) > label:before {
-        content: "★ ";
-      }
-      .rating > input:checked ~ label {
-        color: #f70;
-      }
-      .rating:not(:checked) > label:hover,
-      .rating:not(:checked) > label:hover ~ label {
-        color: gold;
-      }
-      .rating > input:checked + label:hover,
-      .rating > input:checked + label:hover ~ label,
-      .rating > input:checked ~ label:hover,
-      .rating > input:checked ~ label:hover ~ label,
-      .rating > label:hover ~ input:checked ~ label {
-        color: #ea0;
-      }
-      .rating > label:active {
-        position: relative;
-      }
+.rating {
+  float: left;
+  border: none;
+}
 
+.rating:not(:checked)>input {
+  position: absolute;
+  top: -9999px;
+  clip: rect(0, 0, 0, 0);
+}
 
+.rating:not(:checked)>label {
+  float: right;
+  width: 1em;
+  padding: 0 0.1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 200%;
+  line-height: 1.2;
+  color: #ddd;
+}
 
+.rating:not(:checked)>label:before {
+  content: "★ ";
+}
 
+.rating>input:checked~label {
+  color: #f70;
+}
 
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+  color: gold;
+}
+
+.rating>input:checked+label:hover,
+.rating>input:checked+label:hover~label,
+.rating>input:checked~label:hover,
+.rating>input:checked~label:hover~label,
+.rating>label:hover~input:checked~label {
+  color: #ea0;
+}
+
+.rating>label:active {
+  position: relative;
+}
+
+/* Hakkımızda sayfası */
+.breadcumps {
+  text-align: left;
+  width: 60%; /* Genişlik, isteğe bağlı ayarlanabilir */
+  font-size: 20px;
+  font-family: 'Inter Family';
+}
+.section {
+  text-align: left;
+  width: 100%; /* Genişlik, isteğe bağlı ayarlanabilir */
+  font-size: 20px;
+  font-family: 'Inter Family';
+}
+
+/*Kullanım sartlar sayfasi*/
+.container-page {
+  text-align: left;
+  width: 60%; /* Genişlik, isteğe bağlı ayarlanabilir */
+  font-size: 20px;
+  font-family: 'Inter Family';
+}
+
+.page-body {
+  /* display: flex;
+  justify-content: center; */
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.page-content {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 100px;
+  padding-top: 110px;
+  text-align: center;
+  font-family: 'Inter Family';
+}
