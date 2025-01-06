@@ -115,9 +115,10 @@ footer a:hover {
 
 
 /* 
-   ANASAYFA SECTION 2 - KART STİLLERİ
+   ANASAYFA 
   */
 
+  
 /* Ana kart container */
 .section2-cards .card {
   height: 100%;
@@ -162,6 +163,20 @@ footer a:hover {
   font-family: 'Inter Family';
 }
 
+/*Section 4 */
+.contact-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+.contact-section a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.contact-section a:hover {
+  text-decoration: underline;
+}
 
 
 
