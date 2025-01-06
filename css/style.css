@@ -219,13 +219,36 @@ footer a:hover {
   text-align: left;
   width: 60%; /* Genişlik, isteğe bağlı ayarlanabilir */
   font-size: 20px;
-  font-family: 'Inter';
-  margin-left: 70px;
+  font-family: 'Inter Family';
 }
-.left_section {
+.section {
+  text-align: left;
+  width: 100%; /* Genişlik, isteğe bağlı ayarlanabilir */
+  font-size: 20px;
+  font-family: 'Inter Family';
+}
+
+/*Kullanım sartlar sayfasi*/
+.container-page {
   text-align: left;
   width: 60%; /* Genişlik, isteğe bağlı ayarlanabilir */
   font-size: 20px;
-  font-family: 'Inter';
-  margin-left: 70px;
+  font-family: 'Inter Family';
+}
+
+.page-body {
+  /* display: flex;
+  justify-content: center; */
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.page-content {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 100px;
+  padding-top: 110px;
+  text-align: center;
+  font-family: 'Inter Family';
 }
