@@ -134,5 +134,64 @@ footer a:hover{
 
 
 
+/* Filtreleme Css */
+
+     /* Form etiketlerinin stilini özelleştiriyoruz. */
+     .form-label {
+      font-weight: bold;
+      border: 2px solid #c8c8ca;
+      padding: 6px;
+      border-radius: 10px;
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      background-color: white;
+    }
+
+    /* Mesafe slider'ının değerini ortalamak için stil tanımlıyoruz. */
+    .slider-value {
+      text-align: center;
+      margin-top: -10px;
+    }
+
+    /* Input grup etiketlerinin stilini ayarlıyoruz. */
+    .input-group-text {
+      background-color: #f8f9fa;
+      border-radius: 0.5rem;
+    }
+
+    /* Yıldızlı checkbox için stil tanımlıyoruz. */
+    .star-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: medium;
+      margin-bottom: 1px;
+    }
+
+    /* Yıldız simgelerinin rengini sarı yapıyoruz. */
+    .star {
+      color: yellow;
+      font-size: 30px;
+    }
+
+    /* Checkbox'ların ortalanması için stil tanımlıyoruz. */
+    .center-checkbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    /* Mobil cihazlarda form etiketlerinin font boyutunu küçültüyoruz. */
+    @media (max-width: 768px) {
+      .form-label {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+
+
+
 
 
