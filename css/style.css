@@ -1,7 +1,7 @@
 @font-face {
-  font-family: 'Inter Family';
-  src: url('/assets/fonts/Inter_28pt-Medium.ttf') format('truetype'),
-}
+    font-family: 'Inter Family';
+    src: url('../assets/fonts/Inter_28pt-Medium.ttf') format('truetype'),
+  }
 
 
 * {
