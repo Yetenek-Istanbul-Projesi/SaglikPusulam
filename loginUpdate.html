@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profil Bilgileri</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Giriş Yap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/SaglikPusulam/css/style.css">
-  <link rel="stylesheet" href="/SaglikPusulam/css/profile.css">
 </head>
+<!-- bg-whites: Beyaz arka plan rengi -->
 
-<body>
+<body class="bg-whites">
+
   <header>
     <nav class="navbar navbar-expand-lg bg-body-white p-4" style="border-bottom: 5px solid hsla(0, 0%, 80%, 0.2);">
       <div class="container-fluid mb-3">
@@ -31,93 +31,98 @@
             <li class="nav-item">
               <a class="nav-link fw-bold text-dark" href="#">Hakkımızda</a>
             </li>
-            <img src="/SaglikPusulam/assets/img/user-icon.jpg" width="50px;" height="50px" style="opacity: 0.9;">
+            <a href="#"><img src="/SaglikPusulam/assets/img/user-icon.jpg" width="50px;" height="50px" style="opacity: 0.9;"></a>
             <button type="button" class="btn btn-primary rounded-4 shadow">Hemen Katılın</button>
           </ul>
         </div>
       </div>
     </nav>
   </header>
+
+  <div class="container-fluid p-0">
+    <div class="row g-0">
+      <div class="col">
+        <img src="/SaglikPusulam/assets/img/banner_photo.jpg" class="img-fluid w-100" alt="" style="height: 600px; object-fit: fill;">
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
   <main>
-    <div id="wrapper" class="container">
-      <div class="row">
-        <div class="col-6" id="left-content">
-          <div class="card" style="width: 18rem;">
-            <img src="/SaglikPusulam/assets/img/Rectangle 48.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <a href="#" class="card-link">
-                <p style="text-align: center;">Fotoğrafı Değiştir</p>
-              </a>
-              <h5 class="card-title" style="text-align: center;">Ad Soyad</h5>
+    <div class="container d-flex justify-content-center">
+      <!-- Login formu container'ı - minimum ve maximum genişlik sınırlaması -->
+      <div style="min-width: 400px; max-width: 1000px;">
+        <div class="p-5 mt-5">
+          <!-- Form başlığı -->
+          <h2 class="text-center text-primary fw-bold mb-5">Giriş Yap</h2>
+          <form>
+            <!-- Ad Soyad input grubu-->
+            <div class="mb-3">
+              <label for="nameSurname" class="form-label">Ad Soyad</label>
+              <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="nameSurname"
+                placeholder="Adınız ve Soyadınız">
             </div>
 
-            <a href="index.html" class="btn btn-primary btn-lg">Profil Bilgileri</a></br>
-            <a href="#" class="btn btn-outline-primary btn-lg">Favoriler</a></br>
-            <a href="security.html" class="btn btn-outline-primary btn-lg">Güvenlik</a></br>
-            <a href="#" class="btn btn-outline-primary btn-lg">Karşılaştırma Listesi</a></br>
-            <a href="#" class="btn btn-outline-primary btn-lg">Çıkış Yap</a></br>
-          </div>
-        </div>
-        <div class="col-6" id="right-content">
-          <div class="p-5">
-            <!-- Right Content İçerik Alanı -->
-            <form>
-              <div class="container-fluid mb-2" >
-                 <h3>Profil Bilgileri</h3> <br>
-                 <div class="row">
-                     <div class="col-md-6">
-                         <div class="mb-3">
-                             <label for="name" class="form-label" >Ad</label>
-                             <input type="text" class="form-control bgc" id="name" aria-describedby="name" placeholder="Ad">
-                         </div>
-                     </div>
-         
-                     <div class="col-md-6">
-                         <div class="mb-3">
-                             <label for="Surname" class="form-label">Soyad</label>
-                             <input type="text" class="form-control bgc" id="surname" placeholder="Soyad">
-                         </div>
-                     </div>
-                 </div>
-         
-                 <div class="row">
-                     <div class="col-md-6">
-                         <div class="mb-3">
-                             <label for="exampleInputEmail1" class="form-label">E-Posta</label>
-                             <input type="email" class="form-control bgc" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-Posta">
-                         </div>
-                     </div>
-         
-                     <div class="col-md-6">
-                         <div class="mb-3">
-                             <label for="number" class="form-label">Telefon Numarası</label>
-                             <input type="tel" class="form-control bgc" id="number" aria-describedby="number" placeholder="Telefon Numarası">
-                         </div>
-                     </div>
-         
-                     <div class="row-md-8">
-                      
-                         <div class="row-md-6">
-                             <div class="mb-6">
-                                 <label for="text" class="form-label">Adres Bilgisi</label><br>
-                                 <textarea id="textarea" class="form-control w-100 bgc" name="area-text" placeholder="Adres Bilgisi" rows="4"></textarea>
-                             </div>
-                         </div>
-                     </div>
-                 </div><br>
-         
-                 <button type="submit" class="btn btn-primary">Değişiklikleri Kaydet</button>
+            <!-- E-posta/Telefon input grubu -->
+            <div class="mb-3">
+              <label for="emailPhone" class="form-label">E-posta / Telefon Numarası</label>
+              <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="emailPhone"
+                placeholder="E-posta veya telefon numaranız">
+            </div>
+
+            <!-- Şifre input grubu -->
+            <div class="mb-3">
+              <label for="password" class="form-label">Şifre</label>
+              <input type="password" class="form-control border-0 bg-secondary-subtle text-secondary w-100"
+                id="password" placeholder="Şifreniz">
+            </div>
+
+            <!-- Şifremi unuttum linki
+                         text-end: Sağa hizalama -->
+            <div class="text-end mb-3 mt-5">
+              <a href="#" class="text-decoration-none text-primary">Şifremi Unuttum</a>
+            </div>
+
+            <!-- Giriş yap butonu
+                         w-100: Tam genişlik -->
+            <button type="submit" class="btn btn-primary w-100 mb-3">Giriş Yap</button>
+
+            <!-- Kayıt ol yönlendirmesi -->
+            <div class="text-center mb-3">
+              <span class="text-muted">Hesabınız yok mu?</span>
+              <a href="#" class="text-decoration-none">Hemen Kaydolun</a>
+            </div>
+
+            <!-- Sosyal medya butonları bölümü -->
+            <div class="text-center mt-5">
+              <!-- Sosyal medya butonları container'ı
+                             d-flex: Flexbox kullanımı
+                             justify-content-center: Yatay ortalama -->
+              <div class="d-flex justify-content-center">
+                <!-- LinkedIn butonu -->
+                <a href="#" class="social-btn linkedin">
+                  <img src="/SaglikPusulam/assets/img/devicon_linkedin.png" alt="LinkedIn" style="width: 20px; height: 20px;">
+                </a>
+                <!-- Google butonu -->
+                <a href="#" class="social-btn google">
+                  <img src="/SaglikPusulam/assets/img/flat-color-icons_google.png" alt="Google" style="width: 20px; height: 20px;">
+                </a>
+                <!-- Facebook butonu -->
+                <a href="#" class="social-btn facebook">
+                  <img src="/SaglikPusulam/assets/img/logos_facebook.png" alt="Facebook" style="width: 20px; height: 20px;">
+                </a>
               </div>
-             </form>
-          </div>
+            </div>
+          </form>
         </div>
       </div>
-
-
     </div>
-
-
   </main>
+
   <footer style="background-color:#3465FD;">
     <div class="container-fluid">
       <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
@@ -169,7 +174,7 @@
 
               <!-- Simgelerin yer aldığı listeyi sola hizalamak için flex kullanıyoruz -->
               <div class="d-flex justify-content-start align-items-center gap-3">
-                <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_linkedin.png" alt="linkedin"
+                <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/devicon_linkedin.png" alt="linkedin"
                     style="width: 30px; height: 30px;"></a>
                 <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_twitter.png" alt="twitter"
                     style="width: 30px; height: 30px;"></a>
@@ -195,9 +200,10 @@
       </footer>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
