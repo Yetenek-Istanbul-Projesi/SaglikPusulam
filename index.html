@@ -14,6 +14,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <link rel="stylesheet" href="/SaglikPusulam/css/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/SaglikPusulam/css/hover-min.css">
 </head>
 
 <body>
@@ -54,6 +59,91 @@
 
   <main> <!--İçerik Kısmı-->
 
+     <!-- AnaSayfa Section 1 - Ana arama bölümü -->
+    <!--height: 1000px kullanarak sabit yükseklik belirlendi -->
+    <section class="position-relative" style="height: 1000px;">
+      <!-- Arka plan resmi container'ı 
+               position-absolute: Resmi diğer içeriklerin arkasına konumlandırır
+               z-index: 1: Resmi en arkada tutar -->
+      <div class="position-absolute w-100" style="z-index: 1; height: 1000px;">
+          <!-- Arka plan resmi 
+                   object-fit: fill: Resmi container'a tam sığdırır
+                   w-100 h-100: Genişlik ve yüksekliği %100 yapar -->
+          <img src="/SaglikPusulam/assets/img/Ana Sayfa Section_foto_remake.png" 
+               class="w-100 h-100" 
+               style="object-fit: fill;" 
+               alt="Sağlık Arkaplan">
+      </div>
+       <!-- Arama formu container'ı
+               position-relative: İçerikleri resmin üzerine konumlandırır
+               z-index: 2: Formu resmin önünde tutar -->
+      <div class="position-relative d-flex align-items-center" style="z-index: 2; height: 100%;">
+          <div class="container-fluid px-4">
+              <div class="row">
+                  <div class="col-12 col-md-8 col-lg-6">
+                      <form>
+                          <div class="mb-5">
+                              <h1 class="text-primary">Çevrendeki En İyi Hasaneyi Bul</h1>
+                              <h3 class="text-secondary">Sağlık hizmetleri arasında tercihini yap</h3>
+                          </div>
+
+
+                          <!-- Arama kutuları ve buton container'ı
+                                   flex-column: Mobilde alt alta sıralar
+                                   flex-md-row: Tablet ve üstünde yan yana sıralar -->
+                          <div class="d-flex flex-column flex-md-row gap-3">
+                              <!-- İlk arama kutusu container'ı -->
+                              <div class="position-relative flex-grow-1">
+                                  <!-- Sol taraftaki arama ikonu -->
+                                  <i class="bi bi-search position-absolute" 
+                                     style="left: 15px; top: 50%; transform: translateY(-50%); color: #6c757d;"></i>
+                                  <input type="text" 
+                                         class="form-control px-5" 
+                                         placeholder="Sağlık Hizmeti Seçin"
+                                         style="height: 45px;">
+                                  <button type="button" 
+                                          class="btn position-absolute" 
+                                          style="right: 2px; top: 50%; transform: translateY(-50%); border: none; background: none;">
+                                      <img src="/SaglikPusulam/assets/img/Group.png" 
+                                           alt="" 
+                                           style="width: 35px; height: 35px;">
+                                  </button>
+                              </div>
+
+                              <!-- İkinci arama kutusu container'ı (Yapı aynı) -->
+                              <div class="position-relative flex-grow-1">
+                                  <i class="bi bi-search position-absolute" 
+                                     style="left: 15px; top: 50%; transform: translateY(-50%); color: #6c757d;"></i>
+                                  <input type="text" 
+                                         class="form-control px-5" 
+                                         placeholder="Şehir Seçin"
+                                         style="height: 45px;">
+                                  <button type="button" 
+                                          class="btn position-absolute" 
+                                          style="right: 2px; top: 50%; transform: translateY(-50%); border: none; background: none;">
+                                      <img src="/SaglikPusulam/assets/img/Group.png" 
+                                           alt="" 
+                                           style="width: 35px; height: 35px;">
+                                  </button>
+                              </div>
+
+
+                              <!-- Arama butonu
+                              d-flex ve align-items-center: İkon ve metni ortalar
+                              gap-2: İkon ve metin arasında boşluk bırakır -->
+                              <button type="submit" 
+                                      class="btn btn-primary d-flex align-items-center justify-content-center gap-2"
+                                      style="width: 80px; height: 45px;">
+                                  <i class="bi bi-search"></i>
+                                  Ara
+                              </button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
     <section id="features">
       <div class="container-fluid py-5">
 
@@ -86,14 +176,14 @@
               <!-- Kart 2 -->
 
               <div class="col">
-                <div class="card h-100">              
+                <div class="card h-100">
                   <img src="/SaglikPusulam/assets/img/detaylaraBak.png" class="card-img-top" alt="...">
                   <div class="card-body text-center">
                     <h5 class="card-title">Detaylara Bak</h5>
                     <p class="card-text">Sağlık hizmetlerinin hizmet detaylarını, yorumlarını ve konum
-                      bilgilerini inceleyin</p>    
+                      bilgilerini inceleyin</p>
                   </div>
-                </div>   
+                </div>
               </div>
 
               <!-- Kart 3 -->
@@ -171,14 +261,167 @@
 
       </div>
     </section>
-    <section class="contact-section">
+    <section id="best-health-services">
       <div class="container">
-          <i class="bi bi-chat-dots" style="font-size: 40px; color: #007bff;"></i>
-          <h2>Yardıma İhtiyacınız mı Var?</h2>
-          <p>Sorularınız varsa müşteri destek ekibimizle iletişime geçin.<br>Sizlere yardımcı olmaya hazırız.</p>
-          <a href="mailto:support@example.com">Mail Göndermek İstiyorum</a>
+        <h2 class="text-center mb-5" style="color: #007bff; font-weight: bold;">En Çok Tercih Edilen Sağlık Hizmetleri
+        </h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+          <div class="col">
+            <div class="card h-100 sc1-card hvr-glow">
+              <img src="/SaglikPusulam/assets/img/300x200.png" class="card-img-top" alt="Optometri">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-success"><i class="bi bi-circle-fill me-1"></i>Açık</span>
+                  <div class="no-style d-flex gap-2">
+                    <a href="javascript:void(0);" class="toggle-container">
+                      <i class="fa-regular fa-heart toggle-heart" onclick="toggleHeart(this)"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="toggle-container">
+                      <i class="fa-solid fa-shuffle toggle-compare" onclick="toggleCompare(this)"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="toggle-container">
+                      <i class="fa-solid fa-share-nodes toggle-share" onclick="toggleShare(this)"></i>
+                    </a>
+                  </div>
+                </div>
+                <h5 class="card-title">Optometri</h5>
+                <div class="mb-2 d-flex justify-content-between">
+                  <div><span class="rating-stars">★★★★★</span>
+                    <span>(260)</span></div>
+                  <span>Diyetisyen</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nibh ut massa.</p>
+                <div class="features">
+                  <div><i class="bi bi-telephone"></i><a href="tel:+901234567890">Telefon Numarası</a></div>
+                  <div><i class="bi bi-globe"></i><a href="https://example.com" target="_blank">Web Sitesi</a></div>
+                  <div><i class="bi bi-clock"></i><a href="#">Çalışma Saati</a></div>
+                  <div><i class="bi bi-geo-alt"></i><a href="#">Adres Bilgisi</a></div>
+                </div>
+                <button class="btn details-button w-100 mt-3">Detaylar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 sc1-card hvr-glow">
+              <img src="/SaglikPusulam/assets/img/300x200.png" class="card-img-top" alt="Odyoloji">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-success"><i class="bi bi-circle-fill me-1"></i>Açık</span>
+                  <div class="no-style d-flex gap-2">
+                    <a href="javascript:void(0);" class="toggle-container">
+                      <i class="fa-regular fa-heart toggle-heart" onclick="toggleHeart(this)"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="toggle-container">
+                      <i class="fa-solid fa-shuffle toggle-compare" onclick="toggleCompare(this)"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="toggle-container">
+                      <i class="fa-solid fa-share-nodes toggle-share" onclick="toggleShare(this)"></i>
+                    </a>
+                  </div>
+                </div>
+                <h5 class="card-title">Odyoloji</h5>
+                <div class="mb-2 d-flex justify-content-between">
+                  <div><span class="rating-stars">★★★★☆</span>
+                    <span>(198)</span></div>
+                  <span>Kardiyolog</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nibh ut massa.</p>
+                <div class="features">
+                  <div><i class="bi bi-telephone"></i><a href="tel:+901234567891">Telefon Numarası</a></div>
+                  <div><i class="bi bi-globe"></i><a href="https://example.com" target="_blank">Web Sitesi</a></div>
+                  <div><i class="bi bi-clock"></i><a href="#">Çalışma Saati</a></div>
+                  <div><i class="bi bi-geo-alt"></i><a href="#">Adres Bilgisi</a></div>
+                </div>
+                <button class="btn details-button w-100 mt-3">Detaylar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 sc1-card hvr-glow">
+              <img src="/SaglikPusulam/assets/img/300x200.png" class="card-img-top" alt="Diyetisyen">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-danger"><i class="bi bi-circle-fill me-1"></i>Kapalı</span>
+                  <div class="no-style d-flex gap-2">
+                    <a href="javascript:void(0);" class="toggle-container">
+                      <i class="fa-regular fa-heart toggle-heart" onclick="toggleHeart(this)"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="toggle-container">
+                      <i class="fa-solid fa-shuffle toggle-compare" onclick="toggleCompare(this)"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="toggle-container">
+                      <i class="fa-solid fa-share-nodes toggle-share" onclick="toggleShare(this)"></i>
+                    </a>
+                  </div>
+                </div>
+                <h5 class="card-title">Diyetisyen</h5>
+                <div class="mb-2 d-flex justify-content-between">
+                  <div><span class="rating-stars">★★★★☆</span>
+                    <span>(214)</span></div>
+                  <span>Psikoterapist</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nibh ut massa.</p>
+                <div class="features">
+                  <div><i class="bi bi-telephone"></i><a href="tel:+901234567892">Telefon Numarası</a></div>
+                  <div><i class="bi bi-globe"></i><a href="https://example.com" target="_blank">Web Sitesi</a></div>
+                  <div><i class="bi bi-clock"></i><a href="#">Çalışma Saati</a></div>
+                  <div><i class="bi bi-geo-alt"></i><a href="#">Adres Bilgisi</a></div>
+                </div>
+                <button class="btn details-button w-100 mt-3">Detaylar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 sc1-card hvr-glow">
+              <img src="/SaglikPusulam/assets/img/300x200.png" class="card-img-top" alt="Diş Hekimliği">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-success"><i class="bi bi-circle-fill me-1"></i>Açık</span>
+                  <div class="no-style d-flex gap-2">
+                    <a href="javascript:void(0);" class="toggle-container">
+                      <i class="fa-regular fa-heart toggle-heart" onclick="toggleHeart(this)"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="toggle-container">
+                      <i class="fa-solid fa-shuffle toggle-compare" onclick="toggleCompare(this)"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="toggle-container">
+                      <i class="fa-solid fa-share-nodes toggle-share" onclick="toggleShare(this)"></i>
+                    </a>
+                  </div>
+                </div>
+                <h5 class="card-title">Diş Hekimliği</h5>
+                <div class="mb-2 d-flex justify-content-between">
+                  <div><span class="rating-stars">★★★★☆</span>
+                    <span>(314)</span></div>
+                  <span>Fizyoterapist</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nibh ut massa.</p>
+                <div class="features">
+                  <div><i class="bi bi-telephone"></i><a href="tel:+901234567893">Telefon Numarası</a></div>
+                  <div><i class="bi bi-globe"></i><a href="https://example.com" target="_blank">Web Sitesi</a></div>
+                  <div><i class="bi bi-clock"></i><a href="#">Çalışma Saati</a></div>
+                  <div><i class="bi bi-geo-alt"></i><a href="#">Adres Bilgisi</a></div>
+                </div>
+                <button class="btn details-button w-100 mt-3">Detaylar</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-  </section>
+    </section>
+    <section id="contact-section">
+      <div class="container">
+        <i class="bi bi-chat-dots" style="font-size: 40px; color: #007bff;"></i>
+        <h2>Yardıma İhtiyacınız mı Var?</h2>
+        <p>Sorularınız varsa müşteri destek ekibimizle iletişime geçin.<br>Sizlere yardımcı olmaya hazırız.</p>
+        <a href="mailto:support@example.com">Mail Göndermek İstiyorum</a>
+      </div>
+    </section>
   </main>
 
   <!--footer-->
@@ -241,6 +484,8 @@
                     style="width: 30px; height: 30px;"></a>
                 <a href="https://x.com/" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_twitter.png" alt="twitter"
                     style="width: 30px; height: 30px;"></a>
+                <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/line-md_facebook.png"
+                    alt="facebook" style="width: 30px; height: 30px;"></a>
                 <a href="https://www.facebook.com/" class="hover-effect"><img src="/SaglikPusulam/assets/img/line-md_facebook.png" alt="facebook"
                     style="width: 30px; height: 30px;"></a>
               </div>
@@ -265,6 +510,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script src="/SaglikPusulam/js/main.js"></script>
 
 </body>
 
