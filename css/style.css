@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'Inter Family';
-    src: url('../assets/fonts/Inter_28pt-Medium.ttf') format('truetype'),
-  }
+  font-family: 'Inter Family';
+  src: url('../assets/fonts/Inter_28pt-Medium.ttf') format('truetype'),
+}
 
 
 * {
@@ -59,11 +59,39 @@ img {
   color: inherit !important;
 }
 
+.no-style a{
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.no-style a:hover{
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.link-style a{
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.link-style a:hover{
+  color: rgb(136, 136, 136) !important;
+  text-decoration: none !important;
+}
+
+
 .hover-effect img {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .hover-effect img:hover {
+  transform: scale(1.1);
+  /* Hafif büyütme */
+  opacity: 0.8;
+  /* Şeffaflık */
+}
+.hover-effect i {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hover-effect i:hover {
   transform: scale(1.1);
   /* Hafif büyütme */
   opacity: 0.8;
@@ -118,7 +146,9 @@ footer a:hover {
    ANASAYFA 
   */
 
-  
+
+
+
 /* Ana kart container */
 .section2-cards .card {
   height: 100%;
@@ -163,78 +193,219 @@ footer a:hover {
   font-family: 'Inter Family';
 }
 
+/*Section 3*/
 
 
-/* Filtreleme Css */
+.sc1-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
 
-     /* Form etiketlerinin stilini özelleştiriyoruz. */
-     .form-label {
-      font-weight: bold;
-      border: 2px solid #c8c8ca;
-      padding: 6px;
-      border-radius: 10px;
-      text-align: center;
-      display: inline-block;
-      width: 100%;
-      background-color: white;
-    }
+.sc1-card h5 {
+  font-size: 18px;
+  font-weight: bold;
+}
 
-    /* Mesafe slider'ının değerini ortalamak için stil tanımlıyoruz. */
-    .slider-value {
-      text-align: center;
-      margin-top: -10px;
-    }
+.sc1-card p {
+  font-size: 14px;
+  color: #6c757d;
+}
 
-    /* Input grup etiketlerinin stilini ayarlıyoruz. */
-    .input-group-text {
-      background-color: #f8f9fa;
-      border-radius: 0.5rem;
-    }
+.sc1-card .features {
+  font-size: 16px;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 8px;
+}
 
-    /* Yıldızlı checkbox için stil tanımlıyoruz. */
-    .star-checkbox {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      font-size: medium;
-      margin-bottom: 1px;
-    }
+.sc1-card .features div {
+  display: flex;
+  flex: 0 0 45%;
+  padding-left: 20px;
 
-    /* Yıldız simgelerinin rengini sarı yapıyoruz. */
-    .star {
-      color: yellow;
-      font-size: 30px;
-    }
+}
 
-    /* Checkbox'ların ortalanması için stil tanımlıyoruz. */
-    .center-checkbox {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 10px;
-    }
+.sc1-card .features div i {
+  margin-right: 5px;
+  color: #000;
+}
 
-    /* Mobil cihazlarda form etiketlerinin font boyutunu küçültüyoruz. */
-    @media (max-width: 768px) {
-      .form-label {
-        font-size: 14px;
-        padding: 8px;
-      }
-    }
+.sc1-card .features div a {
+  text-decoration: none;
+  color: #000;
+}
+
+.sc1-card .features div a:hover {
+  text-decoration: none;
+  color: rgb(136, 136, 136);
+}
+
+.sc1-card .details-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+.sc1-card .details-button:hover {
+  background-color: #0158b4;
+  color: white;
+  border: none;
+}
+
+/* ---------- Card Actions (Kart aksiyonları, paylaş- favoriye ekle- beğen ) ------------ */
+
+/* Kalp ikonuna varsayılan boyut ve animasyon */
+.toggle-heart {
+  font-size: 18px; /* boyutu */
+  transition: transform 0.2s ease, color 0.2s ease; /* Hover ve renk geçişleri için */
+}
+
+/* Üzerine gelince hafif büyüsün */
+.toggle-container:hover .toggle-heart, 
+.toggle-container:hover .toggle-compare,
+.toggle-container:hover .toggle-share {
+  transform: scale(1.2); /* Hafif büyütme */
+}
+
+.toggle-heart:active,.toggle-compare:active,.toggle-share:active {
+  /* İkonun stilini değiştir */
+  animation: tappingAnim 0.8s ease-in-out; /* Animasyon */
+}
+.toggle-heart:focus {
+  color: red; /* Yeni renk */
+  transform: scale(1.2); /* Büyütme */
+}
+
+/* Tıklayınca kırmızı olsun */
+.toggle-heart.red {
+  color: red;
+}
+
+.toggle-compare {
+  user-select: none;
+  font-size: 18px; /* boyutu */
+  transition: transform 0.2s ease, color 0.2s ease; /* Hover ve renk geçişleri için */
+}
+.toggle-compare:focus{
+  color: green;
+}
+
+.toggle-compare.green {
+  color: green;
+}
+.toggle-share {
+  user-select: none;
+  font-size: 18px; /* boyutu */
+  transition: transform 0.2s ease, color 0.2s ease; /* Hover ve renk geçişleri için */
+}
+.toggle-share:focus {
+  color: orange;
+}
+.toggle-share.orange {
+  color: orange;
+}
+
+
+@keyframes tappingAnim {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+
+/* ----------------------------------------------------------------------------------- */
+
+.rating-stars {
+  color: #ffc107;
+}
+
+.badge {
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
 
 /*Section 4 */
-.contact-section {
+#contact-section {
   text-align: center;
   padding: 50px 20px;
   background-color: #ffffff;
 }
-.contact-section a {
+
+#contact-section a {
   color: #007bff;
   text-decoration: none;
   font-weight: bold;
 }
-.contact-section a:hover {
+
+#contact-section a:hover {
   text-decoration: underline;
+}
+
+
+
+/* Filtreleme Css */
+
+/* Form etiketlerinin stilini özelleştiriyoruz. */
+.form-label {
+  font-weight: bold;
+  border: 2px solid #c8c8ca;
+  padding: 6px;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  background-color: white;
+}
+
+/* Mesafe slider'ının değerini ortalamak için stil tanımlıyoruz. */
+.slider-value {
+  text-align: center;
+  margin-top: -10px;
+}
+
+/* Input grup etiketlerinin stilini ayarlıyoruz. */
+.input-group-text {
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+}
+
+/* Yıldızlı checkbox için stil tanımlıyoruz. */
+.star-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: medium;
+  margin-bottom: 1px;
+}
+
+/* Yıldız simgelerinin rengini sarı yapıyoruz. */
+.star {
+  color: yellow;
+  font-size: 30px;
+}
+
+/* Checkbox'ların ortalanması için stil tanımlıyoruz. */
+.center-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Mobil cihazlarda form etiketlerinin font boyutunu küçültüyoruz. */
+@media (max-width: 768px) {
+  .form-label {
+    font-size: 14px;
+    padding: 8px;
+  }
 }
 
 
@@ -291,13 +462,16 @@ footer a:hover {
 /* Hakkımızda sayfası */
 .breadcumps {
   text-align: left;
-  width: 60%; /* Genişlik, isteğe bağlı ayarlanabilir */
+  width: 60%;
+  /* Genişlik, isteğe bağlı ayarlanabilir */
   font-size: 20px;
   font-family: 'Inter Family';
 }
+
 .section {
   text-align: left;
-  width: 100%; /* Genişlik, isteğe bağlı ayarlanabilir */
+  width: 100%;
+  /* Genişlik, isteğe bağlı ayarlanabilir */
   font-size: 20px;
   font-family: 'Inter Family';
 }
@@ -305,7 +479,8 @@ footer a:hover {
 /*Kullanım sartlar sayfasi*/
 .container-page {
   text-align: left;
-  width: 60%; /* Genişlik, isteğe bağlı ayarlanabilir */
+  width: 60%;
+  /* Genişlik, isteğe bağlı ayarlanabilir */
   font-size: 20px;
   font-family: 'Inter Family';
 }

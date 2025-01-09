@@ -1,194 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karşılaştırma Listesi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-         .card {
-            border: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        .card img {
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
-
-        .card-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        .badge {
-            font-size: 0.9rem;
-        }
-
-        .features {
-            font-size: 0.9rem;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.5rem;
-        }
-
-        .features a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .features a:hover {
-            text-decoration: underline;
-        }
-
-        .btn {
-            background-color: #007bff;
-            color: #fff;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="/SaglikPusulam/css/style.css">
 </head>
+
 <body>
 
-<div class="container mt-5">
-    <h2 class="mb-4">Karşılaştırma Listesi</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <!-- Kart 1 -->
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Optometri">
-                <div class="card-body">
-                    <span class="badge bg-success mb-2">Açık</span>
-                    <h5 class="card-title">Optometri</h5>
-                    <div class="mb-2">
-                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span>(260)</span>
+    <div class="container mt-5">
+        <h2 class="mb-4">Karşılaştırma Listesi</h2>
+
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+            <div class="col">
+                <div class="card h-100 sc1-card">
+                    <img src="/SaglikPusulam/assets/img/300x200.png" class="card-img-top" alt="Optometri">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-success"><i class="bi bi-circle-fill me-1"></i>Açık</span>
+                            <div>
+                                <i class="bi bi-heart me-2"></i>
+                                <i class="bi bi-shuffle me-2"></i>
+                                <i class="bi bi-share"></i>
+                            </div>
+                        </div>
+                        <h5 class="card-title">Optometri</h5>
+                        <div class="mb-2">
+                            <span class="rating-stars">★★★★★</span>
+                            <span>(260)</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nibh ut massa.</p>
+                        <div class="features">
+                            <div><i class="bi bi-telephone"></i><a href="tel:+901234567890">Telefon Numarası</a></div>
+                            <div><i class="bi bi-globe"></i><a href="https://example.com" target="_blank">Web Sitesi</a>
+                            </div>
+                            <div><i class="bi bi-clock"></i><a href="#">Çalışma Saati</a></div>
+                            <div><i class="bi bi-geo-alt"></i><a href="#">Adres Bilgisi</a></div>
+                        </div>
+                        <button class="btn details-button w-100 mt-3">Detaylar</button>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nibh ut massa.</p>
-                    <div class="features">
-                        <a href="#"><i class="bi bi-telephone me-2"></i>Telefon Numarası</a>
-                        <a href="#"><i class="bi bi-globe me-2"></i>Web Sitesi</a>
-                        <a href="#"><i class="bi bi-clock me-2"></i>Çalışma Saati</a>
-                        <a href="#"><i class="bi bi-geo-alt me-2"></i>Adres Bilgisi</a>
-                    </div>
-                    <button class="btn w-100 mt-3">Detaylar</button>
                 </div>
             </div>
+
+            <div class="col">
+                <div class="card h-100 sc1-card">
+                    <img src="/SaglikPusulam/assets/img/300x200.png" class="card-img-top" alt="Odyoloji">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-success"><i class="bi bi-circle-fill me-1"></i>Açık</span>
+                            <div>
+                                <i class="bi bi-heart me-2"></i>
+                                <i class="bi bi-shuffle me-2"></i>
+                                <i class="bi bi-share"></i>
+                            </div>
+                        </div>
+                        <h5 class="card-title">Odyoloji</h5>
+                        <div class="mb-2">
+                            <span class="rating-stars">★★★★☆</span>
+                            <span>(198)</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nibh ut massa.</p>
+                        <div class="features">
+                            <div><i class="bi bi-telephone"></i><a href="tel:+901234567891">Telefon Numarası</a></div>
+                            <div><i class="bi bi-globe"></i><a href="https://example.com" target="_blank">Web Sitesi</a>
+                            </div>
+                            <div><i class="bi bi-clock"></i><a href="#">Çalışma Saati</a></div>
+                            <div><i class="bi bi-geo-alt"></i><a href="#">Adres Bilgisi</a></div>
+                        </div>
+                        <button class="btn details-button w-100 mt-3">Detaylar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 sc1-card">
+                    <img src="/SaglikPusulam/assets/img/300x200.png" class="card-img-top" alt="Diyetisyen">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger"><i class="bi bi-circle-fill me-1"></i>Kapalı</span>
+                            <div>
+                                <i class="bi bi-heart me-2"></i>
+                                <i class="bi bi-shuffle me-2"></i>
+                                <i class="bi bi-share"></i>
+                            </div>
+                        </div>
+                        <h5 class="card-title">Diyetisyen</h5>
+                        <div class="mb-2">
+                            <span class="rating-stars">★★★★☆</span>
+                            <span>(214)</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nibh ut massa.</p>
+                        <div class="features">
+                            <div><i class="bi bi-telephone"></i><a href="tel:+901234567892">Telefon Numarası</a></div>
+                            <div><i class="bi bi-globe"></i><a href="https://example.com" target="_blank">Web Sitesi</a>
+                            </div>
+                            <div><i class="bi bi-clock"></i><a href="#">Çalışma Saati</a></div>
+                            <div><i class="bi bi-geo-alt"></i><a href="#">Adres Bilgisi</a></div>
+                        </div>
+                        <button class="btn details-button w-100 mt-3">Detaylar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 sc1-card">
+                    <img src="/SaglikPusulam/assets/img/300x200.png" class="card-img-top" alt="Diş Hekimliği">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-success"><i class="bi bi-circle-fill me-1"></i>Açık</span>
+                            <div>
+                                <i class="bi bi-heart me-2"></i>
+                                <i class="bi bi-shuffle me-2"></i>
+                                <i class="bi bi-share"></i>
+                            </div>
+                        </div>
+                        <h5 class="card-title">Diş Hekimliği</h5>
+                        <div class="mb-2">
+                            <span class="rating-stars">★★★★★</span>
+                            <span>(220)</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nibh ut massa.</p>
+                        <div class="features">
+                            <div><i class="bi bi-telephone"></i><a href="tel:+901234567893">Telefon Numarası</a></div>
+                            <div><i class="bi bi-globe"></i><a href="https://example.com" target="_blank">Web Sitesi</a>
+                            </div>
+                            <div><i class="bi bi-clock"></i><a href="#">Çalışma Saati</a></div>
+                            <div><i class="bi bi-geo-alt"></i><a href="#">Adres Bilgisi</a></div>
+                        </div>
+                        <button class="btn details-button w-100 mt-3">Detaylar</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Kart 2 -->
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Odyoloji">
-                <div class="card-body">
-                    <span class="badge bg-success mb-2">Açık</span>
-                    <h5 class="card-title">Odyoloji</h5>
-                    <div class="mb-2">
-                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> <span>(198)</span>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nibh ut massa.</p>
-                    <div class="features">
-                        <a href="#"><i class="bi bi-telephone me-2"></i>Telefon Numarası</a>
-                        <a href="#"><i class="bi bi-globe me-2"></i>Web Sitesi</a>
-                        <a href="#"><i class="bi bi-clock me-2"></i>Çalışma Saati</a>
-                        <a href="#"><i class="bi bi-geo-alt me-2"></i>Adres Bilgisi</a>
-                    </div>
-                    <button class="btn w-100 mt-3">Detaylar</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Kart 3 -->
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Diyetisyen">
-                <div class="card-body">
-                    <span class="badge bg-success mb-2">Açık</span>
-                    <h5 class="card-title">Diyetisyen</h5>
-                    <div class="mb-2">
-                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9734;</span> <span>(214)</span>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nibh ut massa.</p>
-                    <div class="features">
-                        <a href="#"><i class="bi bi-telephone me-2"></i>Telefon Numarası</a>
-                        <a href="#"><i class="bi bi-globe me-2"></i>Web Sitesi</a>
-                        <a href="#"><i class="bi bi-clock me-2"></i>Çalışma Saati</a>
-                        <a href="#"><i class="bi bi-geo-alt me-2"></i>Adres Bilgisi</a>
-                    </div>
-                    <button class="btn w-100 mt-3">Detaylar</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Kart 4 -->
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Diş Hekimliği">
-                <div class="card-body">
-                    <span class="badge bg-success mb-2">Açık</span>
-                    <h5 class="card-title">Diş Hekimliği</h5>
-                    <div class="mb-2">
-                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span>(220)</span>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nibh ut massa.</p>
-                    <div class="features">
-                        <a href="#"><i class="bi bi-telephone me-2"></i>Telefon Numarası</a>
-                        <a href="#"><i class="bi bi-globe me-2"></i>Web Sitesi</a>
-                        <a href="#"><i class="bi bi-clock me-2"></i>Çalışma Saati</a>
-                        <a href="#"><i class="bi bi-geo-alt me-2"></i>Adres Bilgisi</a>
-                    </div>
-                    <button class="btn w-100 mt-3">Detaylar</button>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Diş Hekimliği">
-                <div class="card-body">
-                    <span class="badge bg-success mb-2">Açık</span>
-                    <h5 class="card-title">Diş Hekimliği</h5>
-                    <div class="mb-2">
-                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span>(220)</span>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nibh ut massa.</p>
-                    <div class="features">
-                        <a href="#"><i class="bi bi-telephone me-2"></i>Telefon Numarası</a>
-                        <a href="#"><i class="bi bi-globe me-2"></i>Web Sitesi</a>
-                        <a href="#"><i class="bi bi-clock me-2"></i>Çalışma Saati</a>
-                        <a href="#"><i class="bi bi-geo-alt me-2"></i>Adres Bilgisi</a>
-                    </div>
-                    <button class="btn w-100 mt-3">Detaylar</button>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Diş Hekimliği">
-                <div class="card-body">
-                    <span class="badge bg-success mb-2">Açık</span>
-                    <h5 class="card-title">Diş Hekimliği</h5>
-                    <div class="mb-2">
-                        <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span>(220)</span>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nibh ut massa.</p>
-                    <div class="features">
-                        <a href="#"><i class="bi bi-telephone me-2"></i>Telefon Numarası</a>
-                        <a href="#"><i class="bi bi-globe me-2"></i>Web Sitesi</a>
-                        <a href="#"><i class="bi bi-clock me-2"></i>Çalışma Saati</a>
-                        <a href="#"><i class="bi bi-geo-alt me-2"></i>Adres Bilgisi</a>
-                    </div>
-                    <button class="btn w-100 mt-3">Detaylar</button>
-                </div>
-            </div>
-        </div>
     </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 </body>
+
 </html>
