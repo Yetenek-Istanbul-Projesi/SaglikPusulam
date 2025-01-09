@@ -836,3 +836,17 @@ color: red;
 .details-main .like-compare i:hover {
   color: #007bff;
 }
+
+/* Profile Güvenlik*/
+
+.security-form-text{
+  margin-top: 10px;
+}
+.security-form-input{
+
+background-color: #f5f5f5;
+border: none;
+height: 40px;
+border-radius: 8px;
+margin-top: 10px;
+}
