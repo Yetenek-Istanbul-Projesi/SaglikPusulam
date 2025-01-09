@@ -613,28 +613,30 @@ footer a:hover {
     .favorite ul li {
       list-style-type: none;
       display: flex;
-  }
+    }
 
-  .favorite .div-style {
-      border-style: outset;
-      padding-bottom: 15px;
-  }
+    .favorite .div-style {
+        border-style: outset;
+        padding-bottom: 15px;
+    }
 
-  .favorite .icon {
-      width: 35px;
-      height: 35px;
-  }
+    .favorite .icon {
+        width: 35px;
+        height: 35px;
+    }
 
-  .favorite .cdn{
-      font-size: 35px;
-  }
+    .favorite .cdn{
+        font-size: 35px;
+    }
 
-  .favorite a:visited {
-color: black;
-}
-.favorite a:active{
-color:red;
-}
-.favorite a:link {
-color: red;
-}
+    .favorite a:visited {
+      color: black;
+      }
+
+    .favorite a:active{
+      color:red;
+      }
+      
+    .favorite a:link {
+      color: red;
+      }
