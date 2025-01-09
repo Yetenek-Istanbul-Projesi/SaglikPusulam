@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <link rel="stylesheet" href="/SaglikPusulam/css/style.css">
+
 </head>
 
 <body>
 
-  <!--header-->
+     <!--header-->
   <header>
     <nav class="navbar navbar-expand-lg bg-body-white p-4" style="border-bottom: 5px solid hsla(0, 0%, 80%, 0.2);">
       <div class="container-fluid mb-3">
@@ -52,136 +49,80 @@
     </nav>
   </header>
 
-  <main> <!--İçerik Kısmı-->
 
-    <section id="features">
-      <div class="container-fluid py-5">
+  <section>
+    <div class="section-photo"   > 
+    <img src="/SaglikPusulam/assets/img/banner_photo.jpg" alt="" style="margin: 30px 10px 50px 10px; width: 1400%;">
+    </div>
+  </section>
 
-        <div class="row justify-content-center">
+  <main>
+    <div class="container d-flex justify-content-center">
+      <!-- Login formu container'ı - minimum ve maximum genişlik sınırlaması -->
+      <div style="min-width: 400px; max-width: 1000px;">
+        <div class="p-5">
+          <!-- Form başlığı -->
+          <h2 class="text-center text-primary fw-bold mb-4" style="margin: 50px 0px 80px 0px;">İletişim</h2>
+          <form>
 
-          <div class="col-10">
-            <div class="row row-cols-1 row-cols-md-5 g-4 section2-cards">
-              <!-- Kart 1 -->
-
-              <div class="col">
-
-                <div class="card h-100">
-
-                  <img src="/SaglikPusulam/assets/img/HizmetiBul.png" class="card-img-top" alt="...">
-
-                  <div class="card-body text-center">
-
-                    <h5 class="card-title">Hizmeti Bul</h5>
-
-                    <p class="card-text">Çevrenizdeki en iyi sağlık hizmetini kolayca keşfedin</p>
-
-                  </div>
-
-                </div>
-
+            <!-- E-mail input  -->
+            <div class="mb-3">
+                <label for="emailPhone" class="form-label" style="margin-top: 70px;">Ad - Soyad</label>
+                <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="emailPhone"
+                  placeholder="Ad - Soyad" style="height: 50px; width: 500px; margin-bottom: 20px;">
               </div>
 
-
-
-              <!-- Kart 2 -->
-
-              <div class="col">
-                <div class="card h-100">              
-                  <img src="/SaglikPusulam/assets/img/detaylaraBak.png" class="card-img-top" alt="...">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Detaylara Bak</h5>
-                    <p class="card-text">Sağlık hizmetlerinin hizmet detaylarını, yorumlarını ve konum
-                      bilgilerini inceleyin</p>    
-                  </div>
-                </div>   
-              </div>
-
-              <!-- Kart 3 -->
-
-              <div class="col">
-
-                <div class="card h-100">
-
-                  <img src="/SaglikPusulam/assets/img/iletisimeGec.png" class="card-img-top" alt="...">
-
-                  <div class="card-body text-center">
-
-                    <h5 class="card-title">İletişime Geçin</h5>
-
-                    <p class="card-text">Sağlık hizmetleriyle hızlıca iletişim kurabileceğiniz bilgileri
-                      bulun. </p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-
-
-              <!-- Kart 4 -->
-
-              <div class="col">
-
-                <div class="card h-100">
-
-                  <img src="/SaglikPusulam/assets/img/HizmetleriKarsılastırn.png" class="card-img-top" alt="...">
-
-                  <div class="card-body text-center">
-
-                    <h5 class="card-title">Hizmetleri Karşılaştırın</h5>
-
-                    <p class="card-text">Sağlık hizmetlerinin sunduğu hizmetleri kıyaslayarak en iyi seçimi
-                      yapın.</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-
-
-              <!-- Kart 5 -->
-
-              <div class="col">
-
-                <div class="card h-100">
-
-                  <img src="/SaglikPusulam/assets/img/gorüsBildir.png" class="card-img-top" alt="...">
-
-                  <div class="card-body text-center">
-
-                    <h5 class="card-title">Görüş Bildir</h5>
-
-                    <p class="card-text">Sağlık hizmetleri hakkında deneyimlerinizi ve yorumlarınızı
-                      paylaşarak görüşlerinizi bildirebilirsiniz.</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
+            <!-- E-mail input  -->
+            <div class="mb-3">
+              <label for="emailPhone" class="form-label" style="margin-top: 20px;">E-mail</label>
+              <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="emailPhone"
+                placeholder="E-mail" style="height: 50px; margin-bottom: 20px;">
             </div>
 
-          </div>
+            <!-- Mesaj input -->
+            <div class="mb-3">
+              <label for="password" class="form-label" style="margin-top: 20px; text-align: right;">Mesaj</label>
+              <input class="form-control border-0 bg-secondary-subtle  w-100"
+                id="password" placeholder="Mesaj" style="height: 200px;">
+            </div>
 
+            <!-- Gönder butonu
+                         w-100: Tam genişlik -->
+            <button type="submit" class="btn btn-primary w-100 mb-3" style="margin-top: 30px; height: 50px;">Gönder</button>
+            
+          </form>
         </div>
-
       </div>
-    </section>
-    <section class="contact-section">
-      <div class="container">
-          <i class="bi bi-chat-dots" style="font-size: 40px; color: #007bff;"></i>
-          <h2>Yardıma İhtiyacınız mı Var?</h2>
-          <p>Sorularınız varsa müşteri destek ekibimizle iletişime geçin.<br>Sizlere yardımcı olmaya hazırız.</p>
-          <a href="mailto:support@example.com">Mail Göndermek İstiyorum</a>
-      </div>
-  </section>
+    </div>
   </main>
 
-  <!--footer-->
+    <!-- Bize ulaşın mesajının alanı. -->
+    <section2>
+        <div class="section-2" style="position: relative; display: inline-block;">
+            <img src="/SaglikPusulam/assets/img/Rectangle 86.png" alt="" >
+            <p class="overlay-text">Soru ve sorunlarınız için saglikpusulam@gov.tr adresimizi kullanarak bize ulaşabilirsiniz.</p>
+        </div>
+    </section2>
+
+    <style>
+        .section-2 {
+            position: relative;
+            display: flex;
+            width: 1500%;
+        }
+        .overlay-text {
+            position: absolute;
+            top: 50%; /* Yükseklik olarak ortalayalım */
+            left: 50%; /* Enleme olarak ortalayalım */
+            transform: translate(-50%, -50%); /* Tam ortada görmek için */
+            color: rgb(0, 0, 0); /* Yazının rengi */
+            font-size: 18px; /* Yazı boyutu */
+            text-align: center; /* Yazıyı ortalayalım */
+            z-index: 1; /* Yazının görsel olarak ön planda olması için */
+        }
+    </style>
+
+    <!--footer-->
   <footer style="background-color:#3465FD;">
     <div class="container-fluid">
       <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
@@ -261,11 +202,5 @@
     </div>
   </footer>
 
-  <!-- Hem js hem js bağımlılıklarını (popper vs) yükler. -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-
 </body>
-
 </html>
