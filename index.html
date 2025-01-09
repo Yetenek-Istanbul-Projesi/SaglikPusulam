@@ -38,11 +38,17 @@
           <!-- Align Home and Pricing to the right -->
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
             <li class="nav-item">
-              <a class="nav-link fw-bold text-dark" href="#">Ana Sayfa</a>
+              <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/index.html">Ana Sayfa</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold text-dark" href="#">Hakkımızda</a>
+              <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/hakkimizda.html">Hakkımızda</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/iletisim.html">İletişim</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/sss.html">SSS</a>
+              </li>
             <img src="/SaglikPusulam/assets/img/user-icon.jpg" width="50px;" height="50px" style="opacity: 0.9;">
             <button type="button" class="btn btn-primary rounded-4 shadow">Hemen Katılın</button>
           </ul>
@@ -53,6 +59,91 @@
 
   <main> <!--İçerik Kısmı-->
 
+     <!-- AnaSayfa Section 1 - Ana arama bölümü -->
+    <!--height: 1000px kullanarak sabit yükseklik belirlendi -->
+    <section class="position-relative" style="height: 1000px;">
+      <!-- Arka plan resmi container'ı 
+               position-absolute: Resmi diğer içeriklerin arkasına konumlandırır
+               z-index: 1: Resmi en arkada tutar -->
+      <div class="position-absolute w-100" style="z-index: 1; height: 1000px;">
+          <!-- Arka plan resmi 
+                   object-fit: fill: Resmi container'a tam sığdırır
+                   w-100 h-100: Genişlik ve yüksekliği %100 yapar -->
+          <img src="/SaglikPusulam/assets/img/Ana Sayfa Section_foto_remake.png" 
+               class="w-100 h-100" 
+               style="object-fit: fill;" 
+               alt="Sağlık Arkaplan">
+      </div>
+       <!-- Arama formu container'ı
+               position-relative: İçerikleri resmin üzerine konumlandırır
+               z-index: 2: Formu resmin önünde tutar -->
+      <div class="position-relative d-flex align-items-center" style="z-index: 2; height: 100%;">
+          <div class="container-fluid px-4">
+              <div class="row">
+                  <div class="col-12 col-md-8 col-lg-6">
+                      <form>
+                          <div class="mb-5">
+                              <h1 class="text-primary">Çevrendeki En İyi Hasaneyi Bul</h1>
+                              <h3 class="text-secondary">Sağlık hizmetleri arasında tercihini yap</h3>
+                          </div>
+
+
+                          <!-- Arama kutuları ve buton container'ı
+                                   flex-column: Mobilde alt alta sıralar
+                                   flex-md-row: Tablet ve üstünde yan yana sıralar -->
+                          <div class="d-flex flex-column flex-md-row gap-3">
+                              <!-- İlk arama kutusu container'ı -->
+                              <div class="position-relative flex-grow-1">
+                                  <!-- Sol taraftaki arama ikonu -->
+                                  <i class="bi bi-search position-absolute" 
+                                     style="left: 15px; top: 50%; transform: translateY(-50%); color: #6c757d;"></i>
+                                  <input type="text" 
+                                         class="form-control px-5" 
+                                         placeholder="Sağlık Hizmeti Seçin"
+                                         style="height: 45px;">
+                                  <button type="button" 
+                                          class="btn position-absolute" 
+                                          style="right: 2px; top: 50%; transform: translateY(-50%); border: none; background: none;">
+                                      <img src="/SaglikPusulam/assets/img/Group.png" 
+                                           alt="" 
+                                           style="width: 35px; height: 35px;">
+                                  </button>
+                              </div>
+
+                              <!-- İkinci arama kutusu container'ı (Yapı aynı) -->
+                              <div class="position-relative flex-grow-1">
+                                  <i class="bi bi-search position-absolute" 
+                                     style="left: 15px; top: 50%; transform: translateY(-50%); color: #6c757d;"></i>
+                                  <input type="text" 
+                                         class="form-control px-5" 
+                                         placeholder="Şehir Seçin"
+                                         style="height: 45px;">
+                                  <button type="button" 
+                                          class="btn position-absolute" 
+                                          style="right: 2px; top: 50%; transform: translateY(-50%); border: none; background: none;">
+                                      <img src="/SaglikPusulam/assets/img/Group.png" 
+                                           alt="" 
+                                           style="width: 35px; height: 35px;">
+                                  </button>
+                              </div>
+
+
+                              <!-- Arama butonu
+                              d-flex ve align-items-center: İkon ve metni ortalar
+                              gap-2: İkon ve metin arasında boşluk bırakır -->
+                              <button type="submit" 
+                                      class="btn btn-primary d-flex align-items-center justify-content-center gap-2"
+                                      style="width: 80px; height: 45px;">
+                                  <i class="bi bi-search"></i>
+                                  Ara
+                              </button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
     <section id="features">
       <div class="container-fluid py-5">
 
@@ -345,9 +436,13 @@
             </svg>
           </a>
 
-          <h6><a class="navbar-brand no-style" href="#" style="color: white !important;"><b>Sağlık</b>Pusulam</a></h6>
+          <div style="display: flex; align-items: center;">
+            <img src="/SaglikPusulam/assets/img/Footer_logo.svg" alt="Logo" style="width: 60px; height: 55px; margin-right: 10px;"> <!--Footer logo-->
+            <h6><a class="navbar-brand no-style" href="#" style="color: white !important;"><b>Sağlık</b>Pusulam</a></h6>
+          </div>
+          
 
-          <!-- <h5 style="color: white;">Sağlık Pusulam</h5> -->
+         
         </div>
 
         <div class="col mb-3">
@@ -356,9 +451,9 @@
         <div class="col mb-3">
           <h6 style="color: white;">KURUMSAL</h6>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="index.html" style="color: white; text-decoration: none;">Ana Sayfa</a>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/index.html" style="color: white; text-decoration: none;">Ana Sayfa</a>
             </li>
-            <li class="nav-item mb-2"><a href="#" style="color: white; text-decoration: none;">Hakkımızda</a></li>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/hakkimizda.html" style="color: white; text-decoration: none;">Hakkımızda</a></li>
           </ul>
         </div>
 
@@ -380,17 +475,19 @@
             </li></br>
             </li>
 
-            <li class="nav-item mb-2" style="text-align: left;"> <!-- Hiza için text-align kullanıyoruz -->
+            <li class="nav-item mb-2" style="text-align: left;"> 
               <h6 style="color: white; text-decoration: none; text-align: left;">BİZİ TAKİP EDİN</h6>
 
               <!-- Simgelerin yer aldığı listeyi sola hizalamak için flex kullanıyoruz -->
               <div class="d-flex justify-content-start align-items-center gap-3">
-                <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_linkedin.png" alt="linkedin"
+                <a href="https://www.linkedin.com/" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_linkedin.png" alt="linkedin"
                     style="width: 30px; height: 30px;"></a>
-                <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_twitter.png" alt="twitter"
+                <a href="https://x.com/" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_twitter.png" alt="twitter"
                     style="width: 30px; height: 30px;"></a>
                 <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/line-md_facebook.png"
                     alt="facebook" style="width: 30px; height: 30px;"></a>
+                <a href="https://www.facebook.com/" class="hover-effect"><img src="/SaglikPusulam/assets/img/line-md_facebook.png" alt="facebook"
+                    style="width: 30px; height: 30px;"></a>
               </div>
             </li>
             <br>
@@ -398,14 +495,11 @@
         </div>
 
         <div style="width: 100%;">
-          <p style="color: white;">İş bu sayfada yer alan yorumlar, ilgilİ doktorun doğrudan veya dolaylı emri, talebi
-            ve/veya ricası olmaksızın, ilgili hasta tarafından bağımsız olarak yazılmaktadır. Bu web sitesinin temel
-            amacı sağlık
-            alanında kamuoyunun daha iyi bilgilenmesi sağlamaktır.</p>
+          <p style="color: white;">İş bu sayfada yer alan yorumlar, ilgilİ doktorun doğrudan veya dolaylı emri, talebi ve/veya ricası olmaksızın, ilgili hasta tarafından bağımsız olarak yazılmaktadır. Bu web sitesinin temel amacı sağlıkalanında kamuoyunun daha iyi bilgilenmesi sağlamaktır.</p>
           <hr>
           <div class="d-flex justify-content-start">
-            <a href="#" class="link-style fw-medium me-3" style="color: white;">Kullanım koşulları</a>
-            <a href="#" class="link-style fw-medium" style="color: white;">KVKK</a>
+            <a href="/SaglikPusulam/pages/kullanim-sartlari.html" class="link-style fw-medium me-3" style="color: white;">Kullanım şartları</a>
+            <a href="/SaglikPusulam/pages/kvkk.html" class="link-style fw-medium" style="color: white;">KVKK</a>
           </div>
         </div>
       </footer>
