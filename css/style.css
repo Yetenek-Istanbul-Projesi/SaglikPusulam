@@ -21,8 +21,19 @@ body {
   height: 100%;
   width: 100%;
   font-family: 'Inter Family';
-}
 
+}
+/* 
+   Sayfa Arka Planı
+  */
+main{ 
+  background-image: url('/SaglikPusulam/assets/img/medical-pattern.png');
+  background-size: 150px;
+  background-repeat: repeat;
+  background-color: rgba(245, 247, 250, 0.95);
+  background-blend-mode: overlay;
+  position: relative;
+}
 img {
   max-width: 100%;
   /* Resimler ekran genişliğine göre ölçeklendir */
@@ -460,7 +471,7 @@ footer a:hover {
 }
 
 /* Hakkımızda sayfası */
-.breadcumps {
+.about-us-title {
   text-align: left;
   width: 60%;
   /* Genişlik, isteğe bağlı ayarlanabilir */
@@ -497,7 +508,7 @@ footer a:hover {
   max-width: 100%;
   margin: 0 auto;
   padding: 100px;
-  padding-top: 110px;
+  padding-top: 50px;
   text-align: center;
   font-family: 'Inter Family';
 }
@@ -1124,10 +1135,6 @@ color: red;
 
 /* Sıkça Sorulan Sorular */
 
-.faq-main {
-  padding: 1rem;
-}
-
 .faq-section {
   max-width: 800px;
   margin: 0 auto;
@@ -1170,4 +1177,22 @@ color: red;
   margin-top: 0.5rem;
   font-size: 12px;
   border-radius: 5px;
+}
+
+/* Contact Form */
+
+.contact-info {
+  position: relative;
+  display: flex;
+  width: 1500%;
+}
+.contact-info .overlay-text {
+  position: absolute;
+  top: 50%; /* Yükseklik olarak ortalayalım */
+  left: 50%; /* Enleme olarak ortalayalım */
+  transform: translate(-50%, -50%); /* Tam ortada görmek için */
+  color: rgb(0, 0, 0); /* Yazının rengi */
+  font-size: 18px; /* Yazı boyutu */
+  text-align: center; /* Yazıyı ortalayalım */
+  z-index: 1; /* Yazının görsel olarak ön planda olması için */
 }
