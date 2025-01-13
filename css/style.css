@@ -354,7 +354,7 @@ footer a:hover {
 /* Filtreleme Css */
 
 /* Form etiketlerinin stilini özelleştiriyoruz. */
-.form-search {
+.form-label {
   font-weight: bold;
   border: 2px solid #c8c8ca;
   padding: 6px;
@@ -402,7 +402,7 @@ footer a:hover {
 
 /* Mobil cihazlarda form etiketlerinin font boyutunu küçültüyoruz. */
 @media (max-width: 768px) {
-  .form-search {
+  .form-label {
     font-size: 14px;
     padding: 8px;
   }

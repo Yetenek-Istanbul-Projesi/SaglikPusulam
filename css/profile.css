@@ -49,16 +49,10 @@ input[type="text"] {
 
 /* Section öğesini sağa yaslamak için */
 #right-content {
-    margin-top: 40px;
-    /* Yarı genişlik */
-    /* Sağdan sıfır boşluk */
-    text-align: left;
-    /* İçeriği sola yasla */
-    padding: 10px;
-    border: 1px solid white;
-    /* Kenarlık */
-    border-radius: 5px;
-    /* Köşe yuvarlama */
+    margin-top: 175px;
+  
+   
+  
 }
 
 /*Profile Index.Html */

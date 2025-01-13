@@ -18,14 +18,3 @@ function toggleShare(element) {
 }
 
 
-/* Mesafe Siliderı*/ 
- 
-function filterDistance(){
-    // Mesafe slider'ı için dinamik değer güncelleme
-    const rangeInput = document.getElementById('distanceRange');
-    const rangeValue = document.getElementById('rangeValue');
-
-    rangeInput.addEventListener('input', () => {
-      rangeValue.textContent = `${rangeInput.value}km`;
-    });
-}
