@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-css/1.4.6/select2-bootstrap.min.css'>
+<style>
+    body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+ 
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+ 
+/* Custom page header */
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+ 
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+ 
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+ 
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+ 
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+</style>
+</head>
+<body>
+    <form class="form-horizontal">
+        <div class="form-group">
+          <label for="type" class="col-sm-5 control-label">I'd like to ride</label>   
+          <div class="col-sm-5">
+            <select name="type" id="type" class="form-control">
+              <option>--Select your ride--</option>
+              <option value="animals">Animal</option>
+              <option value="vehicles">Vehicle</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subtype" class="col-sm-5 control-label">More specifically</label>       
+          <div class="col-sm-5">
+            <select name="subtype" id="subtype"  class="form-control" style="display: none;">
+                <option>-- Select type first--</option>
+            </select>
+   </div>
+</div>         
+</form>        
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js'></script>
+<script>
+    /**
+ * A Javascript module to loadeding/refreshing options of a select2 list box using ajax based on selection of another select2 list box.
+ * 
+ * @url : https://gist.github.com/ajaxray/187e7c9a00666a7ffff52a8a69b8bf31
+ * @auther : Anis Uddin Ahmad <anis.programmer@gmail.com>
+ * 
+ * Live demo - https://codepen.io/ajaxray/full/oBPbQe/
+ * w: http://ajaxray.com | t: @ajaxray
+ */
+var Select2Cascade = ( function(window, $) {
+ 
+ function Select2Cascade(parent, child, url, select2Options) {
+     var afterActions = [];
+     var options = select2Options || {};
+
+     // Register functions to be called after cascading data loading done
+     this.then = function(callback) {
+         afterActions.push(callback);
+         return this;
+     };
+
+     parent.select2(select2Options).on("change", function (e) {
+
+         child.prop("disabled", true);
+
+         var _this = this;
+         $.getJSON(url.replace(':parentId:', $(this).val()), function(items) {
+             var newOptions = '<option value="">-- Select --</option>';
+             for(var id in items) {
+                 newOptions += '<option value="'+ id +'">'+ items[id] +'</option>';
+             }
+
+             child.select2('destroy').html(newOptions).prop("disabled", false)
+                 .select2(options);
+             
+             afterActions.forEach(function (callback) {
+                 callback(parent, child, items);
+             });
+         });
+     });
+ }
+
+ return Select2Cascade;
+
+})( window, $);
+
+$(document).ready(function() {
+ var select2Options = { width: 'resolve' };
+ // Loading raw JSON files 
+ var apiUrl =  'https://jsonplaceholder.typicode.com/users'; 
+ 
+ $('select').select2(select2Options);                 
+ var cascadLoading = new Select2Cascade($('#type'), $('#subtype'), apiUrl, select2Options);
+ cascadLoading.then( function(parent, child, items) {
+     // Dump response data
+     console.log(items);
+ });
+});
+</script>
+</body>
+</html>
