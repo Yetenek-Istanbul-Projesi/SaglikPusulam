@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Arama Sonuçları</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="/SaglikPusulam/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/SaglikPusulam/css/hover-min.css">
+        
+    
+    </head>
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-white p-4" style="border-bottom: 5px solid hsla(0, 0%, 80%, 0.2)">
+          <div class="container-fluid mb-3">
+            <img src="/SaglikPusulam/assets/img/LOGO.svg" width="70px;" height="70px" />
+            <a class="navbar-brand p-2 no-style" style="color: black" href="#"><b>Sağlık</b>Pusulam</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+              aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <!-- Align Home and Pricing to the right -->
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
+                <li class="nav-item">
+                  <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/index.html">Ana Sayfa</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/hakkimizda.html">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/iletisim.html">İletişim</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/sss.html">SSS</a>
+                </li>
+                <img src="/SaglikPusulam/assets/img/user-icon.jpg" width="50px;" height="50px" style="opacity: 0.9" />
+                <button type="button" class="btn btn-primary rounded-4 shadow">
+                  Hemen Katılın
+                </button>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <div class="p-4 mt-3" style="width: 100%; display: flex; flex-wrap: wrap;">
+          <!-- Filtreleme Bölümü -->
+          <div style="width: 100%; max-width: 300px; padding-right: 15px;">
+            <div class="container-fluid">
+              <div class="d-flex">
+                <!-- Navigation -->
+                <nav class="vh-100 overflow-auto">
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mt-5">
+                      <li class="breadcrumb-item"><a href="#">Ana Sayfa</a></li>
+                      <li class="breadcrumb-item"><a href="#">Sağlık Hizmetleri</a></li>
+                    </ol>
+                  </nav>
+      
+                  <!-- Filtreleme -->
+                  <div class="card p-4 border-0 bg-white">
+                    <!-- Puan -->
+                    <div class="mb-4">
+                      <label class="form-search">Puan</label>
+                      <div>
+                        <!-- Yıldızlı checkbox -->
+                        <div class="star-checkbox">
+                          <input type="checkbox">
+                          <span class="star">★</span>
+                        </div>
+                        <div class="star-checkbox">
+                          <input type="checkbox">
+                          <span class="star">★★</span>
+                        </div>
+                        <div class="star-checkbox">
+                          <input type="checkbox">
+                          <span class="star">★★★</span>
+                        </div>
+                        <div class="star-checkbox">
+                          <input type="checkbox">
+                          <span class="star">★★★★</span>
+                        </div>
+                        <div class="star-checkbox">
+                          <input type="checkbox">
+                          <span class="star">★★★★★</span>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <!-- Mesafe -->
+                    <div class="mb-4">
+                      <label class="form-search">Mesafe</label>
+                      <input type="range" class="form-range" id="distanceRange" min="1" max="10" step="1" value="3">
+                      <div class="slider-value">
+                        <span id="rangeValue">3km</span>
+                      </div>
+                    </div>
+      
+                    <!-- Hizmet Durumu -->
+                    <div class="mb-4">
+                      <label class="form-search">Hizmet Durumu</label>
+                      <div class="form-check center-checkbox">
+                        <input class="form-check-input" type="checkbox" id="serviceStatus">
+                        <label class="form-check-label ms-2" for="serviceStatus">Şuanda Açık</label>
+                      </div>
+                    </div>
+      
+                    <!-- Detaylı Filtreleme -->
+                    <div class="mb-4">
+                      <label class="form-search">Detaylı Filtreleme</label>
+      
+                      <!-- İl Seçiniz -->
+                      <div class="mb-3">
+                        <div class="input-group">
+                          <span class="input-group-text bg-white border-end-0"><i class="fa-solid fa-magnifying-glass"></i></span>
+                          <select class="form-select border-start-0">
+                            <option selected>İl Seçiniz</option>
+                            <option value="1">İstanbul</option>
+                            <option value="2">Ankara</option>
+                            <option value="3">İzmir</option>
+                          </select>
+                        </div>
+                      </div>
+      
+                      <!-- İlçe Seçiniz -->
+                      <div class="mb-3">
+                        <div class="input-group">
+                          <span class="input-group-text bg-white border-end-0"><i class="fa-solid fa-magnifying-glass"></i></span>
+                          <select class="form-select border-start-0">
+                            <option selected>İlçe Seçiniz</option>
+                            <option value="1">Kadıköy</option>
+                            <option value="2">Çankaya</option>
+                            <option value="3">Konak</option>
+                          </select>
+                        </div>
+                      </div>
+      
+                      <!-- Uzmanlık Seçiniz -->
+                      <div class="mb-3">
+                        <div class="input-group">
+                          <span class="input-group-text bg-white border-end-0"><i class="fa-solid fa-magnifying-glass"></i></span>
+                          <select class="form-select border-start-0">
+                            <option selected>Uzmanlık Seçiniz</option>
+                            <option value="1">Kardiyoloji</option>
+                            <option value="2">Dahiliye</option>
+                            <option value="3">Ortopedi</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Sağ Kısım -->
+          <div style="width: 100%; max-width: calc(100% - 300px);">
+            <p class="search-title">Arama Sonuçları</p>
+      
+            <!-- Kartlar -->
+            <!--1. Kart -->
+            <div class="row">
+              <div class="col-12 mb-4">
+                <div class="search-card">
+                  <div class="row g-0">
+                    <div class="col-md-3 pt-3 ps-3">
+                      <img src="/SaglikPusulam/assets/img/Memori.jpg" alt="Hospital Image" class="img-fluid">
+                    </div>
+                    <div class="col-md-9">
+                      <div class="card-body">
+                        <div class="row d-flex justify-content-end">
+                          <h5 class="card-title d-flex justify-content-center col-7" id="favori_name">Memorial</h5>
+                          <div class="no-style d-flex justify-content-end col-4 mt-2 gap-3">
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-solid fa-shuffle toggle-compare" onclick="toggleCompare(this)"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-regular fa-heart toggle-heart" onclick="toggleHeart(this)"></i>
+                            </a>
+                          </div>
+                        </div>
+      
+                        <div class="row">
+                          <div class="info-icons">
+                            <span><img src="/SaglikPusulam/assets/img/line-md_arrow-down-square.png" style="width: 30px;" alt=""> Kapalı</span>
+                            <span><img src="/SaglikPusulam/assets/img/mdi_address-marker.png" style="width: 30px;" alt=""> Adres</span>
+                            <span><img src="/SaglikPusulam/assets/img/bolumu.png" style="width: 30px;" alt=""> Bölümü</span>
+                            <div class="stars ms-auto">
+                              <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; (137 Değerlendirme)</span>
+                            </div>
+                          </div>
+                        </div>
+      
+                        <div class="row">
+                          <p class="card-text col-md-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam diam scelerisque eget a urna cursus ridiculus arcu.</p>
+                          <div class="actions col-md-3">
+                            <div class="btn-group-vertical">
+                              <button class="btn btn-outline-secondary mb-3" style="border-radius: 10px;">Detay</button>
+                              <button class="btn btn-outline-secondary" style="border-radius: 10px;">Randevu Al</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--2. Kart -->
+            <div class="row">
+                <div class="col-12 mb-4">
+                  <div class="search-card">
+                    <div class="row g-0">
+                      <div class="col-md-3 pt-3 ps-3">
+                        <img src="/SaglikPusulam/assets/img/Memori.jpg" alt="Hospital Image" class="img-fluid">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <div class="row d-flex justify-content-end">
+                            <h5 class="card-title d-flex justify-content-center col-7" id="favori_name">Memorial</h5>
+                            <div class="no-style d-flex justify-content-end col-4 mt-2 gap-3">
+                              <a href="javascript:void(0);" class="toggle-container">
+                                <i class="fa-solid fa-shuffle toggle-compare" onclick="toggleCompare(this)"></i>
+                              </a>
+                              <a href="javascript:void(0);" class="toggle-container">
+                                <i class="fa-regular fa-heart toggle-heart" onclick="toggleHeart(this)"></i>
+                              </a>
+                            </div>
+                          </div>
+        
+                          <div class="row">
+                            <div class="info-icons">
+                              <span><img src="/SaglikPusulam/assets/img/line-md_arrow-down-square.png" style="width: 30px;" alt=""> Kapalı</span>
+                              <span><img src="/SaglikPusulam/assets/img/mdi_address-marker.png" style="width: 30px;" alt=""> Adres</span>
+                              <span><img src="/SaglikPusulam/assets/img/bolumu.png" style="width: 30px;" alt=""> Bölümü</span>
+                              <div class="stars ms-auto">
+                                <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; (137 Değerlendirme)</span>
+                              </div>
+                            </div>
+                          </div>
+        
+                          <div class="row">
+                            <p class="card-text col-md-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam diam scelerisque eget a urna cursus ridiculus arcu.</p>
+                            <div class="actions col-md-3">
+                              <div class="btn-group-vertical">
+                                <button class="btn btn-outline-secondary mb-3" style="border-radius: 10px;">Detay</button>
+                                <button class="btn btn-outline-secondary" style="border-radius: 10px;">Randevu Al</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--3. Kart -->
+              <div class="row">
+                <div class="col-12 mb-4">
+                  <div class="search-card">
+                    <div class="row g-0">
+                      <div class="col-md-3 pt-3 ps-3">
+                        <img src="/SaglikPusulam/assets/img/Memori.jpg" alt="Hospital Image" class="img-fluid">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <div class="row d-flex justify-content-end">
+                            <h5 class="card-title d-flex justify-content-center col-7" id="favori_name">Memorial</h5>
+                            <div class="no-style d-flex justify-content-end col-4 mt-2 gap-3">
+                              <a href="javascript:void(0);" class="toggle-container">
+                                <i class="fa-solid fa-shuffle toggle-compare" onclick="toggleCompare(this)"></i>
+                              </a>
+                              <a href="javascript:void(0);" class="toggle-container">
+                                <i class="fa-regular fa-heart toggle-heart" onclick="toggleHeart(this)"></i>
+                              </a>
+                            </div>
+                          </div>
+        
+                          <div class="row">
+                            <div class="info-icons">
+                              <span><img src="/SaglikPusulam/assets/img/line-md_arrow-down-square.png" style="width: 30px;" alt=""> Kapalı</span>
+                              <span><img src="/SaglikPusulam/assets/img/mdi_address-marker.png" style="width: 30px;" alt=""> Adres</span>
+                              <span><img src="/SaglikPusulam/assets/img/bolumu.png" style="width: 30px;" alt=""> Bölümü</span>
+                              <div class="stars ms-auto">
+                                <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; (137 Değerlendirme)</span>
+                              </div>
+                            </div>
+                          </div>
+        
+                          <div class="row">
+                            <p class="card-text col-md-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam diam scelerisque eget a urna cursus ridiculus arcu.</p>
+                            <div class="actions col-md-3">
+                              <div class="btn-group-vertical">
+                                <button class="btn btn-outline-secondary mb-3" style="border-radius: 10px;">Detay</button>
+                                <button class="btn btn-outline-secondary" style="border-radius: 10px;">Randevu Al</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--4. Kart -->
+              <div class="row">
+                <div class="col-12 mb-4">
+                  <div class="search-card">
+                    <div class="row g-0">
+                      <div class="col-md-3 pt-3 ps-3">
+                        <img src="/SaglikPusulam/assets/img/Memori.jpg" alt="Hospital Image" class="img-fluid">
+                      </div>
+                      <div class="col-md-9">
+                        <div class="card-body">
+                          <div class="row d-flex justify-content-end">
+                            <h5 class="card-title d-flex justify-content-center col-7" id="favori_name">Memorial</h5>
+                            <div class="no-style d-flex justify-content-end col-4 mt-2 gap-3">
+                              <a href="javascript:void(0);" class="toggle-container">
+                                <i class="fa-solid fa-shuffle toggle-compare" onclick="toggleCompare(this)"></i>
+                              </a>
+                              <a href="javascript:void(0);" class="toggle-container">
+                                <i class="fa-regular fa-heart toggle-heart" onclick="toggleHeart(this)"></i>
+                              </a>
+                            </div>
+                          </div>
+        
+                          <div class="row">
+                            <div class="info-icons">
+                              <span><img src="/SaglikPusulam/assets/img/line-md_arrow-down-square.png" style="width: 30px;" alt=""> Kapalı</span>
+                              <span><img src="/SaglikPusulam/assets/img/mdi_address-marker.png" style="width: 30px;" alt=""> Adres</span>
+                              <span><img src="/SaglikPusulam/assets/img/bolumu.png" style="width: 30px;" alt=""> Bölümü</span>
+                              <div class="stars ms-auto">
+                                <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; (137 Değerlendirme)</span>
+                              </div>
+                            </div>
+                          </div>
+        
+                          <div class="row">
+                            <p class="card-text col-md-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam diam scelerisque eget a urna cursus ridiculus arcu.</p>
+                            <div class="actions col-md-3">
+                              <div class="btn-group-vertical">
+                                <button class="btn btn-outline-secondary mb-3" style="border-radius: 10px;">Detay</button>
+                                <button class="btn btn-outline-secondary" style="border-radius: 10px;">Randevu Al</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+            <!--5. Kart -->
+            <div class="row">
+              <div class="col-12 mb-4">
+                <div class="search-card">
+                  <div class="row g-0">
+                    <div class="col-md-3 pt-3 ps-3">
+                      <img src="/SaglikPusulam/assets/img/Memori.jpg" alt="Hospital Image" class="img-fluid">
+                    </div>
+                    <div class="col-md-9">
+                      <div class="card-body">
+                        <div class="row d-flex justify-content-end">
+                          <h5 class="card-title d-flex justify-content-center col-7" id="favori_name">Memorial</h5>
+                          <div class="no-style d-flex justify-content-end col-4 mt-2 gap-3">
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-solid fa-shuffle toggle-compare" onclick="toggleCompare(this)"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-regular fa-heart toggle-heart" onclick="toggleHeart(this)"></i>
+                            </a>
+                          </div>
+                        </div>
+      
+                        <div class="row">
+                          <div class="info-icons">
+                            <span><img src="/SaglikPusulam/assets/img/line-md_arrow-down-square.png" style="width: 30px;" alt=""> Kapalı</span>
+                            <span><img src="/SaglikPusulam/assets/img/mdi_address-marker.png" style="width: 30px;" alt=""> Adres</span>
+                            <span><img src="/SaglikPusulam/assets/img/bolumu.png" style="width: 30px;" alt=""> Bölümü</span>
+                            <div class="stars ms-auto">
+                              <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; (137 Değerlendirme)</span>
+                            </div>
+                          </div>
+                        </div>
+      
+                        <div class="row">
+                          <p class="card-text col-md-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam diam scelerisque eget a urna cursus ridiculus arcu.</p>
+                          <div class="actions col-md-3">
+                            <div class="btn-group-vertical">
+                              <button class="btn btn-outline-secondary mb-3" style="border-radius: 10px;">Detay</button>
+                              <button class="btn btn-outline-secondary" style="border-radius: 10px;">Randevu Al</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      
+      <footer style="background-color:#3465FD;">
+        <div class="container-fluid">
+          <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+            <div class="col mb-3">
+              <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
+                style="color: white;">
+                <svg class="bi me-2" width="40" height="32">
+                  <use xlink:href="#bootstrap"></use>
+                </svg>
+              </a>
+    
+              <div style="display: flex; align-items: center;">
+                <img src="/SaglikPusulam/assets/img/Footer_logo.svg" alt="Logo" style="width: 60px; height: 55px; margin-right: 10px;"> <!--Footer logo-->
+                <h6><a class="navbar-brand no-style" href="#" style="color: white !important;"><b>Sağlık</b>Pusulam</a></h6>
+              </div>
+              
+    
+             
+            </div>
+    
+            <div class="col mb-3">
+            </div>
+    
+            <div class="col mb-3">
+              <h6 style="color: white;">KURUMSAL</h6>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="/SaglikPusulam/index.html" style="color: white; text-decoration: none;">Ana Sayfa</a>
+                </li>
+                <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/hakkimizda.html" style="color: white; text-decoration: none;">Hakkımızda</a></li>
+              </ul>
+            </div>
+    
+            <div class="col mb-3">
+              <h6 style="color: white;">ZİYARETÇİ</h6>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" style="color: white; text-decoration: none;">Hastaneler</a></li>
+                <li class="nav-item mb-2"><a href="#" style="color: white; text-decoration: none;">Klinik</a></li>
+                <li class="nav-item mb-2"><a href="#" style="color: white; text-decoration: none;">Branşlar</a></li>
+              </ul>
+            </div>
+    
+            <div class="col mb-3">
+              <h6 style="color: white; text-align: left;">BİZİMLE İLETİŞİME GEÇİNİZ</h6>
+    
+              <ul class="nav flex-column" style="text-align: left;">
+                <li class="nav-item mb-2">
+                  <a href="#" style="color: white; text-decoration: none;">info@hastaneprojesi.com</a>
+                </li></br>
+                </li>
+    
+                <li class="nav-item mb-2" style="text-align: left;"> 
+                  <h6 style="color: white; text-decoration: none; text-align: left;">BİZİ TAKİP EDİN</h6>
+    
+                  <!-- Simgelerin yer aldığı listeyi sola hizalamak için flex kullanıyoruz -->
+                  <div class="d-flex justify-content-start align-items-center gap-3">
+                    <a href="https://www.linkedin.com/" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_linkedin.png" alt="linkedin"
+                        style="width: 30px; height: 30px;"></a>
+                    <a href="https://x.com/" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_twitter.png" alt="twitter"
+                        style="width: 30px; height: 30px;"></a>
+                    <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/line-md_facebook.png"
+                        alt="facebook" style="width: 30px; height: 30px;"></a>
+                    <a href="https://www.facebook.com/" class="hover-effect"><img src="/SaglikPusulam/assets/img/line-md_facebook.png" alt="facebook"
+                        style="width: 30px; height: 30px;"></a>
+                  </div>
+                </li>
+                <br>
+    
+            </div>
+    
+            <div style="width: 100%;">
+              <p style="color: white;">İş bu sayfada yer alan yorumlar, ilgilİ doktorun doğrudan veya dolaylı emri, talebi ve/veya ricası olmaksızın, ilgili hasta tarafından bağımsız olarak yazılmaktadır. Bu web sitesinin temel amacı sağlıkalanında kamuoyunun daha iyi bilgilenmesi sağlamaktır.</p>
+              <hr>
+              <div class="d-flex justify-content-start">
+                <a href="/SaglikPusulam/pages/kullanim-sartlari.html" class="link-style fw-medium me-3" style="color: white;">Kullanım şartları</a>
+                <a href="/SaglikPusulam/pages/kvkk.html" class="link-style fw-medium" style="color: white;">KVKK</a>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </footer>
+      
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="/SaglikPusulam/js/main.js"></script>
+ <script>
+   document.addEventListener('DOMContentLoaded', filterDistance);
+ </script>
+</body>
+</html>

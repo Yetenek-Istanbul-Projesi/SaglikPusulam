@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="tr">
 
@@ -9,357 +11,328 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="/SaglikPusulam/css/style.css">
   <link rel="stylesheet" href="/SaglikPusulam/css/profile.css">
+  <link rel="stylesheet" href="/SaglikPusulam/css/hover-min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
+
+
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-body-white p-4" style="border-bottom: 5px solid hsla(0, 0%, 80%, 0.2);">
-      <div class="container-fluid mb-3">
-        <img src="/SaglikPusulam/assets/img/LOGO.svg" width="70px;" height="70px">
-        <a class="navbar-brand p-2 no-style" style="color: black;" href="#"><b>Sağlık</b>Pusulam</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-
-          <!-- Align Home and Pricing to the right -->
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
-            <li class="nav-item">
-              <a class="nav-link fw-bold text-dark" href="#">Ana Sayfa</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fw-bold text-dark" href="#">Hakkımızda</a>
-            </li>
-            <img src="/SaglikPusulam/assets/img/user-icon.jpg" width="50px;" height="50px" style="opacity: 0.9;">
-            <button type="button" class="btn btn-primary rounded-4 shadow">Hemen Katılın</button>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <div id="wrapper" class="container">
-      <div class="row">
-        <div class="col-6" id="left-content">
-          <div class="card" style="width: 18rem;">
-            <img src="/SaglikPusulam/assets/img/Rectangle 48.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <a href="#" class="card-link">
-                <p style="text-align: center;">Fotoğrafı Değiştir</p>
-              </a>
-              <h5 class="card-title" style="text-align: center;">Ad Soyad</h5>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-white p-4" style="border-bottom: 5px solid hsla(0, 0%, 80%, 0.2);">
+          <div class="container-fluid mb-3">
+            <img src="/SaglikPusulam/assets/img/LOGO.svg" width="70px;" height="70px">
+            <a class="navbar-brand p-2 no-style" style="color: black;" href="#"><b>Sağlık</b>Pusulam</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+              aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+    
+              <!-- Align Home and Pricing to the right -->
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
+                <li class="nav-item">
+                  <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/index.html">Ana Sayfa</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/hakkimizda.html">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/iletisim.html">İletişim</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/sss.html">SSS</a>
+                  </li>
+                <img src="/SaglikPusulam/assets/img/user-icon.jpg" width="50px;" height="50px" style="opacity: 0.9;">
+                <button type="button" class="btn btn-primary rounded-4 shadow">Hemen Katılın</button>
+              </ul>
             </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div id="wrapper" class="container">
+          <div class="row d-flex align-items-start">
 
-            <a href="index.html" class="btn btn-outline-primary btn-lg">Profil Bilgileri</a></br>
-            <a href="#" class="btn btn-outline-primary btn-lg">Favoriler</a></br>
-            <a href="security.html" class="btn btn-primary btn-lg">Güvenlik</a></br>
-            <a href="#" class="btn btn-outline-primary btn-lg">Karşılaştırma Listesi</a></br>
-            <a href="#" class="btn btn-outline-primary btn-lg">Çıkış Yap</a></br>
+            <!-- Sol Taraf -->
+            <div class="col-lg-4 col-md-6 col-12 mb-4" id="left-content">
+              <div class="card mx-auto border-0" style="max-width: 18rem;">
+                <img src="/SaglikPusulam/assets/img/Rectangle 48.png" class="card-img-top img-fluid" alt="Profil Fotoğrafı">
+                <div class="card-body text-center">
+                  <a href="#" class="card-link">
+                    <p>Fotoğrafı Değiştir</p>
+                  </a>
+                  <h5 class="card-title">Ad Soyad</h5>
+                </div>
+                <div class="d-grid gap-2">
+                  <a href="index.html" class="btn btn-outline-primary btn-lg">Profil Bilgileri</a>
+                  <a href="#" class="btn btn-primary btn-lg">Favoriler</a>
+                  <a href="security.html" class="btn btn-outline-primary btn-lg">Güvenlik</a>
+                  <a href="#" class="btn btn-outline-primary btn-lg">Karşılaştırma Listesi</a>
+                  <a href="#" class="btn btn-outline-primary btn-lg">Çıkış Yap</a>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Sağ Taraf -->
+            <div class="container-fluid col-lg-8 col-md-6 col-12 " id="right-content">
+              <div class="search-title mb-3">
+                <h4>Favoriler</h4>
+              </div>
+              
+              <div class="favori_cards"></div>
+              <!-- 1. Kart -->
+              <div class="search-card">
+                <div class="row g-0">
+                  <div class="col-md-4 pt-3 ps-3">
+                    <img src="/SaglikPusulam/assets/img/Memori.jpg" alt="Hospital Image">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <div class="like-compare">
+                        <i class="bi bi-heart me-2"></i>
+                        <i class="bi bi-arrow-left-right"></i>
+                      </div>
+                      <div class="row">
+                      <h5 class="card-title justify-content-center col-8" id="favori_name">Memorial</h5>
+                      
+                        <div class="no-style d-flex justify-content-end col-4 mt-2 gap-3">
+                            
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-solid fa-shuffle toggle-compare" onclick="toggleCompare(this)"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-regular fa-heart toggle-heart" onclick="toggleHeart(this)"></i>
+                            </a>
+                          </div>
+                      
+                    </div>
+                    <div class="row">
+                      <div class="info-icons">
+                        <span><img src="/SaglikPusulam/assets/img/line-md_arrow-down-square.png" style="width: 30px;" alt=""> Kapalı</span>
+                        <span><img src="/SaglikPusulam/assets/img/mdi_address-marker.png" style="width: 30px;" alt=""> Adres</span>
+                        <span><img src="/SaglikPusulam/assets/img/bolumu.png" style="width: 30px;" alt=""> Bölümü</span>
+                        <div class="stars ms-auto">
+                          <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; (137 Değerlendirme)</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="row">
+                      <p class="card-text col-md-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam diam scelerisque eget a urna cursus ridiculus arcu.</p>
+                      <div class="actions col-md-3">
+                        <div class="btn-group-vertical">
+                          <button class="btn btn-outline-secondary mb-3" style="border-radius: 10px;">Detay</button>
+                          <button class="btn btn-outline-secondary" style="border-radius: 10px;">Randevu Al</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Kart -->
+              <div class="search-card">
+                <div class="row g-0">
+                  <div class="col-md-4 pt-3 ps-3">
+                    <img src="/SaglikPusulam/assets/img/Memori.jpg" alt="Hospital Image">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <div class="like-compare">
+                        <i class="bi bi-heart me-2"></i>
+                        <i class="bi bi-arrow-left-right"></i>
+                      </div>
+                      <div class="row">
+                      <h5 class="card-title justify-content-center col-8" id="favori_name">Memorial</h5>
+                      
+                        <div class="no-style d-flex justify-content-end col-4 mt-2 gap-3">
+                            
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-solid fa-shuffle toggle-compare" onclick="toggleCompare(this)"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-regular fa-heart toggle-heart" onclick="toggleHeart(this)"></i>
+                            </a>
+                          </div>
+                      
+                    </div>
+                    <div class="row">
+                      <div class="info-icons">
+                        <span><img src="/SaglikPusulam/assets/img/line-md_arrow-down-square.png" style="width: 30px;" alt=""> Kapalı</span>
+                        <span><img src="/SaglikPusulam/assets/img/mdi_address-marker.png" style="width: 30px;" alt=""> Adres</span>
+                        <span><img src="/SaglikPusulam/assets/img/bolumu.png" style="width: 30px;" alt=""> Bölümü</span>
+                        <div class="stars ms-auto">
+                          <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; (137 Değerlendirme)</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="row">
+                      <p class="card-text col-md-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam diam scelerisque eget a urna cursus ridiculus arcu.</p>
+                      <div class="actions col-md-3">
+                        <div class="btn-group-vertical">
+                          <button class="btn btn-outline-secondary mb-3" style="border-radius: 10px;">Detay</button>
+                          <button class="btn btn-outline-secondary" style="border-radius: 10px;">Randevu Al</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Kart -->
+              <div class="search-card">
+                <div class="row g-0">
+                  <div class="col-md-4 pt-3 ps-3">
+                    <img src="/SaglikPusulam/assets/img/Memori.jpg" alt="Hospital Image">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <div class="like-compare">
+                        <i class="bi bi-heart me-2"></i>
+                        <i class="bi bi-arrow-left-right"></i>
+                      </div>
+                      <div class="row">
+                      <h5 class="card-title justify-content-center col-8" id="favori_name">Memorial</h5>
+                      
+                        <div class="no-style d-flex justify-content-end col-4 mt-2 gap-3">
+                            
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-solid fa-shuffle toggle-compare" onclick="toggleCompare(this)"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-regular fa-heart toggle-heart" onclick="toggleHeart(this)"></i>
+                            </a>
+                          </div>
+                      
+                    </div>
+                    <div class="row">
+                      <div class="info-icons">
+                        <span><img src="/SaglikPusulam/assets/img/line-md_arrow-down-square.png" style="width: 30px;" alt=""> Kapalı</span>
+                        <span><img src="/SaglikPusulam/assets/img/mdi_address-marker.png" style="width: 30px;" alt=""> Adres</span>
+                        <span><img src="/SaglikPusulam/assets/img/bolumu.png" style="width: 30px;" alt=""> Bölümü</span>
+                        <div class="stars ms-auto">
+                          <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; (137 Değerlendirme)</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="row">
+                      <p class="card-text col-md-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam diam scelerisque eget a urna cursus ridiculus arcu.</p>
+                      <div class="actions col-md-3">
+                        <div class="btn-group-vertical">
+                          <button class="btn btn-outline-secondary mb-3" style="border-radius: 10px;">Detay</button>
+                          <button class="btn btn-outline-secondary" style="border-radius: 10px;">Randevu Al</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+            </div>
+            </div>
           </div>
         </div>
-        <div class="col-6" id="right-content">
-          <div class="container mt-5">
-            <div class="favorite">
-              <div class="container row border p-3 mb-3 mt-3 rounded-3 ms-3 me-3 div-style">
-                  <div class="col-md-3 d-flex align-items-center justify-content-center" style="height: 300px;">
-                      <img src="/SaglikPusulam/assets/img/memori.jpg" alt="hastane resmi" class="img-fluid img-sty rounded" width="250px" height="300px">
-                  </div>
-          
-                  <div class="col-md-9 info-container justify-content-center">
-                      <div class="row " style="padding-bottom: 7px;">
-                          <div class="col-8 d-flex justify-content-center mt-2">
-                             <a href="#"><button type="submit"class="btn btn-outline-dark w-100"> <h2 >Memorial</h2></button></a>
-                          </div>
-                      
-                          <div class="col d-flex justify-content-end gap-4" style="padding-top: 10px;">
-                              <a class="cdn-s" href="#"><i class="cdn fa-solid fa-code-compare"></i></a>
-                              <a class="cdn-s" href="#"><i class="cdn fa-solid fa-heart"></i></a> 
-                          </div>
-                      </div>
-                      
-          
-                      <div class="row" style="padding-top: 10px;">
-                          <div class="col g-2 ">
-                              <ul class="d-flex gap-5">
-                                  <li><a href="#"><img class="icon" src="/SaglikPusulam/assets/img/kapali.png" alt="kapalı logosu"> Kapalı</a></li>
-                                  <li><a href="#"><img class="icon" src="/SaglikPusulam/assets/img/adres.png" alt="adres logosu"> Adres</a></li>
-                                  <li><a href="#"><img class="icon" src="/SaglikPusulam/assets/img/bolumu.png" alt="bölümü logosu"> Bölümü</a></li>
-                      
-                                  <!-- Yıldızlar ve Görüş Sayısı -->
-                                  <li>
-                                      <ul class="list-unstyled d-flex gap-1 justify-content-end">
-                                          <li class=""><img src="/SaglikPusulam/assets/img/star2.png" class="icon" alt="yıldız logosu"></li>
-                                          <li class=""><img src="/SaglikPusulam/assets/img/star2.png" class="icon" alt="yıldız logosu"></li>
-                                          <li class=""><img src="/SaglikPusulam/assets/img/star2.png" class="icon" alt="yıldız logosu"></li>
-                                          <li class=""><img src="/SaglikPusulam/assets/img/star2.png" class="icon" alt="yıldız logosu"></li>
-                                          <li class=""><img src="/SaglikPusulam/assets/img/star.png"  class="icon" alt="yıldız logosu"></li>
-                                          <li class="m-2">(137 değerlendirme)</li>
-                                      </ul>
-                                  </li>
-                              </ul>
-                          </div>
-          
-                      </div>
-                      <div class="container" style="padding-top: 10px;" >
-                          <div class="row  d-flex justify-content-between">
-                              <div class="col-9"> 
-                                  <p>
-                                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde ad, reprehenderit modi
-                                      impedit
-                                      quidem deserunt
-                                      suscipit culpa esse, cumque eveniet fugit sunt cupiditate voluptatum, debitis eum magni!
-                                      Nobis
-                                      voluptatem suscipit,
-                                      autem eos hic aliquid, nemo distinctio rerum iusto inventore voluptatum officia itaque
-                                      aspernatur fuga neque similique
-                                      corporis, soluta illum eveniet quam iste nihil ut placeat!
-                                  </p>
-          
-                              </div>
-          
-                              <div class="col-3"><br>
-                                  <ul class="list-unstyled gap-2">
-                                      <li class="row justify-content-end"><button style=" width: 150px;" class="btn btn-outline-dark" type="submit">Detay</button></li><br>
-                                      <li class="row justify-content-end"><button style=" width: 150px;" class="btn btn-outline-dark" type="submit">Randevu Al</button></li>
-                                  </ul>
-                              </div>
-                              
-                          </div>
-                      </div>
-          
-                  </div>
-                  <script src="script.js"></script>
+      </main>
+      
+      
+      
+      
+      
+      <footer style="background-color:#3465FD;">
+        <div class="container-fluid">
+          <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+            <div class="col mb-3">
+              <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
+                style="color: white;">
+                <svg class="bi me-2" width="40" height="32">
+                  <use xlink:href="#bootstrap"></use>
+                </svg>
+              </a>
+    
+              <div style="display: flex; align-items: center;">
+                <img src="/SaglikPusulam/assets/img/Footer_logo.svg" alt="Logo" style="width: 60px; height: 55px; margin-right: 10px;"> <!--Footer logo-->
+                <h6><a class="navbar-brand no-style" href="#" style="color: white !important;"><b>Sağlık</b>Pusulam</a></h6>
               </div>
-              <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-              <div class="container row border p-3 mb-3 mt-3 rounded-3 ms-3 me-3 div-style">
-                  <div class="col-md-3 d-flex align-items-center justify-content-center" style="height: 300px;">
-                      <img src="/SaglikPusulam/assets/img/Taksim_Eğitim_Araştırma_Hastanesi.jpg" alt="hastane resmi" class="img-fluid img-sty rounded" width="250px" height="300px">
+              
+    
+             
+            </div>
+    
+            <div class="col mb-3">
+            </div>
+    
+            <div class="col mb-3">
+              <h6 style="color: white;">KURUMSAL</h6>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="/SaglikPusulam/index.html" style="color: white; text-decoration: none;">Ana Sayfa</a>
+                </li>
+                <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/hakkimizda.html" style="color: white; text-decoration: none;">Hakkımızda</a></li>
+              </ul>
+            </div>
+    
+            <div class="col mb-3">
+              <h6 style="color: white;">ZİYARETÇİ</h6>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" style="color: white; text-decoration: none;">Hastaneler</a></li>
+                <li class="nav-item mb-2"><a href="#" style="color: white; text-decoration: none;">Klinik</a></li>
+                <li class="nav-item mb-2"><a href="#" style="color: white; text-decoration: none;">Branşlar</a></li>
+              </ul>
+            </div>
+    
+            <div class="col mb-3">
+              <h6 style="color: white; text-align: left;">BİZİMLE İLETİŞİME GEÇİNİZ</h6>
+    
+              <ul class="nav flex-column" style="text-align: left;">
+                <li class="nav-item mb-2">
+                  <a href="#" style="color: white; text-decoration: none;">info@hastaneprojesi.com</a>
+                </li></br>
+                </li>
+    
+                <li class="nav-item mb-2" style="text-align: left;"> 
+                  <h6 style="color: white; text-decoration: none; text-align: left;">BİZİ TAKİP EDİN</h6>
+    
+                  <!-- Simgelerin yer aldığı listeyi sola hizalamak için flex kullanıyoruz -->
+                  <div class="d-flex justify-content-start align-items-center gap-3">
+                    <a href="https://www.linkedin.com/" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_linkedin.png" alt="linkedin"
+                        style="width: 30px; height: 30px;"></a>
+                    <a href="https://x.com/" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_twitter.png" alt="twitter"
+                        style="width: 30px; height: 30px;"></a>
+                    <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/line-md_facebook.png"
+                        alt="facebook" style="width: 30px; height: 30px;"></a>
+                    <a href="https://www.facebook.com/" class="hover-effect"><img src="/SaglikPusulam/assets/img/line-md_facebook.png" alt="facebook"
+                        style="width: 30px; height: 30px;"></a>
                   </div>
-          
-                  <div class="col-md-9 info-container justify-content-center">
-                      <div class="row " style="padding-bottom: 7px;">
-                          <div class="col-8 d-flex justify-content-center mt-2">
-                             <a href="#"><button type="submit"class="btn btn-outline-dark w-100"> <h2 >Acıbadem hastanesi</h2></button></a>
-                          </div>
-                      
-                          <div class="col d-flex justify-content-end gap-4" style="padding-top: 10px;">
-                              <a class="cdn-s" href="#"><i class="cdn fa-solid fa-code-compare"></i></a>
-                              <a class="cdn-s" href="#"><i class="cdn fa-solid fa-heart"></i></a> 
-                          </div>
-                      </div>
-                      
-          
-                      <div class="row" style="padding-top: 10px;">
-                          <div class="col g-2">
-                              <ul class="d-flex gap-5">
-                                  <li><a href="#"><img class="icon" src="/SaglikPusulam/assets/img/kapali.png" alt="kapalı logosu"> Kapalı</a></li>
-                                  <li><a href="#"><img class="icon" src="/SaglikPusulam/assets/img/adres.png" alt="adres logosu"> Adres</a></li>
-                                  <li><a href="#"><img class="icon" src="/SaglikPusulam/assets/img/bolumu.png" alt="bölümü logosu"> Bölümü</a></li>
-                      
-                                  <!-- Yıldızlar ve Görüş Sayısı -->
-                                  <li>
-                                      <ul class="list-unstyled d-flex gap-1 justify-content-end">
-                                          <li class=""><img src="/SaglikPusulam/assets/img/star2.png" class="icon" alt="yıldız logosu"></li>
-                                          <li class=""><img src="/SaglikPusulam/assets/img/star2.png" class="icon" alt="yıldız logosu"></li>
-                                          <li class=""><img src="/SaglikPusulam/assets/img/star2.png" class="icon" alt="yıldız logosu"></li>
-                                          <li class=""><img src="/SaglikPusulam/assets/img/star.png" class="icon" alt="yıldız logosu"></li>
-                                          <li class=""><img src="/SaglikPusulam/assets/img/star.png"  class="icon" alt="yıldız logosu"></li>
-                                          <li class="m-2">(137 değerlendirme)</li>
-                                      </ul>
-                                  </li>
-                              </ul>
-                          </div>
-          
-                      </div>
-                      <div class="container" style="padding-top: 10px;" >
-                          <div class="row  d-flex justify-content-between">
-                              <div class="col-9"> 
-                                  <p>
-                                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde ad, reprehenderit modi
-                                      impedit
-                                      quidem deserunt
-                                      suscipit culpa esse, cumque eveniet fugit sunt cupiditate voluptatum, debitis eum magni!
-                                      Nobis
-                                      voluptatem suscipit,
-                                      autem eos hic aliquid, nemo distinctio rerum iusto inventore voluptatum officia itaque
-                                      aspernatur fuga neque similique
-                                      corporis, soluta illum eveniet quam iste nihil ut placeat!
-                                  </p>
-          
-                              </div>
-          
-                              <div class="col-3"><br>
-                                  <ul class="list-unstyled gap-2">
-                                      <li class="row justify-content-end"><button style=" width: 150px;" class="btn btn-outline-dark" type="submit">Detay</button></li><br>
-                                      <li class="row justify-content-end"><button style=" width: 150px;" class="btn btn-outline-dark" type="submit">Randevu Al</button></li>
-                                  </ul>
-                              </div>
-                              
-                          </div>
-                      </div>
-          
-                  </div>
-                  <script src="script.js"></script>
+                </li>
+                <br>
+    
+            </div>
+    
+            <div style="width: 100%;">
+              <p style="color: white;">İş bu sayfada yer alan yorumlar, ilgilİ doktorun doğrudan veya dolaylı emri, talebi ve/veya ricası olmaksızın, ilgili hasta tarafından bağımsız olarak yazılmaktadır. Bu web sitesinin temel amacı sağlıkalanında kamuoyunun daha iyi bilgilenmesi sağlamaktır.</p>
+              <hr>
+              <div class="d-flex justify-content-start">
+                <a href="/SaglikPusulam/pages/kullanim-sartlari.html" class="link-style fw-medium me-3" style="color: white;">Kullanım şartları</a>
+                <a href="/SaglikPusulam/pages/kvkk.html" class="link-style fw-medium" style="color: white;">KVKK</a>
               </div>
-              <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-              <div class="container row border p-3 mb-3 mt-3 rounded-3 ms-3 me-3 div-style">
-                  <div class="col-md-3 d-flex align-items-center justify-content-center" style="height: 300px;">
-                      <img src="/SaglikPusulam/assets/img/sddefault.jpg" alt="hastane resmi" class="img-fluid img-sty rounded" width="250px" height="300px">
-                  </div>
-          
-                  <div class="col-md-9 info-container justify-content-center">
-                      <div class="row " style="padding-bottom: 7px;">
-                          <div class="col-8 d-flex justify-content-center mt-2">
-                             <a href="#"><button type="submit"class="btn btn-outline-dark w-100"> <h2 >Şehir Hastanesi</h2></button></a>
-                          </div>
-                      
-                          <div class="col d-flex justify-content-end gap-4" style="padding-top: 10px;">
-                              <a class="cdn-s" href="#"><i class="cdn fa-solid fa-code-compare"></i></a>
-                              <a class="cdn-s" href="#"><i class="cdn fa-solid fa-heart"></i></a> 
-                          </div>
-                      </div>
-                      
-          
-                      <div class="row" style="padding-top: 10px;">
-                          <div class="col g-2">
-                              <ul class="d-flex gap-5">
-                                  <li><a href="#"><img class="icon" src="/SaglikPusulam/assets/img/kapali.png" alt="kapalı logosu"> Kapalı</a></li>
-                                  <li><a href="#"><img class="icon" src="/SaglikPusulam/assets/img/adres.png" alt="adres logosu"> Adres</a></li>
-                                  <li><a href="#"><img class="icon" src="/SaglikPusulam/assets/img/bolumu.png" alt="bölümü logosu"> Bölümü</a></li>
-                      
-                                  <!-- Yıldızlar ve Görüş Sayısı -->
-                                  <li>
-                                      <ul class="list-unstyled d-flex gap-1 justify-content-end">
-                                          <li class=""><img src="/SaglikPusulam/assets/img/star2.png" class="icon" alt="yıldız logosu"></li>
-                                          <li class=""><img src="/SaglikPusulam/assets/img/star2.png" class="icon" alt="yıldız logosu"></li>
-                                          <li class=""><img src="/SaglikPusulam/assets/img/star2.png" class="icon" alt="yıldız logosu"></li>
-                                          <li class=""><img src="/SaglikPusulam/assets/img/star.png" class="icon" alt="yıldız logosu"></li>
-                                          <li class=""><img src="/SaglikPusulam/assets/img/star.png"  class="icon" alt="yıldız logosu"></li>
-                                          <li class="m-2">(137 değerlendirme)</li>
-                                      </ul>
-                                  </li>
-                              </ul>
-                          </div>
-          
-                      </div>
-                      <div class="container" style="padding-top: 10px;" >
-                          <div class="row  d-flex justify-content-between">
-                              <div class="col-9"> 
-                                  <p>
-                                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde ad, reprehenderit modi
-                                      impedit
-                                      quidem deserunt
-                                      suscipit culpa esse, cumque eveniet fugit sunt cupiditate voluptatum, debitis eum magni!
-                                      Nobis
-                                      voluptatem suscipit,
-                                      autem eos hic aliquid, nemo distinctio rerum iusto inventore voluptatum officia itaque
-                                      aspernatur fuga neque similique
-                                      corporis, soluta illum eveniet quam iste nihil ut placeat!
-                                  </p>
-          
-                              </div>
-          
-                              <div class="col-3"><br>
-                                  <ul class="list-unstyled gap-2">
-                                      <li class="row justify-content-end"><button style=" width: 150px;" class="btn btn-outline-dark" type="submit">Detay</button></li><br>
-                                      <li class="row justify-content-end"><button style=" width: 150px;" class="btn btn-outline-dark" type="submit">Randevu Al</button></li>
-                                  </ul>
-                              </div>
-                              
-                          </div>
-                      </div>
-          
-                  </div>
-              </div>
-          </div>
-
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-
-
-  </main>
-  <footer style="background-color:#3465FD;">
-    <div class="container-fluid">
-      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-        <div class="col mb-3">
-          <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
-            style="color: white;">
-            <svg class="bi me-2" width="40" height="32">
-              <use xlink:href="#bootstrap"></use>
-            </svg>
-          </a>
-
-          <h6><a class="navbar-brand no-style" href="#" style="color: white !important;"><b>Sağlık</b>Pusulam</a></h6>
-
-          <!-- <h5 style="color: white;">Sağlık Pusulam</h5> -->
-        </div>
-
-        <div class="col mb-3">
-        </div>
-
-        <div class="col mb-3">
-          <h6 style="color: white;">KURUMSAL</h6>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="index.html" style="color: white; text-decoration: none;">Ana Sayfa</a>
-            </li>
-            <li class="nav-item mb-2"><a href="#" style="color: white; text-decoration: none;">Hakkımızda</a></li>
-          </ul>
-        </div>
-
-        <div class="col mb-3">
-          <h6 style="color: white;">ZİYARETÇİ</h6>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" style="color: white; text-decoration: none;">Hastaneler</a></li>
-            <li class="nav-item mb-2"><a href="#" style="color: white; text-decoration: none;">Klinik</a></li>
-            <li class="nav-item mb-2"><a href="#" style="color: white; text-decoration: none;">Branşlar</a></li>
-          </ul>
-        </div>
-
-        <div class="col mb-3">
-          <h6 style="color: white; text-align: left;">BİZİMLE İLETİŞİME GEÇİNİZ</h6>
-
-          <ul class="nav flex-column" style="text-align: left;">
-            <li class="nav-item mb-2">
-              <a href="#" style="color: white; text-decoration: none;">info@hastaneprojesi.com</a>
-            </li></br>
-            </li>
-
-            <li class="nav-item mb-2" style="text-align: left;"> <!-- Hiza için text-align kullanıyoruz -->
-              <h6 style="color: white; text-decoration: none; text-align: left;">BİZİ TAKİP EDİN</h6>
-
-              <!-- Simgelerin yer aldığı listeyi sola hizalamak için flex kullanıyoruz -->
-              <div class="d-flex justify-content-start align-items-center gap-3">
-                <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_linkedin.png" alt="linkedin"
-                    style="width: 30px; height: 30px;"></a>
-                <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_twitter.png" alt="twitter"
-                    style="width: 30px; height: 30px;"></a>
-                <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/line-md_facebook.png"
-                    alt="facebook" style="width: 30px; height: 30px;"></a>
-              </div>
-            </li>
-            <br>
-
-        </div>
-
-        <div style="width: 100%;">
-          <p style="color: white;">İş bu sayfada yer alan yorumlar, ilgilİ doktorun doğrudan veya dolaylı emri, talebi
-            ve/veya ricası olmaksızın, ilgili hasta tarafından bağımsız olarak yazılmaktadır. Bu web sitesinin temel
-            amacı sağlık
-            alanında kamuoyunun daha iyi bilgilenmesi sağlamaktır.</p>
-          <hr>
-          <div class="d-flex justify-content-start">
-            <a href="#" class="link-style fw-medium me-3" style="color: white;">Kullanım koşulları</a>
-            <a href="#" class="link-style fw-medium" style="color: white;">KVKK</a>
-          </div>
+            </div>
+          </footer>
         </div>
       </footer>
-    </div>
-  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
