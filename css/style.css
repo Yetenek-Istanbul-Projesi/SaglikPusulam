@@ -744,7 +744,10 @@ color: red;
 }
 
 .details-main .pagination .page-link:hover {
-  text-decoration: underline;
+  text-decoration: none;
+}
+.details-main .pagination .page-item.active a {
+  color: white;
 }
 
 .details-main .search-title {
@@ -954,11 +957,6 @@ color: red;
     cursor: pointer;
     width: 1.2em;
     height: 1.2em;
-}
-
-.form-check-input:checked {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
 }
 
 .form-check-label {

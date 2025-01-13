@@ -24,6 +24,12 @@ faqQuestions.forEach(question => {
   });
 });
 
+//*Details sayfası *//
+// Küçük resme tıklandığında büyük resmin değişmesi
+function changeImage(imageUrl) {
+  document.getElementById('mainImage').src = imageUrl;
+}
+
 // ---- Action Buttons -----
 
 function toggleHeart(element) {
