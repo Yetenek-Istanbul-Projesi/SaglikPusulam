@@ -3,6 +3,28 @@
 * olması  durumunu tersine çevirir.
 * @param {HTMLElement} element - Buton elementi
  */
+// ---- Sıkça Sorulan Sorular -----
+
+// Tüm soru başlıklarını al
+
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+// Her bir soru başlığına tıklama olayını ekle
+faqQuestions.forEach(question => {
+  question.addEventListener('click', () => {
+    // Sorunun altında yer alan cevabı al
+    const answer = question.nextElementSibling;
+
+    // Cevabı göster/gizle
+    if (answer.style.display === 'block') {
+      answer.style.display = 'none';
+    } else {
+      answer.style.display = 'block';
+    }
+  });
+});
+
+// ---- Action Buttons -----
 
 function toggleHeart(element) {
   // İkonun kırmızı olup olmadığını kontrol et
@@ -30,7 +52,7 @@ function loadJson() {
 
 
   json = {
-    "Hizmet Seçiniz..": { 
+    "Hizmet Seçiniz..": {
     },
     "Hastaneler": {
     },
@@ -64,7 +86,10 @@ function loadJson() {
 
 }
 
-$(function () {
+$(document).ready(function () {
   $("#load_json").on('click', loadJson);
   loadJson();
 });
+
+
+

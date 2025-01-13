@@ -712,7 +712,7 @@ color: red;
 
 .details-main .review-header .name {
   font-weight: bold;
-  flex: 1; /
+  flex: 1; 
 }
 
 .details-main .review-footer {
@@ -839,7 +839,337 @@ color: red;
 
 
 
+/* Filter Styles */
+.filter-title {
+    color: #333;
+    font-weight: 600;
+    font-size: 1rem;
+}
 
+.form-check-input {
+    cursor: pointer;
+    width: 1.2em;
+    height: 1.2em;
+}
 
+.form-check-input:checked {
+    background-color: #3465FD;
+    border-color: #3465FD;
+}
 
+.form-check-label {
+    cursor: pointer;
+}
 
+.form-range {
+    height: 6px;
+    cursor: pointer;
+}
+
+.form-range::-webkit-slider-thumb {
+    background: #3465FD;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.form-range::-moz-range-thumb {
+    background: #3465FD;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.input-group .form-select {
+    cursor: pointer;
+}
+
+.input-group .input-group-text {
+    color: #6c757d;
+}
+
+.input-group .form-select:focus,
+.input-group .input-group-text {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.breadcrumb-item a {
+    color: #6c757d;
+}
+
+.breadcrumb-item.active {
+    color: #3465FD;
+}
+
+.breadcrumb-item a:hover {
+    color: #3465FD;
+}
+
+/* Search Results Page Styles */
+.search-results-container {
+    --spacing-unit: 1rem;
+    --primary-color: #3465FD;
+    --text-muted: #6c757d;
+    --border-color: #ced4da;
+}
+
+/* Filter Styles */
+.filter-card {
+    position: sticky;
+    top: var(--spacing-unit);
+}
+
+.filter-section {
+    margin-bottom: var(--spacing-unit);
+}
+
+.filter-section:last-child {
+    margin-bottom: 0;
+}
+
+.filter-title {
+    color: #333;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: calc(var(--spacing-unit) * 0.75);
+}
+
+/* Rating Filters */
+.rating-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.rating-label{
+  margin-left: 0.5rem;
+  margin-top: 0.27rem;
+
+}
+
+.form-check-input {
+    cursor: pointer;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.form-check-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* Distance Slider */
+.distance-slider {
+    padding: 0 calc(var(--spacing-unit) * 0.5);
+}
+
+.form-range {
+    height: 6px;
+    cursor: pointer;
+}
+
+.form-range::-webkit-slider-thumb {
+    background: var(--primary-color);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.form-range::-moz-range-thumb {
+    background: var(--primary-color);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Select Groups */
+.filter-select-group {
+    margin-bottom: calc(var(--spacing-unit) * 0.75);
+}
+
+.filter-select-group:last-child {
+    margin-bottom: 0;
+}
+
+.input-group .input-group-text {
+    background-color: white;
+    color: var(--text-muted);
+    border-right: 0;
+}
+
+.input-group .form-select {
+    cursor: pointer;
+    border-left: 0;
+}
+
+.input-group .form-select:focus,
+.input-group .input-group-text {
+    box-shadow: none;
+    border-color: var(--border-color);
+}
+
+/* Hospital Cards */
+.hospital-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.hospital-card:hover {
+    transform: translateY(-2px);
+}
+
+.hospital-card .card-body {
+    padding: var(--spacing-unit);
+}
+
+.hospital-info span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+}
+
+/* Action Buttons */
+.action-buttons {
+  font-size: 22px;
+  display: flex;
+  gap: 0.5rem
+}
+.action-buttons .btn-link {
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.action-buttons .btn-link:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .filter-card {
+        position: static;
+        margin-bottom: var(--spacing-unit);
+    }
+
+    .hospital-card .card-body {
+        padding: calc(var(--spacing-unit) * 0.75);
+    }
+
+    .hospital-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hospital-card img {
+        height: 200px !important;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .hospital-card .row {
+        flex-direction: column;
+    }
+
+    .hospital-card .col-md-3 {
+        width: 100%;
+    }
+
+    .action-buttons {
+        margin-top: 0.5rem;
+    }
+}
+
+/* Breadcrumb Styles */
+.breadcrumb {
+    margin-bottom: var(--spacing-unit);
+    --spacing-unit: 1rem;
+    --primary-color: #3465FD;
+    --text-muted: #6c757d;
+    --border-color: #ced4da;
+}
+
+.breadcrumb-item a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-item.active {
+    color: var(--primary-color);
+}
+
+.breadcrumb-item a:hover {
+    color: var(--primary-color);
+}
+
+/* Sıkça Sorulan Sorular */
+
+.faq-main {
+  padding: 1rem;
+}
+
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 28px;
+  color: #0000;
+  margin: 10px;
+} */
+
+.faq-item {
+  margin-bottom: 1rem;
+  margin-top: 10px;
+}
+
+.faq-question {
+  background-color: #3465FD;
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.faq-answer {
+  display: none;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-top: 0.5rem;
+  font-size: 12px;
+  border-radius: 5px;
+}
