@@ -12,90 +12,86 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-white p-4" style="border-bottom: 5px solid hsla(0, 0%, 80%, 0.2);">
-          <div class="container-fluid mb-3">
-            <img src="/SaglikPusulam/assets/img/LOGO.svg" width="70px;" height="70px">
-            <a class="navbar-brand p-2 no-style" style="color: black;" href="#"><b>Sağlık</b>Pusulam</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-              aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-    
-              <!-- Align Home and Pricing to the right -->
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
-                <li class="nav-item">
-                  <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/index.html">Ana Sayfa</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/hakkimizda.html">Hakkımızda</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/iletisim.html">İletişim</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/sss.html">SSS</a>
-                  </li>
-                <img src="/SaglikPusulam/assets/img/user-icon.jpg" width="50px;" height="50px" style="opacity: 0.9;">
-                <button type="button" class="btn btn-primary rounded-4 shadow">Hemen Katılın</button>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-white p-4" style="border-bottom: 5px solid hsla(0, 0%, 80%, 0.2);">
+      <div class="container-fluid mb-3">
+        <img src="/SaglikPusulam/assets/img/LOGO.svg" width="70px;" height="70px">
+        <a class="navbar-brand p-2 no-style" style="color: black;" href="#"><b>Sağlık</b>Pusulam</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+
+          <!-- Align Home and Pricing to the right -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-dark" href="#">Ana Sayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-dark" href="#">Hakkımızda</a>
+            </li>
+            <img src="/SaglikPusulam/assets/img/user-icon.jpg" width="50px;" height="50px" style="opacity: 0.9;">
+            <button type="button" class="btn btn-primary rounded-4 shadow">Hemen Katılın</button>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
   <main>
     <div id="wrapper" class="container">
       <div class="row">
-        <!-- Sol içerik -->
-        <div class="col-md-6 col-12 mb-4" id="left-content">
-          <div class="card mx-auto" style="width: 100%; max-width: 18rem;">
-            <img src="/SaglikPusulam/assets/img/Rectangle 48.png" class="card-img-top img-fluid" alt="...">
-            <div class="card-body text-center">
+        <div class="col-6" id="left-content">
+          <div class="card" style="width: 18rem;">
+            <img src="/SaglikPusulam/assets/img/Rectangle 48.png" class="card-img-top" alt="...">
+            <div class="card-body">
               <a href="#" class="card-link">
-                <p>Fotoğrafı Değiştir</p>
+                <p style="text-align: center;">Fotoğrafı Değiştir</p>
               </a>
-              <h5 class="card-title">Ad Soyad</h5>
+              <h5 class="card-title" style="text-align: center;">Ad Soyad</h5>
             </div>
-            <div class="d-grid gap-2">
-              <a href="index.html" class="btn btn-outline-primary btn-lg">Profil Bilgileri</a>
-              <a href="#" class="btn btn-outline-primary btn-lg">Favoriler</a>
-              <a href="security.html" class="btn btn-primary btn-lg">Güvenlik</a>
-              <a href="#" class="btn btn-outline-primary btn-lg">Karşılaştırma Listesi</a>
-              <a href="#" class="btn btn-outline-primary btn-lg">Çıkış Yap</a>
-            </div>
+
+            <a href="index.html" class="btn btn-outline-primary btn-lg">Profil Bilgileri</a></br>
+            <a href="#" class="btn btn-outline-primary btn-lg">Favoriler</a></br>
+            <a href="security.html" class="btn btn-primary btn-lg">Güvenlik</a></br>
+            <a href="#" class="btn btn-outline-primary btn-lg">Karşılaştırma Listesi</a></br>
+            <a href="#" class="btn btn-outline-primary btn-lg">Çıkış Yap</a></br>
           </div>
         </div>
-  
-        <!-- Sağ içerik -->
-        <div class="col-md-6 col-12" id="right-content">
-          <div class="p-3">
+        <div class="col-6" id="right-content">
+          <div class="p-5">
+            <!-- Right Content İçerik Alanı -->
             <h2>Güvenlik</h2>
-            <!-- Mevcut Şifre -->
-            <div class="mb-3">
-              <label for="current-password" class="security-form-text">Mevcut Şifre</label>
-              <input type="password" id="current-password" class="security-form-input text-secondary w-100" placeholder="Mevcut Şifre">
-            </div>
-            <!-- Yeni Şifre -->
-            <div class="mb-3">
-              <label for="new-password" class="security-form-text">Yeni Şifre(*)</label>
-              <input type="password" id="new-password" class="security-form-input  text-secondary w-100" placeholder="Yeni Şifre">
-              <small class="text-danger">Şifreniz en az 8 karakter olmalı, büyük harf, küçük harf ve rakam içermelidir</small>
-            </div>
-            <!-- Yeni Şifre Tekrar -->
-            <div class="mb-3">
-              <label for="confirm-password" class="security-form-text">Yeni Şifre Tekrar(*)</label>
-              <input type="password" id="confirm-password" class="security-form-input text-secondary w-100" placeholder="Yeni Şifre Tekrar">
-              <small class="text-danger">Şifreniz en az 8 karakter olmalı, büyük harf, küçük harf ve rakam içermelidir</small>
-            </div>
-            <!-- Şifre Değiştir Butonu -->
-            <button type="button" class="btn btn-primary btn-lg w-100">Şifre Değiştir</button>
+
+            <!-- Mevcut Şifre için input alanı -->
+            </br>
+            <p>Mevcut Şifre</p>
+            <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary w-100"
+              placeholder="Mevcut Şifre"><br>
+
+            </br>
+            <p>Yeni Şifre(*)</p>
+            <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary w-100"
+              placeholder="Yeni Şifre"><br>
+            <p style="color: #EF0006;">Şifreniz en az 8 karakter olmalı, büyük harf, küçük harf ve rakam içermelidir</p>
+
+            </br>
+            <p>Yeni Şifre Tekrar(*)</p>
+            <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary w-100"
+              placeholder="Yeni Şifre Tekrar"><br>
+            <p style="color: #EF0006;">Şifreniz en az 8 karakter olmalı, büyük harf, küçük harf ve rakam içermelidir</p>
+
+            <!-- Şifre değiştirme butonu -->
+            <br><button type="button" class="btn btn-primary btn-lg btn-extra w-100">Şifre Değiştir</button>
           </div>
         </div>
       </div>
+
+
     </div>
+
+
   </main>
-  
   <footer style="background-color:#3465FD;">
     <div class="container-fluid">
       <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
@@ -107,13 +103,9 @@
             </svg>
           </a>
 
-          <div style="display: flex; align-items: center;">
-            <img src="/SaglikPusulam/assets/img/Footer_logo.svg" alt="Logo" style="width: 60px; height: 55px; margin-right: 10px;"> <!--Footer logo-->
-            <h6><a class="navbar-brand no-style" href="#" style="color: white !important;"><b>Sağlık</b>Pusulam</a></h6>
-          </div>
-          
+          <h6><a class="navbar-brand no-style" href="#" style="color: white !important;"><b>Sağlık</b>Pusulam</a></h6>
 
-         
+          <!-- <h5 style="color: white;">Sağlık Pusulam</h5> -->
         </div>
 
         <div class="col mb-3">
@@ -122,9 +114,9 @@
         <div class="col mb-3">
           <h6 style="color: white;">KURUMSAL</h6>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="/SaglikPusulam/index.html" style="color: white; text-decoration: none;">Ana Sayfa</a>
+            <li class="nav-item mb-2"><a href="index.html" style="color: white; text-decoration: none;">Ana Sayfa</a>
             </li>
-            <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/hakkimizda.html" style="color: white; text-decoration: none;">Hakkımızda</a></li>
+            <li class="nav-item mb-2"><a href="#" style="color: white; text-decoration: none;">Hakkımızda</a></li>
           </ul>
         </div>
 
@@ -146,18 +138,16 @@
             </li></br>
             </li>
 
-            <li class="nav-item mb-2" style="text-align: left;"> 
+            <li class="nav-item mb-2" style="text-align: left;"> <!-- Hiza için text-align kullanıyoruz -->
               <h6 style="color: white; text-decoration: none; text-align: left;">BİZİ TAKİP EDİN</h6>
 
               <!-- Simgelerin yer aldığı listeyi sola hizalamak için flex kullanıyoruz -->
               <div class="d-flex justify-content-start align-items-center gap-3">
-                <a href="https://www.linkedin.com/" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_linkedin.png" alt="linkedin"
+                <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_linkedin.png" alt="linkedin"
                     style="width: 30px; height: 30px;"></a>
-                <a href="https://x.com/" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_twitter.png" alt="twitter"
+                <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_twitter.png" alt="twitter"
                     style="width: 30px; height: 30px;"></a>
-                <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/line-md_facebook.png"
-                    alt="facebook" style="width: 30px; height: 30px;"></a>
-                <a href="https://www.facebook.com/" class="hover-effect"><img src="/SaglikPusulam/assets/img/line-md_facebook.png" alt="facebook"
+                <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/line-md_facebook.png" alt="facebook"
                     style="width: 30px; height: 30px;"></a>
               </div>
             </li>
@@ -166,11 +156,14 @@
         </div>
 
         <div style="width: 100%;">
-          <p style="color: white;">İş bu sayfada yer alan yorumlar, ilgilİ doktorun doğrudan veya dolaylı emri, talebi ve/veya ricası olmaksızın, ilgili hasta tarafından bağımsız olarak yazılmaktadır. Bu web sitesinin temel amacı sağlıkalanında kamuoyunun daha iyi bilgilenmesi sağlamaktır.</p>
+          <p style="color: white;">İş bu sayfada yer alan yorumlar, ilgilİ doktorun doğrudan veya dolaylı emri, talebi
+            ve/veya ricası olmaksızın, ilgili hasta tarafından bağımsız olarak yazılmaktadır. Bu web sitesinin temel
+            amacı sağlık
+            alanında kamuoyunun daha iyi bilgilenmesi sağlamaktır.</p>
           <hr>
           <div class="d-flex justify-content-start">
-            <a href="/SaglikPusulam/pages/kullanim-sartlari.html" class="link-style fw-medium me-3" style="color: white;">Kullanım şartları</a>
-            <a href="/SaglikPusulam/pages/kvkk.html" class="link-style fw-medium" style="color: white;">KVKK</a>
+            <a href="#" class="link-style fw-medium me-3" style="color: white;">Kullanım koşulları</a>
+            <a href="#" class="link-style fw-medium" style="color: white;">KVKK</a>
           </div>
         </div>
       </footer>
