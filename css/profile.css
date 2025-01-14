@@ -43,16 +43,9 @@ input[type="text"] {
     /* Flexbox kullanma */
 }
 
-#left-content {
-    width: 50%;
-}
-
 /* Section öğesini sağa yaslamak için */
 #right-content {
-    margin-top: 175px;
-  
-   
-  
+    margin-top: 115px;
 }
 
 /*Profile Index.Html */
@@ -153,11 +146,6 @@ input[type="text"] {
 
 @media (max-width: 768px) {
 
-    #left-content,
-    #right-content {
-        width: 100%;
-    }
-
     .favori_cards .search-card {
         height: auto;
     }
@@ -170,4 +158,17 @@ input[type="text"] {
 
 .favori_cards .info-icons .rating {
     width: 500px;
+}
+
+.favorite-cards .hospital-card {
+    margin:0;
+    padding:10px;
+}
+.favorite-cards .hospital-card .card-body {
+    padding:20px;
+}
+
+.card-container .sc1-card{
+margin:0;
+padding:10px;
 }
