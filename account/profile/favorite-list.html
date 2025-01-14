@@ -55,7 +55,7 @@
       <div class="row">
 
         <!-- Sol Taraf -->
-        <div class="col-5" id="left-content">
+        <div class="col-4" id="left-content">
           <div class="card" style="width: 18rem;">
             <img src="/SaglikPusulam/assets/img/Rectangle 48.png" class="card-img-top" alt="...">
             <div class="card-body">
@@ -73,173 +73,225 @@
           </div>
         </div>
         <!-- Sağ Taraf -->
-        <div class="container-fluid col-lg-8 col-md-6 col-12 " id="right-content">
+        <div class="container-fluid col-8" id="right-content" style="padding-left: 19px;">
           <div class="search-title mb-3">
             <h4>Favoriler</h4>
           </div>
-          <!-- 1. Kart -->
-          <div class="search-card">
-            <div class="row g-0">
-              <div class="col-md-4 pt-3 ps-3">
-                <img src="/SaglikPusulam/assets/img/Memori.jpg" alt="Hospital Image">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <div class="like-compare">
-                    <i class="bi bi-heart me-2"></i>
-                    <i class="bi bi-arrow-left-right"></i>
-                  </div>
-                  <div class="row">
-                    <h5 class="card-title justify-content-center col-8" id="favori_name">Memorial</h5>
-
-                    <div class="no-style d-flex justify-content-end col-4 mt-2 gap-3">
-
-                      <a href="javascript:void(0);" class="toggle-container">
-                        <i class="fa-solid fa-shuffle toggle-compare" onclick="toggleCompare(this)"></i>
-                      </a>
-                      <a href="javascript:void(0);" class="toggle-container">
-                        <i class="fa-regular fa-heart toggle-heart" onclick="toggleHeart(this)"></i>
-                      </a>
+          <div class="search-results favorite-cards">
+            <!-- Cards -->
+            <div class="hospital-card card mb-4 border rounded-3 shadow-sm">
+              <div class="row g-0">
+                <div class="col-md-3">
+                  <img src="/SaglikPusulam/assets/img/Memori.jpg" class="img-fluid rounded-start h-100 object-fit-cover"
+                    alt="Memorial Hospital">
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start mb-3">
+                      <h5 class="card-title mb-2 mb-md-0">Memorial</h5>
+                      <div class="action-buttons d-flex gap-3">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <div class="no-style d-flex gap-2">
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-regular fa-heart toggle-heart action-buttons"
+                                onclick="toggleHeart(this)"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-solid fa-shuffle toggle-compare action-buttons"
+                                onclick="toggleCompare(this)"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-solid fa-share-nodes toggle-share action-buttons"
+                                onclick="toggleShare(this)"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-
-                  </div>
-                  <div class="row">
-                    <div class="info-icons">
-                      <span><img src="/SaglikPusulam/assets/img/line-md_arrow-down-square.png" style="width: 30px;"
-                          alt=""> Kapalı</span>
-                      <span><img src="/SaglikPusulam/assets/img/mdi_address-marker.png" style="width: 30px;" alt="">
-                        Adres</span>
-                      <span><img src="/SaglikPusulam/assets/img/bolumu.png" style="width: 30px;" alt=""> Bölümü</span>
-                      <div class="stars ms-auto">
-                        <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; (137 Değerlendirme)</span>
+                    <div class="hospital-info d-flex flex-wrap gap-4 mb-3">
+                      <span><i class="fa-regular fa-calendar"></i> Kapalı</span>
+                      <span><i class="fa-solid fa-location-dot"></i> Adres</span>
+                      <span><i class="fa-solid fa-user-doctor"></i> Bölümü</span>
+                    </div>
+                    <p class="card-text mb-3">Lorem ipsum dolor sit amet consectetur. Ut non diam a ut nunc pulvinar
+                      massa.</p>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                      <div class="rating">
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <span class="ms-2">(137 Değerlendirme)</span>
+                      </div>
+                      <div class="d-flex gap-2">
+                        <button class="btn btn-outline-primary rounded-pill">Detay</button>
+                        <button class="btn btn-primary rounded-pill">Randevu Al</button>
                       </div>
                     </div>
                   </div>
-
-
-                  <div class="row">
-                    <p class="card-text col-md-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam diam
-                      scelerisque eget a urna cursus ridiculus arcu.</p>
-                    <div class="actions col-md-3">
-                      <div class="btn-group-vertical">
-                        <button class="btn btn-outline-secondary mb-3" style="border-radius: 10px;">Detay</button>
-                        <button class="btn btn-outline-secondary" style="border-radius: 10px;">Randevu Al</button>
-                      </div>
-                    </div>
-                  </div>
-
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- 2. Kart -->
-          <div class="search-card">
-            <div class="row g-0">
-              <div class="col-md-4 pt-3 ps-3">
-                <img src="/SaglikPusulam/assets/img/Memori.jpg" alt="Hospital Image">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <div class="like-compare">
-                    <i class="bi bi-heart me-2"></i>
-                    <i class="bi bi-arrow-left-right"></i>
-                  </div>
-                  <div class="row">
-                    <h5 class="card-title justify-content-center col-8" id="favori_name">Memorial</h5>
-
-                    <div class="no-style d-flex justify-content-end col-4 mt-2 gap-3">
-
-                      <a href="javascript:void(0);" class="toggle-container">
-                        <i class="fa-solid fa-shuffle toggle-compare" onclick="toggleCompare(this)"></i>
-                      </a>
-                      <a href="javascript:void(0);" class="toggle-container">
-                        <i class="fa-regular fa-heart toggle-heart" onclick="toggleHeart(this)"></i>
-                      </a>
+            <div class="hospital-card card mb-4 border rounded-3 shadow-sm">
+              <div class="row g-0">
+                <div class="col-md-3">
+                  <img src="/SaglikPusulam/assets/img/Memori.jpg" class="img-fluid rounded-start h-100 object-fit-cover"
+                    alt="Memorial Hospital">
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start mb-3">
+                      <h5 class="card-title mb-2 mb-md-0">Memorial</h5>
+                      <div class="action-buttons d-flex gap-3">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <div class="no-style d-flex gap-2">
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-regular fa-heart toggle-heart action-buttons"
+                                onclick="toggleHeart(this)"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-solid fa-shuffle toggle-compare action-buttons"
+                                onclick="toggleCompare(this)"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-solid fa-share-nodes toggle-share action-buttons"
+                                onclick="toggleShare(this)"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-
-                  </div>
-                  <div class="row">
-                    <div class="info-icons">
-                      <span><img src="/SaglikPusulam/assets/img/line-md_arrow-down-square.png" style="width: 30px;"
-                          alt=""> Kapalı</span>
-                      <span><img src="/SaglikPusulam/assets/img/mdi_address-marker.png" style="width: 30px;" alt="">
-                        Adres</span>
-                      <span><img src="/SaglikPusulam/assets/img/bolumu.png" style="width: 30px;" alt=""> Bölümü</span>
-                      <div class="stars ms-auto">
-                        <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; (137 Değerlendirme)</span>
+                    <div class="hospital-info d-flex flex-wrap gap-4 mb-3">
+                      <span><i class="fa-regular fa-calendar"></i> Kapalı</span>
+                      <span><i class="fa-solid fa-location-dot"></i> Adres</span>
+                      <span><i class="fa-solid fa-user-doctor"></i> Bölümü</span>
+                    </div>
+                    <p class="card-text mb-3">Lorem ipsum dolor sit amet consectetur. Ut non diam a ut nunc pulvinar
+                      massa.</p>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                      <div class="rating">
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <span class="ms-2">(137 Değerlendirme)</span>
+                      </div>
+                      <div class="d-flex gap-2">
+                        <button class="btn btn-outline-primary rounded-pill">Detay</button>
+                        <button class="btn btn-primary rounded-pill">Randevu Al</button>
                       </div>
                     </div>
                   </div>
-
-
-                  <div class="row">
-                    <p class="card-text col-md-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam diam
-                      scelerisque eget a urna cursus ridiculus arcu.</p>
-                    <div class="actions col-md-3">
-                      <div class="btn-group-vertical">
-                        <button class="btn btn-outline-secondary mb-3" style="border-radius: 10px;">Detay</button>
-                        <button class="btn btn-outline-secondary" style="border-radius: 10px;">Randevu Al</button>
-                      </div>
-                    </div>
-                  </div>
-
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- 3. Kart -->
-          <div class="search-card">
-            <div class="row g-0">
-              <div class="col-md-4 pt-3 ps-3">
-                <img src="/SaglikPusulam/assets/img/Memori.jpg" alt="Hospital Image">
+            <div class="hospital-card card mb-4 border rounded-3 shadow-sm">
+              <div class="row g-0">
+                <div class="col-md-3">
+                  <img src="/SaglikPusulam/assets/img/Memori.jpg" class="img-fluid rounded-start h-100 object-fit-cover"
+                    alt="Memorial Hospital">
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start mb-3">
+                      <h5 class="card-title mb-2 mb-md-0">Memorial</h5>
+                      <div class="action-buttons d-flex gap-3">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <div class="no-style d-flex gap-2">
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-regular fa-heart toggle-heart action-buttons"
+                                onclick="toggleHeart(this)"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-solid fa-shuffle toggle-compare action-buttons"
+                                onclick="toggleCompare(this)"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-solid fa-share-nodes toggle-share action-buttons"
+                                onclick="toggleShare(this)"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hospital-info d-flex flex-wrap gap-4 mb-3">
+                      <span><i class="fa-regular fa-calendar"></i> Kapalı</span>
+                      <span><i class="fa-solid fa-location-dot"></i> Adres</span>
+                      <span><i class="fa-solid fa-user-doctor"></i> Bölümü</span>
+                    </div>
+                    <p class="card-text mb-3">Lorem ipsum dolor sit amet consectetur. Ut non diam a ut nunc pulvinar
+                      massa.</p>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                      <div class="rating">
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <span class="ms-2">(137 Değerlendirme)</span>
+                      </div>
+                      <div class="d-flex gap-2">
+                        <button class="btn btn-outline-primary rounded-pill">Detay</button>
+                        <button class="btn btn-primary rounded-pill">Randevu Al</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <div class="like-compare">
-                    <i class="bi bi-heart me-2"></i>
-                    <i class="bi bi-arrow-left-right"></i>
-                  </div>
-                  <div class="row">
-                    <h5 class="card-title justify-content-center col-8" id="favori_name">Memorial</h5>
-
-                    <div class="no-style d-flex justify-content-end col-4 mt-2 gap-3">
-
-                      <a href="javascript:void(0);" class="toggle-container">
-                        <i class="fa-solid fa-shuffle toggle-compare" onclick="toggleCompare(this)"></i>
-                      </a>
-                      <a href="javascript:void(0);" class="toggle-container">
-                        <i class="fa-regular fa-heart toggle-heart" onclick="toggleHeart(this)"></i>
-                      </a>
+            </div>
+            <div class="hospital-card card mb-4 border rounded-3 shadow-sm">
+              <div class="row g-0">
+                <div class="col-md-3">
+                  <img src="/SaglikPusulam/assets/img/Memori.jpg" class="img-fluid rounded-start h-100 object-fit-cover"
+                    alt="Memorial Hospital">
+                </div>
+                <div class="col-md-9">
+                  <div class="card-body">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start mb-3">
+                      <h5 class="card-title mb-2 mb-md-0">Memorial</h5>
+                      <div class="action-buttons d-flex gap-3">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <div class="no-style d-flex gap-2">
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-regular fa-heart toggle-heart action-buttons"
+                                onclick="toggleHeart(this)"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-solid fa-shuffle toggle-compare action-buttons"
+                                onclick="toggleCompare(this)"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="toggle-container">
+                              <i class="fa-solid fa-share-nodes toggle-share action-buttons"
+                                onclick="toggleShare(this)"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-
-                  </div>
-                  <div class="row">
-                    <div class="info-icons">
-                      <span><img src="/SaglikPusulam/assets/img/line-md_arrow-down-square.png" style="width: 30px;"
-                          alt=""> Kapalı</span>
-                      <span><img src="/SaglikPusulam/assets/img/mdi_address-marker.png" style="width: 30px;" alt="">
-                        Adres</span>
-                      <span><img src="/SaglikPusulam/assets/img/bolumu.png" style="width: 30px;" alt=""> Bölümü</span>
-                      <div class="stars ms-auto">
-                        <span class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; (137 Değerlendirme)</span>
+                    <div class="hospital-info d-flex flex-wrap gap-4 mb-3">
+                      <span><i class="fa-regular fa-calendar"></i> Kapalı</span>
+                      <span><i class="fa-solid fa-location-dot"></i> Adres</span>
+                      <span><i class="fa-solid fa-user-doctor"></i> Bölümü</span>
+                    </div>
+                    <p class="card-text mb-3">Lorem ipsum dolor sit amet consectetur. Ut non diam a ut nunc pulvinar
+                      massa.</p>
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                      <div class="rating">
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <span class="ms-2">(137 Değerlendirme)</span>
+                      </div>
+                      <div class="d-flex gap-2">
+                        <button class="btn btn-outline-primary rounded-pill">Detay</button>
+                        <button class="btn btn-primary rounded-pill">Randevu Al</button>
                       </div>
                     </div>
                   </div>
-
-
-                  <div class="row">
-                    <p class="card-text col-md-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam diam
-                      scelerisque eget a urna cursus ridiculus arcu.</p>
-                    <div class="actions col-md-3">
-                      <div class="btn-group-vertical">
-                        <button class="btn btn-outline-secondary mb-3" style="border-radius: 10px;">Detay</button>
-                        <button class="btn btn-outline-secondary" style="border-radius: 10px;">Randevu Al</button>
-                      </div>
-                    </div>
-                  </div>
-
                 </div>
               </div>
             </div>

@@ -159,3 +159,16 @@ input[type="text"] {
 .favori_cards .info-icons .rating {
     width: 500px;
 }
+
+.favorite-cards .hospital-card {
+    margin:0;
+    padding:10px;
+}
+.favorite-cards .hospital-card .card-body {
+    padding:20px;
+}
+
+.card-container .sc1-card{
+margin:0;
+padding:10px;
+}
