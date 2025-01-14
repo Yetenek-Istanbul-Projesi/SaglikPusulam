@@ -7,7 +7,7 @@ Sağlık kuruluşlarını kolayca bulmanızı ve karşılaştırmanızı sağlay
 - 🔍 Gelişmiş sağlık kuruluşu arama  
 - 📍 İl ve ilçe bazlı filtreleme  
 - ⭐ Favori listeleme  
-- 📊 Kuruluş karşılaştırma  
+- 📊 Hizmet karşılaştırma  
 - 👤 Kullanıcı profil yönetimi  
 - 📱 Responsive tasarım  
 
