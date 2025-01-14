@@ -26,13 +26,21 @@
           <!-- Align Home and Pricing to the right -->
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
             <li class="nav-item">
-              <a class="nav-link fw-bold text-dark" href="#">Ana Sayfa</a>
+              <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/index.html">Ana Sayfa</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold text-dark" href="#">Hakkımızda</a>
+              <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/about-us.html">Hakkımızda</a>
             </li>
-            <img src="/SaglikPusulam/assets/img/user-icon.jpg" width="50px;" height="50px" style="opacity: 0.9;">
-            <button type="button" class="btn btn-primary rounded-4 shadow">Hemen Katılın</button>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/contact.html">İletişim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/sss.html">SSS</a>
+            </li>
+            <a href="/SaglikPusulam/account/profile/index.html"><img src="/SaglikPusulam/assets/img/user-icon.jpg"
+                width="50px;" height="50px" style="opacity: 0.9;"></a>
+            <button type="button" class="btn btn-primary rounded-4 shadow"
+              onclick="location.href='/SaglikPusulam/account/register.html'">Hemen Katılın</button>
           </ul>
         </div>
       </div>
@@ -41,7 +49,7 @@
   <main>
     <div id="wrapper" class="container">
       <div class="row">
-        <div class="col-6" id="left-content">
+        <div class="col-5" id="left-content">
           <div class="card" style="width: 18rem;">
             <img src="/SaglikPusulam/assets/img/Rectangle 48.png" class="card-img-top" alt="...">
             <div class="card-body">
@@ -52,71 +60,78 @@
             </div>
 
             <a href="index.html" class="btn btn-primary btn-lg">Profil Bilgileri</a></br>
-            <a href="favoritelist.html" class="btn btn-outline-primary btn-lg">Favoriler</a></br>
+            <a href="favorite-list.html" class="btn btn-outline-primary btn-lg">Favoriler</a></br>
             <a href="security.html" class="btn btn-outline-primary btn-lg">Güvenlik</a></br>
-            <a href="comparelist.html" class="btn btn-outline-primary btn-lg">Karşılaştırma Listesi</a></br>
-            <a href="#" class="btn btn-outline-primary btn-lg">Çıkış Yap</a></br>
+            <a href="compare-list.html" class="btn btn-outline-primary btn-lg">Karşılaştırma Listesi</a></br>
+            <a href="javascript:void(0);" class="btn btn-outline-primary btn-lg">Çıkış Yap</a></br>
           </div>
         </div>
-        <div class="col-6" id="right-content">
-          <div class="p-5 form-container">
-            <!-- Right Content İçerik Alanı -->
-            <form>
-              <div class="container-fluid  ms-auto align-items-center" >
-                 <h3>Profil Bilgileri</h3> <br>
-                 <div class="row mb-3">
-                     <div class="col-md-6 ">
-                         <div class="mb-3">
-                             <label for="name" class="" >Ad</label>
-                             <input type="text" class="form-control bgc" id="name" aria-describedby="name" placeholder="Ad">
-                         </div>
-                     </div>
-         
-                     <div class="col-md-6">
-                         <div class="mb-3">
-                             <label for="Surname" class="">Soyad</label>
-                             <input type="text" class="form-control bgc" id="surname" placeholder="Soyad">
-                         </div>
-                     </div>
-                 </div>
-         
-                 <div class="row mb-3">
-                     <div class="col-md-6">
-                         <div class="mb-3">
-                             <label for="exampleInputEmail1" class="">E-Posta</label>
-                             <input type="email" class="form-control bgc" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-Posta">
-                         </div>
-                     </div>
-         
-                     <div class="col-md-6">
-                         <div class="mb-3">
-                             <label for="number" class="">Telefon Numarası</label>
-                             <input type="tel" class="form-control bgc" id="number" aria-describedby="number" placeholder="Telefon Numarası">
-                         </div>
-                     </div>
-         
-                     <div class="row-md-8 mt-3">
-                      
-                         <div class="row-md-6">
-                             <div class="mb-6">
-                                 <label for="text" class="">Adres Bilgisi</label><br>
-                                 <textarea id="textarea" class="form-control w-100 bgc" name="area-text" placeholder="Adres Bilgisi" rows="4"></textarea>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-         
-                 <button type="submit" class="btn btn-primary">Değişiklikleri Kaydet</button>
+        <div class="col-7" id="right-content" style="padding-left: 73px;">
+          <div class="search-title mb-3">
+            <h4>Profil Bilgileri</h4>
+          </div>
+          <div class="search-card">
+            <div class="row g-0">
+              <div class="col">
+                <div class="container p-5">
+                  <form>
+                    <!-- Ad ve Soyad -->
+                    <div class="row mb-3">
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label for="name" class="form-label">Ad</label>
+                          <input type="text" class="form-control bgc" id="name" placeholder="Ad">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label for="surname" class="form-label">Soyad</label>
+                          <input type="text" class="form-control bgc" id="surname" placeholder="Soyad">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- E-Posta ve Telefon Numarası -->
+                    <div class="row mb-3">
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label for="profile-email" class="form-label">E-Posta</label>
+                          <input type="email" class="form-control bgc" id="profile-email" name="profile-email"
+                            placeholder="E-Posta">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <label for="profile-number" class="form-label">Telefon Numarası</label>
+                          <input type="tel" class="form-control bgc" id="profile-number" name="profile-number"
+                            placeholder="Telefon Numarası">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Adres Bilgisi -->
+                    <div class="row mb-3">
+                      <div class="col-12">
+                        <div class="mb-3">
+                          <label for="textarea" class="form-label">Adres Bilgisi</label>
+                          <textarea id="textarea" class="form-control bgc" name="profile-address"
+                            placeholder="Adres Bilgisi" rows="4"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-12">
+                        <button type="submit" class="btn btn-primary w-100">Değişiklikleri Kaydet</button>
+                      </div>
+                    </div>
+                    <!-- Kaydet Butonu -->
+
+                  </form>
+                </div>
               </div>
-             </form>
+            </div>
           </div>
         </div>
       </div>
-
-
     </div>
-
-
   </main>
   <footer style="background-color:#3465FD;">
     <div class="container-fluid">
@@ -129,9 +144,14 @@
             </svg>
           </a>
 
-          <h6><a class="navbar-brand no-style" href="#" style="color: white !important;"><b>Sağlık</b>Pusulam</a></h6>
+          <div style="display: flex; align-items: center;">
+            <img src="/SaglikPusulam/assets/img/Footer_logo.svg" alt="Logo"
+              style="width: 60px; height: 55px; margin-right: 10px;"> <!--Footer logo-->
+            <h6><a class="navbar-brand no-style" href="#" style="color: white !important;"><b>Sağlık</b>Pusulam</a></h6>
+          </div>
 
-          <!-- <h5 style="color: white;">Sağlık Pusulam</h5> -->
+
+
         </div>
 
         <div class="col mb-3">
@@ -140,18 +160,24 @@
         <div class="col mb-3">
           <h6 style="color: white;">KURUMSAL</h6>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="index.html" style="color: white; text-decoration: none;">Ana Sayfa</a>
-            </li>
-            <li class="nav-item mb-2"><a href="#" style="color: white; text-decoration: none;">Hakkımızda</a></li>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/index.html"
+                style="color: white; text-decoration: none;">Ana Sayfa</a></li>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/about-us.html"
+                style="color: white; text-decoration: none;">Hakkımızda</a></li>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/sss.html"
+                style="color: white; text-decoration: none;">Sıkça Sorulan Sorular</a></li>
           </ul>
         </div>
 
         <div class="col mb-3">
           <h6 style="color: white;">ZİYARETÇİ</h6>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" style="color: white; text-decoration: none;">Hastaneler</a></li>
-            <li class="nav-item mb-2"><a href="#" style="color: white; text-decoration: none;">Klinik</a></li>
-            <li class="nav-item mb-2"><a href="#" style="color: white; text-decoration: none;">Branşlar</a></li>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/account/login.html"
+                style="color: white; text-decoration: none;">Giriş Yap</a></li>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/account/register.html"
+                style="color: white; text-decoration: none;">Kaydol</a></li>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/account/forgot-password.html"
+                style="color: white; text-decoration: none;">Şifremi Unuttum</a></li>
           </ul>
         </div>
 
@@ -160,20 +186,22 @@
 
           <ul class="nav flex-column" style="text-align: left;">
             <li class="nav-item mb-2">
-              <a href="#" style="color: white; text-decoration: none;">info@hastaneprojesi.com</a>
+              <a href="#" style="color: white; text-decoration: none;">info@saglikpusulam.com</a>
             </li></br>
             </li>
 
-            <li class="nav-item mb-2" style="text-align: left;"> <!-- Hiza için text-align kullanıyoruz -->
+            <li class="nav-item mb-2" style="text-align: left;">
               <h6 style="color: white; text-decoration: none; text-align: left;">BİZİ TAKİP EDİN</h6>
 
               <!-- Simgelerin yer aldığı listeyi sola hizalamak için flex kullanıyoruz -->
               <div class="d-flex justify-content-start align-items-center gap-3">
-                <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_linkedin.png" alt="linkedin"
+                <a href="https://www.linkedin.com/" class="hover-effect"><img
+                    src="/SaglikPusulam/assets/img/mdi_linkedin.png" alt="linkedin"
                     style="width: 30px; height: 30px;"></a>
-                <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_twitter.png" alt="twitter"
-                    style="width: 30px; height: 30px;"></a>
-                <a href="#" class="hover-effect"><img src="/SaglikPusulam/assets/img/line-md_facebook.png" alt="facebook"
+                <a href="https://x.com/" class="hover-effect"><img src="/SaglikPusulam/assets/img/mdi_twitter.png"
+                    alt="twitter" style="width: 30px; height: 30px;"></a>
+                <a href="https://www.facebook.com/" class="hover-effect"><img
+                    src="/SaglikPusulam/assets/img/line-md_facebook.png" alt="facebook"
                     style="width: 30px; height: 30px;"></a>
               </div>
             </li>
@@ -184,12 +212,12 @@
         <div style="width: 100%;">
           <p style="color: white;">İş bu sayfada yer alan yorumlar, ilgilİ doktorun doğrudan veya dolaylı emri, talebi
             ve/veya ricası olmaksızın, ilgili hasta tarafından bağımsız olarak yazılmaktadır. Bu web sitesinin temel
-            amacı sağlık
-            alanında kamuoyunun daha iyi bilgilenmesi sağlamaktır.</p>
+            amacı sağlıkalanında kamuoyunun daha iyi bilgilenmesi sağlamaktır.</p>
           <hr>
           <div class="d-flex justify-content-start">
-            <a href="#" class="link-style fw-medium me-3" style="color: white;">Kullanım koşulları</a>
-            <a href="#" class="link-style fw-medium" style="color: white;">KVKK</a>
+            <a href="/SaglikPusulam/pages/terms-of-use.html" class="link-style fw-medium me-3"
+              style="color: white;">Kullanım şartları</a>
+            <a href="/SaglikPusulam/pages/kvkk.html" class="link-style fw-medium" style="color: white;">KVKK</a>
           </div>
         </div>
       </footer>

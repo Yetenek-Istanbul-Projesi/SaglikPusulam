@@ -364,7 +364,7 @@ footer a:hover {
 
 /* Filtreleme Css */
 
-/* Form etiketlerinin stilini özelleştiriyoruz. */
+/* Form etiketlerinin stilini özelleştiriyoruz. 
 .form-label {
   font-weight: bold;
   border: 2px solid #c8c8ca;
@@ -375,7 +375,7 @@ footer a:hover {
   width: 100%;
   background-color: white;
 }
-
+/*
 /* Mesafe slider'ının değerini ortalamak için stil tanımlıyoruz. */
 .slider-value {
   text-align: center;
@@ -411,14 +411,14 @@ footer a:hover {
   margin-top: 10px;
 }
 
-/* Mobil cihazlarda form etiketlerinin font boyutunu küçültüyoruz. */
+/* Mobil cihazlarda form etiketlerinin font boyutunu küçültüyoruz. 
 @media (max-width: 768px) {
   .form-label {
     font-size: 14px;
     padding: 8px;
   }
 }
-
+*/
 
 
 /* Yorum bölümü Yıldızlı puanlama sistemi için CSS stilleri */
