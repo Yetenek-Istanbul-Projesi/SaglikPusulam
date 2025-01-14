@@ -1,0 +1,36 @@
+{
+    "Hizmet Seçiniz": {},
+    "Hastaneler": {
+        "Hastane Türü Seçiniz": {},
+        "Devlet Hastaneleri": {},
+        "Özel Hastaneler": {},
+        "Üniversite Hastaneleri": {}
+    },
+    "Klinikler": {
+        "Klinik Türü Seçiniz": {},
+        "Diş Klinikleri": {},
+        "Fizik Tedavi Merkezleri": {},
+        "Göz Merkezleri": {},
+        "Tüp Bebek Merkezleri": {},
+        "Diyaliz Merkezleri": {}
+    },
+    "Doktorlar": {
+        "Uzmanlık Alanı Seçiniz": {},
+        "Aile Hekimliği": {},
+        "Beyin ve Sinir Cerrahisi": {},
+        "Çocuk Sağlığı ve Hastalıkları": {},
+        "Dahiliye": {},
+        "Dermatoloji": {},
+        "Fizik Tedavi ve Rehabilitasyon": {},
+        "Genel Cerrahi": {},
+        "Göz Hastalıkları": {},
+        "Kadın Hastalıkları ve Doğum": {},
+        "Kalp ve Damar Cerrahisi": {},
+        "Kardiyoloji": {},
+        "Kulak Burun Boğaz": {},
+        "Nöroloji": {},
+        "Ortopedi ve Travmatoloji": {},
+        "Psikiyatri": {},
+        "Üroloji": {}
+    }
+}

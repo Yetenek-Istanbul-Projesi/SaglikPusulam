@@ -1,0 +1,539 @@
+{
+    "İl Seçiniz": {},
+    "Adana": {
+        "İlçe Seçiniz": {},
+        "Aladağ": {},
+        "Ceyhan": {},
+        "Çukurova": {},
+        "Feke": {},
+        "Seyhan": {},
+        "Yüreğir": {}
+    },
+    "Adıyaman": {
+        "İlçe Seçiniz": {},
+        "Besni": {},
+        "Çelikhan": {},
+        "Gerger": {},
+        "Gölbaşı": {}
+    },
+    "Afyonkarahisar": {
+        "İlçe Seçiniz": {},
+        "Başmakçı": {},
+        "Bayat": {},
+        "Bolvadin": {},
+        "Çay": {}
+    },
+    "Ağrı": {
+        "İlçe Seçiniz": {},
+        "Diyadin": {},
+        "Doğubayazıt": {},
+        "Eleşkirt": {},
+        "Hamur": {}
+    },
+    "Amasya": {
+        "İlçe Seçiniz": {},
+        "Göynücek": {},
+        "Gümüşhacıköy": {},
+        "Hamamözü": {},
+        "Merzifon": {}
+    },
+    "Ankara": {
+        "İlçe Seçiniz": {},
+        "Altındağ": {},
+        "Armutlu": {},
+        "Ayaş": {},
+        "Bala": {},
+        "Beypazarı": {}
+    },
+    "Antalya": {
+        "İlçe Seçiniz": {},
+        "Akseki": {},
+        "Aksu": {},
+        "Alanya": {},
+        "Demre": {}
+    },
+    "Artvin": {
+        "İlçe Seçiniz": {},
+        "Ardanuç": {},
+        "Arhavi": {},
+        "Borçka": {},
+        "Hopa": {}
+    },
+    "Aydın": {
+        "İlçe Seçiniz": {},
+        "Bozdoğan": {},
+        "Buharkent": {},
+        "Çine": {},
+        "Didim": {}
+    },
+    "Balıkesir": {
+        "İlçe Seçiniz": {},
+        "Altıeylül": {},
+        "Ayvalık": {},
+        "Balya": {},
+        "Bandırma": {}
+    },
+    "Bilecik": {
+        "İlçe Seçiniz": {},
+        "Bozüyük": {},
+        "Gölpazarı": {},
+        "Osmaneli": {},
+        "Pazaryeri": {}
+    },
+    "Bingöl": {
+        "İlçe Seçiniz": {},
+        "Adaklı": {},
+        "Genç": {},
+        "Karlıova": {},
+        "Kiğı": {}
+    },
+    "Bitlis": {
+        "İlçe Seçiniz": {},
+        "Adilcevaz": {},
+        "Ahlat": {},
+        "Güroymak": {},
+        "Hizan": {}
+    },
+    "Bolu": {
+        "İlçe Seçiniz": {},
+        "Dörtdivan": {},
+        "Gerede": {},
+        "Göynük": {},
+        "Kıbrıscık": {}
+    },
+    "Burdur": {
+        "İlçe Seçiniz": {},
+        "Ağlasun": {},
+        "Altınyayla": {},
+        "Bucak": {},
+        "Çavdır": {}
+    },
+    "Bursa": {
+        "İlçe Seçiniz": {},
+        "Gemlik": {},
+        "Gürsu": {},
+        "Harmancık": {},
+        "İnegöl": {}
+    },
+    "Çanakkale": {
+        "İlçe Seçiniz": {},
+        "Ayvacık": {},
+        "Bayramiç": {},
+        "Biga": {},
+        "Bozcaada": {}
+    },
+    "Çankırı": {
+        "İlçe Seçiniz": {},
+        "Atkaracalar": {},
+        "Bayramören": {},
+        "Çerkeş": {},
+        "Eldivan": {}
+    },
+    "Çorum": {
+        "İlçe Seçiniz": {},
+        "Alaca": {},
+        "Bayat": {},
+        "Boğazkale": {},
+        "Dodurga": {}
+    },
+    "Denizli": {
+        "İlçe Seçiniz": {},
+        "Acıpayam": {},
+        "Babadağ": {},
+        "Baklan": {},
+        "Bekilli": {}
+    },
+    "Diyarbakır": {
+        "İlçe Seçiniz": {},
+        "Bağlar": {},
+        "Bismil": {},
+        "Çermik": {},
+        "Çınar": {}
+    },
+    "Düzce": {
+        "İlçe Seçiniz": {},
+        "Akçakoca": {},
+        "Cumayeri": {},
+        "Çilimli": {},
+        "Gölyaka": {}
+    },
+    "Edirne": {
+        "İlçe Seçiniz": {},
+        "Enez": {},
+        "Havsa": {},
+        "İpsala": {},
+        "Keşan": {}
+    },
+    "Elazığ": {
+        "İlçe Seçiniz": {},
+        "Ağın": {},
+        "Alacakaya": {},
+        "Arıcak": {},
+        "Baskil": {}
+    },
+    "Erzincan": {
+        "İlçe Seçiniz": {},
+        "Çayırlı": {},
+        "İliç": {},
+        "Kemah": {},
+        "Kemaliye": {}
+    },
+    "Erzurum": {
+        "İlçe Seçiniz": {},
+        "Aşkale": {},
+        "Çat": {},
+        "Hınıs": {},
+        "Horasan": {}
+    },
+    "Eskişehir": {
+        "İlçe Seçiniz": {},
+        "Alpu": {},
+        "Beylikova": {},
+        "Çifteler": {},
+        "Günyüzü": {}
+    },
+    "Gaziantep": {
+        "İlçe Seçiniz": {},
+        "Araban": {},
+        "İslahiye": {},
+        "Karkamış": {},
+        "Nizip": {}
+    },
+    "Giresun": {
+        "İlçe Seçiniz": {},
+        "Alucra": {},
+        "Bulancak": {},
+        "Çamoluk": {},
+        "Çanakçı": {}
+    },
+    "Gümüşhane": {
+        "İlçe Seçiniz": {},
+        "Kelkit": {},
+        "Köse": {},
+        "Kürtün": {},
+        "Şiran": {}
+    },
+    "Hakkari": {
+        "İlçe Seçiniz": {},
+        "Çukurca": {},
+        "Derecik": {},
+        "Şemdinli": {},
+        "Yüksekova": {}
+    },
+    "Hatay": {
+        "İlçe Seçiniz": {},
+        "Altınözü": {},
+        "Arsuz": {},
+        "Belen": {},
+        "Defne": {}
+    },
+    "Iğdır": {
+        "İlçe Seçiniz": {},
+        "Aralık": {},
+        "Karakoyunlu": {},
+        "Merkez": {},
+        "Tuzluca": {}
+    },
+    "Isparta": {
+        "İlçe Seçiniz": {},
+        "Aksu": {},
+        "Atabey": {},
+        "Eğirdir": {},
+        "Gelendost": {}
+    },
+    "İstanbul": {
+        "İlçe Seçiniz": {},
+        "Adalar": {},
+        "Arnavutköy": {},
+        "Ataşehir": {},
+        "Avcılar": {}
+    },
+    "İzmir": {
+        "İlçe Seçiniz": {},
+        "Aliağa": {},
+        "Balçova": {},
+        "Bayındır": {},
+        "Bayraklı": {}
+    },
+    "Kahramanmaraş": {
+        "İlçe Seçiniz": {},
+        "Afşin": {},
+        "Andırın": {},
+        "Çağlayancerit": {},
+        "Dulkadiroğlu": {}
+    },
+    "Karabük": {
+        "İlçe Seçiniz": {},
+        "Eflani": {},
+        "Eskipazar": {},
+        "Ovacık": {},
+        "Safranbolu": {}
+    },
+    "Karaman": {
+        "İlçe Seçiniz": {},
+        "Ayrancı": {},
+        "Başyayla": {},
+        "Ermenek": {},
+        "Kazımkarabekir": {}
+    },
+    "Kars": {
+        "İlçe Seçiniz": {},
+        "Arpaçay": {},
+        "Digor": {},
+        "Kağızman": {},
+        "Sarıkamış": {}
+    },
+    "Kastamonu": {
+        "İlçe Seçiniz": {},
+        "Abana": {},
+        "Ağlı": {},
+        "Araç": {},
+        "Azdavay": {}
+    },
+    "Kayseri": {
+        "İlçe Seçiniz": {},
+        "Bünyan": {},
+        "Develi": {},
+        "Felahiye": {},
+        "Hacılar": {}
+    },
+    "Kırıkkale": {
+        "İlçe Seçiniz": {},
+        "Bahşili": {},
+        "Balışeyh": {},
+        "Çelebi": {},
+        "Delice": {}
+    },
+    "Kırklareli": {
+        "İlçe Seçiniz": {},
+        "Babaeski": {},
+        "Demirköy": {},
+        "Kofçaz": {},
+        "Lüleburgaz": {}
+    },
+    "Kırşehir": {
+        "İlçe Seçiniz": {},
+        "Akçakent": {},
+        "Akpınar": {},
+        "Boztepe": {},
+        "Çiçekdağı": {}
+    },
+    "Kilis": {
+        "İlçe Seçiniz": {},
+        "Elbeyli": {},
+        "Merkez": {},
+        "Musabeyli": {},
+        "Polateli": {}
+    },
+    "Kocaeli": {
+        "İlçe Seçiniz": {},
+        "Başiskele": {},
+        "Çayırova": {},
+        "Darıca": {},
+        "Derince": {}
+    },
+    "Konya": {
+        "İlçe Seçiniz": {},
+        "Ahırlı": {},
+        "Akören": {},
+        "Akşehir": {},
+        "Altınekin": {}
+    },
+    "Kütahya": {
+        "İlçe Seçiniz": {},
+        "Altıntaş": {},
+        "Aslanapa": {},
+        "Çavdarhisar": {},
+        "Domaniç": {}
+    },
+    "Malatya": {
+        "İlçe Seçiniz": {},
+        "Akçadağ": {},
+        "Arapgir": {},
+        "Arguvan": {},
+        "Battalgazi": {}
+    },
+    "Manisa": {
+        "İlçe Seçiniz": {},
+        "Ahmetli": {},
+        "Akhisar": {},
+        "Alaşehir": {},
+        "Demirci": {}
+    },
+    "Mardin": {
+        "İlçe Seçiniz": {},
+        "Artuklu": {},
+        "Dargeçit": {},
+        "Derik": {},
+        "Kızıltepe": {}
+    },
+    "Mersin": {
+        "İlçe Seçiniz": {},
+        "Akdeniz": {},
+        "Anamur": {},
+        "Aydıncık": {},
+        "Bozyazı": {}
+    },
+    "Muğla": {
+        "İlçe Seçiniz": {},
+        "Bodrum": {},
+        "Dalaman": {},
+        "Datça": {},
+        "Fethiye": {}
+    },
+    "Muş": {
+        "İlçe Seçiniz": {},
+        "Bulanık": {},
+        "Hasköy": {},
+        "Korkut": {},
+        "Malazgirt": {}
+    },
+    "Nevşehir": {
+        "İlçe Seçiniz": {},
+        "Avanos": {},
+        "Derinkuyu": {},
+        "Gülşehir": {},
+        "Hacıbektaş": {}
+    },
+    "Niğde": {
+        "İlçe Seçiniz": {},
+        "Altunhisar": {},
+        "Bor": {},
+        "Çiftlik": {},
+        "Ulukışla": {}
+    },
+    "Ordu": {
+        "İlçe Seçiniz": {},
+        "Akyazı": {},
+        "Armutlu": {},
+        "Bala": {},
+        "Beypazarı": {}
+    },
+    "Osmaniye": {
+        "İlçe Seçiniz": {},
+        "Bahçe": {},
+        "Düziçi": {},
+        "Kadirli": {},
+        "Merkez": {}
+    },
+    "Rize": {
+        "İlçe Seçiniz": {},
+        "Ardeşen": {},
+        "Çayeli": {},
+        "Merkez": {},
+        "Pazar": {}
+    },
+    "Sakarya": {
+        "İlçe Seçiniz": {},
+        "Adapazarı": {},
+        "Çınarcık": {},
+        "Hendek": {},
+        "Karasu": {},
+        "Serdivan": {}
+    },
+    "Samsun": {
+        "İlçe Seçiniz": {},
+        "Atakum": {},
+        "Bafra": {},
+        "Çarşamba": {},
+        "İlkadım": {}
+    },
+    "Siirt": {
+        "İlçe Seçiniz": {},
+        "Baykan": {},
+        "Kurtalan": {},
+        "Merkez": {},
+        "Pervari": {}
+    },
+    "Sinop": {
+        "İlçe Seçiniz": {},
+        "Ayancık": {},
+        "Boyabat": {},
+        "Gerze": {},
+        "Merkez": {}
+    },
+    "Sivas": {
+        "İlçe Seçiniz": {},
+        "Divriği": {},
+        "Gemerek": {},
+        "Merkez": {},
+        "Şarkışla": {}
+    },
+    "Şanlıurfa": {
+        "İlçe Seçiniz": {},
+        "Birecik": {},
+        "Haliliye": {},
+        "Karaköprü": {},
+        "Siverek": {}
+    },
+    "Şırnak": {
+        "İlçe Seçiniz": {},
+        "Cizre": {},
+        "İdil": {},
+        "Merkez": {},
+        "Silopi": {}
+    },
+    "Tekirdağ": {
+        "İlçe Seçiniz": {},
+        "Çerkezköy": {},
+        "Çorlu": {},
+        "Kapaklı": {},
+        "Süleymanpaşa": {}
+    },
+    "Tokat": {
+        "İlçe Seçiniz": {},
+        "Erbaa": {},
+        "Merkez": {},
+        "Niksar": {},
+        "Turhal": {}
+    },
+    "Trabzon": {
+        "İlçe Seçiniz": {},
+        "Akçaabat": {},
+        "Araklı": {},
+        "Of": {},
+        "Ortahisar": {}
+    },
+    "Tunceli": {
+        "İlçe Seçiniz": {},
+        "Hozat": {},
+        "Mazgirt": {},
+        "Merkez": {},
+        "Pertek": {}
+    },
+    "Uşak": {
+        "İlçe Seçiniz": {},
+        "Banaz": {},
+        "Eşme": {},
+        "Merkez": {},
+        "Ulubey": {}
+    },
+    "Van": {
+        "İlçe Seçiniz": {},
+        "Erciş": {},
+        "İpekyolu": {},
+        "Merkez": {},
+        "Tuşba": {}
+    },
+    "Yalova": {
+        "İlçe Seçiniz": {},
+        "Altınova": {},
+        "Çiftlikköy": {},
+        "Çınarcık": {},
+        "Merkez": {}
+    },
+    "Yozgat": {
+        "İlçe Seçiniz": {},
+        "Akdağmadeni": {},
+        "Merkez": {},
+        "Sorgun": {},
+        "Yerköy": {}
+    },
+    "Zonguldak": {
+        "İlçe Seçiniz": {},
+        "Çaycuma": {},
+        "Ereğli": {},
+        "Kilimli": {},
+        "Merkez": {}
+    }
+}

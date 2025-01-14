@@ -50,52 +50,113 @@ function toggleShare(element) {
 var chainedData1 = {};
 var chainedData2 = {};
 
-function loadJson() {
-  $("form select").remove();
+async function loadJson() {
+  try {
+    // İlk JSON dosyasını yükle
+    const doctorResponse = await fetch('./data/healthservices.json');
+    const doctorJson = await doctorResponse.json();
 
-  $("#firstChain").append($("<select name=\"example1\" class=\"form-select px-5\" style=\"height: 45px;\" id=\"example1\" ></select>"));
-  $("#secondChain").append($("<select name=\"example2\" class=\"form-select px-5\" style=\"height: 45px;\" id=\"example2\"></select>"));
+    // İkinci JSON dosyasını yükle
+    const citiesResponse = await fetch('./data/cities.json');
+    const citiesJson = await citiesResponse.json();
 
+    // Remove any existing selects
+    $("form select").remove();
 
-  json = {
-    "Hizmet Seçiniz..": {
-    },
-    "Hastaneler": {
-    },
-    "Kliniklikler": {
-    },
-    "Doktorlar": {
-      "Uzmanlık Seçiniz..": {
-      },
-      "Fizyoterapist": {
-      },
-      "Psikoterapist": {
+    // Create wrapper for first select
+    const firstWrapper = $('<div>', {
+      style: 'position: relative;'
+    });
+    
+    // Create icon for first select
+    const firstIcon = $('<i>', {
+      class: 'bi bi-search',
+      css: {
+        'position': 'absolute',
+        'left': '15px',
+        'top': '50%',
+        'transform': 'translateY(-50%)',
+        'color': '#6c757d',
+        'z-index': '1'
       }
-    }
-  };
-  //     chainedData1 = JSON.parse($("#json").val());
-  // chainedData2 = JSON.parse($("#json").val());
-  chainedData1 = json;
-  chainedData2 = json;
+    });
 
-  $('#example1').chainedSelects({
-    data: chainedData1,
-    loggingEnabled: true,
-    'onSelectedCallback': function (id) { if (console !== undefined) { console.log("chain1 selected option", id); } },
-  });
+    const firstSelect = $("<select>", {
+      name: "example1",
+      id: "example1",
+      class: "form-select px-5",
+      style: "height: 45px; width: 100%"
+    });
 
-  $('#example2').chainedSelects({
-    data: chainedData2,
-    loggingEnabled: true,
-    'onSelectedCallback': function (id) { if (console !== undefined) { console.log("chain2 selected option", id); } },
-  });
+    firstWrapper.append(firstIcon).append(firstSelect);
+    $("#firstChain").append(firstWrapper);
 
+    // Create wrapper for second select
+    const secondWrapper = $('<div>', {
+      style: 'position: relative;'
+    });
+    
+    // Create icon for second select
+    const secondIcon = $('<i>', {
+      class: 'bi bi-geo-alt',
+      css: {
+        'position': 'absolute',
+        'left': '15px',
+        'top': '50%',
+        'transform': 'translateY(-50%)',
+        'color': '#6c757d',
+        'z-index': '1'
+      }
+    });
+
+    const secondSelect = $("<select>", {
+      name: "example2",
+      id: "example2",
+      class: "form-select px-5",
+      style: "height: 45px; width: 100%"
+    });
+
+    secondWrapper.append(secondIcon).append(secondSelect);
+    $("#secondChain").append(secondWrapper);
+
+    // Select container'ı için style ekleme
+    $("#firstChain, #secondChain").css({
+      'position': 'relative',
+      'min-height': '250px'
+    });
+
+    // İkinci select için dropdown yönünü ayarla
+    $("#secondChain select").css({
+      'transform-origin': 'top',
+      'transform': 'scaleY(1)'
+    });
+
+    // Select elementlerine position relative ekle
+    $("#firstChain select, #secondChain select").css('position', 'relative');
+
+    $('#example1').chainedSelects({
+      data: doctorJson,
+      loggingEnabled: true,
+      maxLevels: 5,
+      onSelectedCallback: function(id) {
+        console.log("chain1 selected option", id);
+      }
+    });
+
+    $('#example2').chainedSelects({
+      data: citiesJson,
+      loggingEnabled: true,
+      maxLevels: 5,
+      onSelectedCallback: function(id) {
+        console.log("chain2 selected option", id);
+      }
+    });
+  } catch (error) {
+    console.error('JSON verisi yüklenirken hata oluştu:', error);
+  }
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
   $("#load_json").on('click', loadJson);
   loadJson();
 });
-
-
-
