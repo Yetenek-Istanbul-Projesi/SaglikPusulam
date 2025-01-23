@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profil Bilgileri</title>
+  <title>Hesabını Onayla</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
   <link rel="stylesheet" href="/SaglikPusulam/css/style.css">
-  <link rel="stylesheet" href="/SaglikPusulam/css/profile.css">
+
 </head>
 
 <body>
+  <div class="loader-container">
+    <div class="medical-loader"></div>
+  </div>
+  <!--header-->
   <header>
     <nav class="navbar navbar-expand-lg bg-body-white p-4" style="border-bottom: 5px solid hsla(0, 0%, 80%, 0.2);">
       <div class="container-fluid mb-3">
@@ -48,93 +55,50 @@
       </div>
     </nav>
   </header>
+
   <main>
-    <div id="wrapper" class="container">
-      <div class="row">
-        <div class="col-5" id="left-content">
-          <div class="card" style="width: 18rem;">
-            <img src="/SaglikPusulam/assets/img/Rectangle 48.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <a href="#" class="card-link">
-                <p style="text-align: center;">Fotoğrafı Değiştir</p>
-              </a>
-              <h5 class="card-title" style="text-align: center;">Ad Soyad</h5>
+    <section>
+      <div class="section-photo">
+        <img src="/SaglikPusulam/assets/img/banner_photo.jpg" alt="" style="width: 100%">
+      </div>
+    </section>
+    <div class="container d-flex justify-content-center">
+      <!-- Login formu container'ı - minimum ve maximum genişlik sınırlaması -->
+      <div style="min-width: 400px; max-width: 1000px;">
+        <div class="p-5">
+          <!-- Form başlığı -->
+          <h2 class="text-center text-primary fw-bold mb-4" style="margin: 50px 0px 80px 0px;">Onay Kodu</h2>
+          <form>
+
+            <!-- E-mail Onay Kodu input  -->
+            <div class="mb-3">
+              <label for="emailPhone" class="form-label"
+                style="margin-top: 50px; border: none; text-align: left;">E-mail Onay Kodu</label>
+              <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="emailPhone"
+                placeholder="E-mail onay kodunuz" style="height: 50px; width: 500px; margin-bottom: 20px;">
             </div>
 
-            <a href="index.html" class="btn btn-primary btn-lg">Profil Bilgileri</a></br>
-            <a href="favorite-list.html" class="btn btn-outline-primary btn-lg">Favoriler</a></br>
-            <a href="security.html" class="btn btn-outline-primary btn-lg">Güvenlik</a></br>
-            <a href="compare-list.html" class="btn btn-outline-primary btn-lg">Karşılaştırma Listesi</a></br>
-            <a href="javascript:void(0);" class="btn btn-outline-primary btn-lg">Çıkış Yap</a></br>
-          </div>
-        </div>
-        <div class="col-7" id="right-content" style="padding-left: 108px;">
-          <div class="search-title mb-3">
-            <h4>Profil Bilgileri</h4>
-          </div>
-          <div class="search-card">
-            <div class="row g-0">
-              <div class="col">
-                <div class="container p-5">
-                  <form>
-                    <!-- Ad ve Soyad -->
-                    <div class="row mb-3">
-                      <div class="col-md-6">
-                        <div class="mb-3">
-                          <label for="name" class="form-label">Ad</label>
-                          <input type="text" class="form-control bgc" id="name" placeholder="Ad">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="mb-3">
-                          <label for="surname" class="form-label">Soyad</label>
-                          <input type="text" class="form-control bgc" id="surname" placeholder="Soyad">
-                        </div>
-                      </div>
-                    </div>
-                    <!-- E-Posta ve Telefon Numarası -->
-                    <div class="row mb-3">
-                      <div class="col-md-6">
-                        <div class="mb-3">
-                          <label for="profile-email" class="form-label">E-Posta</label>
-                          <input type="email" class="form-control bgc" id="profile-email" name="profile-email"
-                            placeholder="E-Posta">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="mb-3">
-                          <label for="profile-number" class="form-label">Telefon Numarası</label>
-                          <input type="tel" class="form-control bgc" id="profile-number" name="profile-number"
-                            placeholder="Telefon Numarası">
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Adres Bilgisi -->
-                    <div class="row mb-3">
-                      <div class="col-12">
-                        <div class="mb-3">
-                          <label for="textarea" class="form-label">Adres Bilgisi</label>
-                          <textarea id="textarea" class="form-control bgc" name="profile-address"
-                            placeholder="Adres Bilgisi" rows="4"></textarea>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row mb-3">
-                      <div class="col-12">
-                        <button type="submit" class="btn btn-primary w-100">Değişiklikleri Kaydet</button>
-                      </div>
-                    </div>
-                    <!-- Kaydet Butonu -->
-
-                  </form>
-                </div>
-              </div>
+            <!-- Cep telefonu onay kodunuz input  -->
+            <div class="mb-3">
+              <label for="emailPhone" class="form-label" style="margin-top: 20px; border: none; text-align: left;">Cep
+                Telefonu Onay Kodu</label>
+              <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="emailPhone"
+                placeholder="Cep telefonu onay kodunuz" style="height: 50px; margin-bottom: 20px;">
             </div>
-          </div>
+
+
+
+            <!-- Onayla butonu
+                         w-100: Tam genişlik -->
+            <button type="submit" class="btn btn-primary w-100 mb-3"
+              style="margin-top: 30px; height: 50px;">Onayla</button>
+
+          </form>
         </div>
       </div>
     </div>
   </main>
+  <!--footer-->
   <footer style="background-color:#3465FD;">
     <div class="container-fluid">
       <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
@@ -225,9 +189,7 @@
       </footer>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+  <script src="/SaglikPusulam/js/loader.js"></script>
 </body>
 
 </html>
