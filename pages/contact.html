@@ -25,7 +25,8 @@
         <a href="/SaglikPusulam/index.html">
           <img src="/SaglikPusulam/assets/img/LOGO.svg" width="70px;" height="70px">
         </a>
-        <a class="navbar-brand p-2 no-style" style="color: black;" href="/SaglikPusulam/index.html"><b>Sağlık</b>Pusulam</a>
+        <a class="navbar-brand p-2 no-style" style="color: black;"
+          href="/SaglikPusulam/index.html"><b>Sağlık</b>Pusulam</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -206,6 +207,21 @@
     </div>
   </footer>
   <script src="/SaglikPusulam/js/loader.js"></script>
+  <script>
+    // Page span noktası belirleme
+
+    window.onload = function () {
+      // Ekran genişliğine göre kaydırma miktarını belirle
+      let scrollAmount = (window.innerWidth <= 768) ? 300 : 500; // 768px'den küçük ekranlar için 250px, büyük ekranlar için 400px
+
+      // Sayfa yüklendiğinde belirlenen miktarda kaydır
+      window.scrollTo(0, scrollAmount);
+    };
+
+    window.onbeforeunload = function () {
+      // Sayfa yenilendiğinde kaydırma işlemi otomatik olarak yapılacak
+    };
+  </script>
 </body>
 
 </html>
