@@ -1251,3 +1251,25 @@ color: red;
   text-align: center; /* Yazıyı ortalayalım */
   z-index: 1; /* Yazının görsel olarak ön planda olması için */
 }
+
+
+
+/* Blog Sayfası styel kodları */
+
+#blog_kart_img{
+  height: 100%;
+  border-radius:5px;
+  
+}
+#blog_kart:hover{
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+border: none;
+border-radius: 10px;
+background-color: #ffffff;
+overflow: hidden;
+}
+
+#blog_img{
+  border-radius: 10px;
+  width: 100%;
+}
