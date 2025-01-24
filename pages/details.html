@@ -16,6 +16,7 @@
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="/SaglikPusulam/css/hover-min.css">
+  <link rel="stylesheet" href="/SaglikPusulam/css/sweetalert2.min.css">
 </head>
 
 <body>
@@ -28,7 +29,8 @@
         <a href="/SaglikPusulam/index.html">
           <img src="/SaglikPusulam/assets/img/LOGO.svg" width="70px;" height="70px">
         </a>
-        <a class="navbar-brand p-2 no-style" style="color: black;" href="/SaglikPusulam/index.html"><b>Sağlık</b>Pusulam</a>
+        <a class="navbar-brand p-2 no-style" style="color: black;"
+          href="/SaglikPusulam/index.html"><b>Sağlık</b>&nbsp;Pusulam</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -42,6 +44,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/about-us.html">Hakkımızda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/blog.html">Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/contact.html">İletişim</a>
@@ -59,9 +64,8 @@
     </nav>
   </header>
 
-  <main class="details-main">
+  <main class="start details-main">
     <div class="container-fluid">
-      <!--header-->
 
       <div class="row">
         <div class="media col-md-6 col-lg-5 ">
@@ -69,7 +73,8 @@
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/SaglikPusulam/index.html" class="text-decoration-none">Ana Sayfa</a>
               </li>
-              <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Hizmet Detayları</a></li>
+              <li class="breadcrumb-item"><a href="/SaglikPusulam/pages/details.html" class="text-primary">Sıkça Sorulan
+                  Sorular</a></li>
             </ol>
           </nav>
         </div>
@@ -77,144 +82,147 @@
           <h1 class="text-left mt-3 ml-2">Hizmet Detayları</h1>
         </div>
       </div>
-      <div class="container-fluid">
-        <div class="row">
-          <!--Galeri-->
-          <div class="media col-md-6 col-lg-5 ">
+      <div class="row">
+        <div class="container-fluid">
+          <div class="row">
+            <!--Galeri-->
+            <div class="media col-xl-5 col-12 ">
 
 
-            <!-- Büyük Resim -->
-            <img id="mainImage" src="/SaglikPusulam/assets/img/bakirkoy-dr-sadi-konuk-egitim-ve-arastirma-hastanesi.jpg"
-              alt="Main Image">
+              <!-- Büyük Resim -->
+              <div class="text-center">
+                <img id="mainImage"
+                  src="/SaglikPusulam/assets/img/bakirkoy-dr-sadi-konuk-egitim-ve-arastirma-hastanesi.jpg"
+                  alt="Main Image" class="img-fluid mx-auto d-block">
+              </div>
 
-            <!-- Küçük Resimler -->
-            <div class="thumbnail-container">
-              <img class="thumbnail" src="/SaglikPusulam/assets/img/acıbadem.jpg" alt="Thumbnail 1"
-                onclick="changeImage('/SaglikPusulam/assets/img/acıbadem.jpg')">
-              <img class="thumbnail" src="/SaglikPusulam/assets/img/acibadem-1024x640.jpg" alt="Thumbnail 2"
-                onclick="changeImage('/SaglikPusulam/assets/img/acibadem-1024x640.jpg')">
-              <img class="thumbnail" src="/SaglikPusulam/assets/img/Taksim_Eğitim_Araştırma_Hastanesi.jpg"
-                alt="Thumbnail 3"
-                onclick="changeImage('/SaglikPusulam/assets/img/Taksim_Eğitim_Araştırma_Hastanesi.jpg')">
-              <img class="thumbnail"
-                src="/SaglikPusulam/assets/img/bakirkoy-dr-sadi-konuk-egitim-ve-arastirma-hastanesi.jpg"
-                alt="Thumbnail 4"
-                onclick="changeImage('/SaglikPusulam/assets/img/bakirkoy-dr-sadi-konuk-egitim-ve-arastirma-hastanesi.jpg')">
+              <!-- Küçük Resimler -->
+              <div class="thumbnail-container">
+                <img class="thumbnail" src="/SaglikPusulam/assets/img/acibadem-1024x640-67937208390ef.webp" alt="Thumbnail 1"
+                  onclick="changeImage('/SaglikPusulam/assets/img/acibadem-1024x640-67937208390ef.webp')">
+                <img class="thumbnail" src="/SaglikPusulam/assets/img/acibadem-6793720827950.webp" alt="Thumbnail 2"
+                  onclick="changeImage('/SaglikPusulam/assets/img/acibadem-6793720827950.webp')">
+                <img class="thumbnail" src="/SaglikPusulam/assets/img/taksim-egitim-arastirma-hastanesi-6793727b8b894.webp"
+                  alt="Thumbnail 3"
+                  onclick="changeImage('/SaglikPusulam/assets/img/taksim-egitim-arastirma-hastanesi-6793727b8b894.webp')">
+                <img class="thumbnail"
+                  src="/SaglikPusulam/assets/img/bakirkoy-dr-sadi-konuk-egitim-ve-arastirma-hastanesi-679372092eb35.webp"
+                  alt="Thumbnail 4"
+                  onclick="changeImage('/SaglikPusulam/assets/img/bakirkoy-dr-sadi-konuk-egitim-ve-arastirma-hastanesi-679372092eb35.webp')">
+              </div>
+
             </div>
 
-          </div>
-
-          <!--Hakkımızda Detay-->
-          <div class="about  col-md-6 col-lg-7 ">
+            <!--Hakkımızda Detay-->
+            <div class="about col-xl-7 col-12 ">
 
 
-            <div class="card border-0">
-              <div class="">
+              <div class="card border-0">
+                <div class="">
 
-                <h2 class="text-center mt-2">Acıbadem</h2>
-              </div>
-              <div class="row mt-2">
-                <div class="col-md-2" style="padding-left: 30px;">
-                  <span class="badge bg-success"><i class="bi bi-circle-fill me-1"></i>Açık</span>
+                  <h2 class="text-center mt-2">Acıbadem</h2>
                 </div>
+                <div class="row mt-2">
+                  <div class="col-md-2" style="padding-left: 30px;">
+                    <span class="badge bg-success"><i class="bi bi-circle-fill me-1"></i>Açık</span>
+                  </div>
 
-                <div class="col-md-6 d-flex flex-row justify-content-start">
-                  <span class="me-2 ">Hastane Puanı:</span>
-                  <span class="text-warning me-2">
-                    <!--Yıldız sayısı -->
-                    &#9733; &#9733; &#9733; &#9733; &#9733;
-                  </span>
-                  <span>(137 Değerlendirme)</span>
-                </div>
+                  <div class="col-md-6 d-flex flex-row justify-content-start">
+                    <span class="me-2 ">Hastane Puanı:</span>
+                    <span class="text-warning me-2">
+                      <!--Yıldız sayısı -->
+                      &#9733; &#9733; &#9733; &#9733; &#9733;
+                    </span>
+                    <span>(137 Değerlendirme)</span>
+                  </div>
 
-
-
-
-                <div class="no-style d-flex gap-2 col-md-4 justify-content-end">
-                  <a href="javascript:void(0);" class="toggle-container">
-                    <i class="fa-regular fa-heart toggle-heart" style="font-size: 25px;" onclick="toggleHeart(this)"></i>
-                  </a>
-                  <a href="javascript:void(0);" class="toggle-container">
-                    <i class="fa-solid fa-shuffle toggle-compare" style="font-size: 25px;" onclick="toggleCompare(this)"></i>
-                  </a>
-                  <a href="javascript:void(0);" class="toggle-container">
-                    <i class="fa-solid fa-share-nodes toggle-share" style="font-size: 25px;" onclick="toggleShare(this)"></i>
-                  </a>
-                </div>
-
-
-              </div>
-              <div class="row mt-2">
-                <p class="col-md-6 card-text p-4">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fuga
-                  necessitatibus tempora, laborum asperiores sunt aspernatur vel ullam
-                  doloremque saepe tenetur rerum quasi quos facilis molestiae velit,
-                  eaque sequi reprehenderit placeat! Quam, laboriosam similique
-                  distinctio laborum tempora, aliquam voluptate error, cumque quisquam
-                  rerum eaque rem vel quae iste repudiandae accusamus cupiditate ipsa
-                  odio velit! Ipsum, magni vitae, repudiandae repellendus eius akdn rerum quasi quos facilis
-                  rerum quasi quos facilis molestiae velit molestiae velit
-
-                </p>
-
-                <!--Map verisi-->
-                <div class="col-md-6">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.112411739545!2d29.27552315694627!3d40.90275219281155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadb0875f19b45%3A0x32d4dae8021a39d8!2s%C4%B0stanbul%20Gedik%20%C3%9Cniversitesi%20Halil%20Kaya%20Gedik%20Kamp%C3%BCs%C3%BC!5e1!3m2!1str!2str!4v1736258585777!5m2!1str!2str"
-                    width=100% style="border: 0; height: 300px;" allowfullscreen="" loading="lazy">
-                  </iframe>
+                  <div class="no-style d-flex gap-2 col-md-4 justify-content-end">
+                    <a href="javascript:void(0);" class="toggle-container">
+                      <i class="fa-regular fa-heart toggle-heart" style="font-size: 25px;"
+                        onclick="toggleHeart(this)"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="toggle-container">
+                      <i class="fa-solid fa-shuffle toggle-compare" style="font-size: 25px;"
+                        onclick="toggleCompare(this)"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="toggle-container">
+                      <i class="fa-solid fa-share-nodes toggle-share" style="font-size: 25px;"
+                        onclick="toggleShare(this)"></i>
+                    </a>
+                  </div>
 
                 </div>
+                <div class="row mt-2">
+                  <p class="col-md-6 card-text p-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fuga
+                    necessitatibus tempora, laborum asperiores sunt aspernatur vel ullam
+                    doloremque saepe tenetur rerum quasi quos facilis molestiae velit,
+                    eaque sequi reprehenderit placeat! Quam, laboriosam similique
+                    distinctio laborum tempora, aliquam voluptate error, cumque quisquam
+                    rerum eaque rem vel quae iste repudiandae accusamus cupiditate ipsa
+                    odio velit! Ipsum, magni vitae, repudiandae repellendus eius akdn rerum quasi quos facilis
+                    rerum quasi quos facilis molestiae velit molestiae velit
 
-              </div>
-              <div class="row mt-5 m-lg-4">
-                <div class="col-md-4">
-                  <ul class="list-unstyled">
-                    <li class="d-flex align-items-center mb-4">
-                      <img src="/SaglikPusulam/assets/img/mingcute_phone-fill.png" alt=""
-                        style="width: 25px; height: 25px" />
-                      <span class="ms-2">0555-555-55-55</span>
-                    </li>
-                    <li class="d-flex align-items-center mb-4">
-                      <img src="/SaglikPusulam/assets/img/mdi_archive-time.png" alt=""
-                        style="width: 25px; height: 25px" />
-                      <span class="ms-2">Pazartesi - Cuma 09:00-17:00</span>
-                    </li>
+                  </p>
 
-                  </ul>
+                  <!--Map verisi-->
+                  <div class="col-md-6">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.112411739545!2d29.27552315694627!3d40.90275219281155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadb0875f19b45%3A0x32d4dae8021a39d8!2s%C4%B0stanbul%20Gedik%20%C3%9Cniversitesi%20Halil%20Kaya%20Gedik%20Kamp%C3%BCs%C3%BC!5e1!3m2!1str!2str!4v1736258585777!5m2!1str!2str"
+                      width=100% style="border: 0; height: 300px;" allowfullscreen="" loading="lazy">
+                    </iframe>
+
+                  </div>
+
                 </div>
-                <div class="col-md-4">
-                  <ul class="list-unstyled">
-                    <li class="d-flex align-items-center mb-4">
-                      <img src="/SaglikPusulam/assets/img/mdi_web.png" alt="" style="width: 25px; height: 25px" />
-                      <span class="ms-2">(Web sitesi buraya gelecek)</span>
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <img src="/SaglikPusulam/assets/img/mdi_address-marker.png" alt=""
-                        style="width: 25px; height: 25px" />
-                      <span class="ms-2">(Adres bilgisi buraya gelecek)</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class=" col">
-                  <button class="btn btn-outline-secondary text-dark mb-3 me-2 w-100">
-                    Yol Tarifi
-                  </button>
-                  <button class="btn btn-outline-secondary text-dark w-100">
-                    Randevu Al
-                  </button>
+                <div class="row mt-5 m-lg-4">
+                  <div class="col-md-4">
+                    <ul class="list-unstyled">
+                      <li class="d-flex align-items-center mb-4">
+                        <img src="/SaglikPusulam/assets/img/mingcute_phone-fill.png" alt=""
+                          style="width: 25px; height: 25px" />
+                        <span class="ms-2">0555-555-55-55</span>
+                      </li>
+                      <li class="d-flex align-items-center mb-4">
+                        <img src="/SaglikPusulam/assets/img/mdi_archive-time.png" alt=""
+                          style="width: 25px; height: 25px" />
+                        <span class="ms-2">Pazartesi - Cuma 09:00-17:00</span>
+                      </li>
+
+                    </ul>
+                  </div>
+                  <div class="col-md-4">
+                    <ul class="list-unstyled">
+                      <li class="d-flex align-items-center mb-4">
+                        <img src="/SaglikPusulam/assets/img/mdi_web.png" alt="" style="width: 25px; height: 25px" />
+                        <span class="ms-2">(Web sitesi buraya gelecek)</span>
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <img src="/SaglikPusulam/assets/img/mdi_address-marker.png" alt=""
+                          style="width: 25px; height: 25px" />
+                        <span class="ms-2">(Adres bilgisi buraya gelecek)</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class=" col">
+                    <button class="btn btn-outline-primary mb-3 me-2 w-100">
+                      Yol Tarifi
+                    </button>
+                    <button class="btn btn-primary text-white btn-lg mb-3 me-2 w-100">
+                      Randevu Al
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
-
       </div>
-    </div>
     </div>
 
     <!--Yorumlar-->
-    <div class="container">
+    <div class="container-fluid">
 
       <div class="col mt-3">
         <h1 class="reviews-title mt-5">Değerlendirmeler</h1>
@@ -290,16 +298,16 @@
         <nav aria-label="Page navigation">
           <ul class="pagination pagination-lg justify-content-center">
             <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
+              <a class="page-link" href="javascript:void(0);" aria-label="Previous">
                 <span aria-hidden="true">&larr;</span>
               </a>
             </li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);">4</a></li>
             <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
+              <a class="page-link" href="javascript:void(0);" aria-label="Next">
                 <span aria-hidden="true">&rarr;</span>
               </a>
             </li>
@@ -308,62 +316,54 @@
 
       </div>
     </div>
-
-    <!-- Değerlendirme -->
-
-    <div class="container mt-5">
-      <div class="row">
-        <!-- Ortalanmış, medium ekranlarda 8 birim genişliğinde sütun -->
-        <div class="mx-auto">
-          <div class="card">
-            <div class="card-body">
-              <!-- d-flex: Flexbox kullanarak yatay hizalama -->
-              <div class="d-flex">
-                <!-- Kullanıcı profil fotoğrafı 
+    <form class="needs-validation" novalidate onsubmit="handleCommentForm(event)">
+      <!-- Değerlendirme-->
+      <div class="container-fluid px-4" style="width: 1200px;">
+        <div class="row">
+          <div class="col-12">
+            <div class="card w-100">
+              <div class="card-body">
+                <!-- d-flex: Flexbox kullanarak yatay hizalama -->
+                <div class="d-flex">
+                  <!-- Kullanıcı profil fotoğrafı 
                                    rounded-square: Dikdörtgen görünüm
                                    me-3: Sağdan 3 birim margin
                                    object-fit: cover: Resmin boyut oranını koruyarak container'ı doldurur -->
-                <img src="https://picsum.photos/100" class="rounded-circle me-3 mt-4" alt="Kullanıcı Fotoğrafı"
-                  style="width: 100px; height: 100px; object-fit: cover" />
+                  <img src="https://picsum.photos/100" class="rounded-circle me-3 mt-4" alt="Kullanıcı Fotoğrafı"
+                    style="width: 100px; height: 100px; object-fit: cover" />
 
-                <!-- Yorum yazma alanı container'ı 
+                  <!-- Yorum yazma alanı container'ı 
                                    flex-grow-1: Kalan boşluğu doldurur -->
-                <div class="flex-grow-1">
-                  <!-- Form kontrolü - çok satırlı metin alanı -->
-                  <textarea class="form-control" rows="6" placeholder="Değerlendirmen"></textarea>
+                  <div class="flex-grow-1">
+                    <!-- Form kontrolü - çok satırlı metin alanı -->
+                    <textarea class="form-control" rows="6" placeholder="Değerlendirmen"></textarea>
 
-                  <!-- Alt kısım - checkbox ve buton container'ı -->
-                  <div class="d-flex flex-column align-items-end">
-                    <!-- Yıldızlı puanlama sistemi -->
-                    <div class="rating mb-2">
-                      <div class="stars d-inline-block position-relative">
-                        <!-- Gizli radio input'lar -->
-                        <fieldset class="rating px-2">
-                          <input type="radio" id="star5" name="rating" value="5" />
-                          <label for="star5">5 stars</label>
-                          <input type="radio" id="star4" name="rating" value="4" />
-                          <label for="star4">4 stars</label>
-                          <input type="radio" id="star3" name="rating" value="3" />
-                          <label for="star3">3 stars</label>
-                          <input type="radio" id="star2" name="rating" value="2" />
-                          <label for="star2">2 stars</label>
-                          <input type="radio" id="star1" name="rating" value="1" />
-                          <label for="star1">1 star</label>
-                        </fieldset>
+                    <!-- Alt kısım - checkbox ve buton container'ı -->
+                    <div class="d-flex flex-column align-items-end pt-3">
+                      <!-- Yıldız ve buton container -->
+                      <div class="d-flex flex-wrap w-100 justify-content-between align-items-center gap-4 mb-3">
+                        <!-- Anonim yorum seçeneği -->
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="anonimCheck">
+                          <label class="form-check-label" for="anonimCheck">
+                            Anonim olarak yorum yap
+                          </label>
+                        </div>
+                        
+                        <div class="d-flex gap-4 align-items-center">
+                          <!-- Yıldızlı puanlama sistemi -->
+                          <div class="rating">
+                            <div class="stars d-inline-block">
+                              <i class="fa-regular fa-star star-rating" onclick="handleStarClick(1, this)" style="font-size: 24px; cursor: pointer;"></i>
+                              <i class="fa-regular fa-star star-rating" onclick="handleStarClick(2, this)" style="font-size: 24px; cursor: pointer;"></i>
+                              <i class="fa-regular fa-star star-rating" onclick="handleStarClick(3, this)" style="font-size: 24px; cursor: pointer;"></i>
+                              <i class="fa-regular fa-star star-rating" onclick="handleStarClick(4, this)" style="font-size: 24px; cursor: pointer;"></i>
+                              <i class="fa-regular fa-star star-rating" onclick="handleStarClick(5, this)" style="font-size: 24px; cursor: pointer;"></i>
+                            </div>
+                          </div>
+                          <button class="btn btn-primary rounded-pill">Değerlendir</button>
+                        </div>
                       </div>
-                    </div>
-
-                    <!-- Alt kısım - checkbox ve buton -->
-                    <div class="d-flex justify-content-between align-items-center w-100">
-                      <!-- Checkbox grubu -->
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="anonimCheck" />
-                        <label class="form-check-label" for="anonimCheck" style="margin:3px">Anonim olarak yorum yap</label>
-                      </div>
-                      <!-- Gönder butonu -->
-                      <button class="btn btn-primary" style="width: 13%">
-                        Değerlendir
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -372,18 +372,17 @@
           </div>
         </div>
       </div>
-    </div>
+    </form>
 
   </main>
-
 
   <!--footer-->
   <footer style="background-color:#3465FD;">
     <div class="container-fluid">
       <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
         <div class="col mb-3">
-          <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
-            style="color: white;">
+          <a href="/SaglikPusulam/index.html"
+            class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" style="color: white;">
             <svg class="bi me-2" width="40" height="32">
               <use xlink:href="#bootstrap"></use>
             </svg>
@@ -392,10 +391,9 @@
           <div style="display: flex; align-items: center;">
             <img src="/SaglikPusulam/assets/img/Footer_logo.svg" alt="Logo"
               style="width: 60px; height: 55px; margin-right: 10px;"> <!--Footer logo-->
-            <h6><a class="navbar-brand no-style" href="#" style="color: white !important;"><b>Sağlık</b>Pusulam</a></h6>
+            <h6><a class="navbar-brand no-style" href="/SaglikPusulam/index.html"
+                style="color: white !important;"><b>Sağlık</b>&nbsp;Pusulam</a></h6>
           </div>
-
-
 
         </div>
 
@@ -405,12 +403,14 @@
         <div class="col mb-3">
           <h6 style="color: white;">KURUMSAL</h6>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="/SaglikPusulam/index.html"
-                style="color: white; text-decoration: none;">Ana Sayfa</a></li>
             <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/about-us.html"
                 style="color: white; text-decoration: none;">Hakkımızda</a></li>
             <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/sss.html"
                 style="color: white; text-decoration: none;">Sıkça Sorulan Sorular</a></li>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/contact.html"
+                style="color: white; text-decoration: none;">İletişim</a></li>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/blog.html"
+                style="color: white; text-decoration: none;">Blog</a></li>
           </ul>
         </div>
 
@@ -423,6 +423,8 @@
                 style="color: white; text-decoration: none;">Kaydol</a></li>
             <li class="nav-item mb-2"><a href="/SaglikPusulam/account/forgot-password.html"
                 style="color: white; text-decoration: none;">Şifremi Unuttum</a></li>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/account/forgot-password.html"
+                style="color: white; text-decoration: none;">Yeni Şifre Oluştur</a></li>
           </ul>
         </div>
 
@@ -469,8 +471,8 @@
     </div>
   </footer>
 
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/SaglikPusulam/js/sweetalert2.min.js"></script>
   <script src="/SaglikPusulam/js/main.js"></script>
   <script src="/SaglikPusulam/js/loader.js"></script>
 </body>

@@ -17,6 +17,7 @@
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="/SaglikPusulam/css/hover-min.css">
+  <link rel="stylesheet" href="/SaglikPusulam/css/sweetalert2.min.css">
 </head>
 
 <body>
@@ -30,7 +31,8 @@
         <a href="/SaglikPusulam/index.html">
           <img src="/SaglikPusulam/assets/img/LOGO.svg" width="70px;" height="70px">
         </a>
-        <a class="navbar-brand p-2 no-style" style="color: black;" href="/SaglikPusulam/index.html"><b>Sağlık</b>Pusulam</a>
+        <a class="navbar-brand p-2 no-style" style="color: black;"
+          href="/SaglikPusulam/index.html"><b>Sağlık</b>&nbsp;Pusulam</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -46,13 +48,18 @@
               <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/about-us.html">Hakkımızda</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/contact.html">İletişim</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/sss.html">SSS</a>
             </li>
-            <a href="/SaglikPusulam/account/profile/index.html"><img src="/SaglikPusulam/assets/img/user-icon.jpg" width="50px;" height="50px" style="opacity: 0.9;"></a>
-            <button type="button" class="btn btn-primary rounded-4 shadow" onclick="location.href='/SaglikPusulam/account/register.html'">Hemen Katılın</button>
+            <a href="/SaglikPusulam/account/profile/index.html"><img src="/SaglikPusulam/assets/img/user-icon.jpg"
+                width="50px;" height="50px" style="opacity: 0.9;"></a>
+            <button type="button" class="btn btn-primary rounded-4 shadow"
+              onclick="location.href='/SaglikPusulam/account/register.html'">Hemen Katılın</button>
           </ul>
         </div>
       </div>
@@ -63,7 +70,7 @@
 
     <!-- AnaSayfa Section 1 - Ana arama bölümü -->
     <!--height: 1000px kullanarak sabit yükseklik belirlendi -->
-    <section class="position-relative" style="height: 1000px;">
+    <section class="start position-relative" style="height: 1000px;">
       <!-- Arka plan resmi container'ı 
                position-absolute: Resmi diğer içeriklerin arkasına konumlandırır
                z-index: 1: Resmi en arkada tutar -->
@@ -81,59 +88,50 @@
         <div class="container-fluid px-4">
           <div class="row">
             <div class="col-12 col-md-8 col-lg-6">
-              <form>
+              <form id="searchForm" onsubmit="return handleSearchForm(event)">
                 <div class="mb-5" style="padding-top: 200px;">
-                  <h1 class="text-primary">Çevrendeki En İyi Hastaneyi Bul</h1>
+                  <h1 class="text-primary">Çevrendeki En İyi Sağlık Hizmetini Bul</h1>
                   <h3 class="text-secondary">Sağlık hizmetleri arasında tercihini yap</h3>
                 </div>
 
                 <!-- Arama kutuları ve buton container'ı
-                                   flex-column: Mobilde alt alta sıralar
-                                   flex-md-row: Tablet ve üstünde yan yana sıralar -->
-                <div class="d-flex flex-column flex-md-row gap-3">
+                                           flex-column: Mobilde alt alta sıralar
+                                           flex-md-row: Tablet ve üstünde yan yana sıralar -->
+                <div class="d-flex flex-column flex-lg-row gap-3">
                   <!-- İlk arama kutusu container'ı -->
-                  <div class="position-relative " style="display: flex;flex-direction: column;height: auto;">
+                  <div class="position-relative " style="display: flex;flex-direction: column;height: 100px;">
                     <!-- Sol taraftaki arama ikonu -->
 
                     <!-- Arama kutusu -->
                     <!-- <select id="main-dropdown" class="form-select px-5" style="height: 45px;" data-live-search="true">
-                                          <option value="hastaneler">Hastaneler</option>
-                                          <option value="doktorlar">Doktorlar</option>
-                                        </select> -->
-                    <div style="flex-grow: 1; width: 400px;">
+                                                  <option value="hastaneler">Hastaneler</option>
+                                                  <option value="doktorlar">Doktorlar</option>
+                                                </select> -->
+                    <div style="flex-grow: 1; width: 100%; min-width: 400px;">
                       <div id="firstChain">
                       </div>
                     </div>
 
-                    <!-- <div id="secondChain">
-                                        </div> -->
-
-
-                    <button type="button" class="btn position-absolute"
-                      style="right: -11px; top: 9%; transform: translateY(-50%); border: none; background: none;">
-                      <img src="/SaglikPusulam/assets/img/Group.png" alt="" style="width: 43px; height: 43px;">
-                    </button>
+                    <div class="position-absolute" style="align-self: flex-end; border: none; background: none;">
+                      <img src="/SaglikPusulam/assets/img/Group.png" alt="" style="width: 45px; height: 45px;">
+                    </div>
                   </div>
-
-                  <!-- İkinci arama kutusu container'ı (Yapı aynı) -->
-                  <div class="position-relative">
-                    <div style="flex-grow: 1; width: 400px;">
+                  <div class="position-relative " style="display: flex;flex-direction: column;height: 100px;">
+                    <!-- İkinci arama kutusu container'ı (Yapı aynı) -->
+                    <div style="flex-grow: 1; width: 100%; min-width: 400px;">
                       <div id="secondChain">
                       </div>
                     </div>
-                    <button type="button" class="btn position-absolute"
-                      style="right: -11px; top: 9%; transform: translateY(-50%); border: none; background: none;">
-                      <img src="/SaglikPusulam/assets/img/Group.png" alt="" style="width: 43px; height: 43px;">
-                    </button>
+                    <div class="position-absolute" style="align-self: flex-end; border: none; background: none;">
+                      <img src="/SaglikPusulam/assets/img/Group.png" alt="" style="width: 45px; height: 45px;">
+                    </div>
                   </div>
-
                   <!-- Arama butonu
-                              d-flex ve align-items-center: İkon ve metni ortalar
-                              gap-2: İkon ve metin arasında boşluk bırakır -->
+                                      d-flex ve align-items-center: İkon ve metni ortalar
+                                      gap-2: İkon ve metin arasında boşluk bırakır -->
                   <button type="submit"
                     class="btn btn-primary d-flex align-items-center justify-content-center gap-2 shadow"
-                    style="width: 85px; height: 45px;"
-                    onclick="location.href='/SaglikPusulam/pages/search-results.html'">
+                    style="width: 85px; height: 45px;">
                     <i class="fa-solid fa-magnifying-glass" style="font-size: 20px;"></i>
                     Ara
                   </button>
@@ -144,7 +142,7 @@
         </div>
       </div>
     </section>
-    <section id="features">
+    <section id="features" style="margin-top: 100px; margin-bottom: 100px;">
       <div class="container-fluid py-5">
 
         <div class="row justify-content-center">
@@ -157,7 +155,7 @@
 
                 <div class="card h-100">
 
-                  <img src="/SaglikPusulam/assets/img/HizmetiBul.png" class="card-img-top" alt="...">
+                  <img src="/SaglikPusulam/assets/img/Group 121.svg" class="card-img-top" alt="...">
 
                   <div class="card-body text-center">
 
@@ -175,7 +173,7 @@
 
               <div class="col">
                 <div class="card h-100">
-                  <img src="/SaglikPusulam/assets/img/detaylaraBak.png" class="card-img-top" alt="...">
+                  <img src="/SaglikPusulam/assets/img/detaylaraBak.svg" class="card-img-top" alt="...">
                   <div class="card-body text-center">
                     <h5 class="card-title">Detaylara Bak</h5>
                     <p class="card-text">Sağlık hizmetlerinin hizmet detaylarını, yorumlarını ve konum
@@ -190,7 +188,7 @@
 
                 <div class="card h-100">
 
-                  <img src="/SaglikPusulam/assets/img/iletisimeGec.png" class="card-img-top" alt="...">
+                  <img src="/SaglikPusulam/assets/img/iletisimeGec.svg" class="card-img-top" alt="...">
 
                   <div class="card-body text-center">
 
@@ -211,7 +209,7 @@
 
                 <div class="card h-100">
 
-                  <img src="/SaglikPusulam/assets/img/HizmetleriKarsılastırn.png" class="card-img-top" alt="...">
+                  <img src="/SaglikPusulam/assets/img/iletisim.svg" class="card-img-top" alt="...">
 
                   <div class="card-body text-center">
 
@@ -232,7 +230,7 @@
 
                 <div class="card h-100">
 
-                  <img src="/SaglikPusulam/assets/img/gorüsBildir.png" class="card-img-top" alt="...">
+                  <img src="/SaglikPusulam/assets/img/HizmetiBul.svg" class="card-img-top" alt="...">
 
                   <div class="card-body text-center">
 
@@ -293,7 +291,8 @@
                   <div><i class="bi bi-clock"></i><a href="#">Çalışma Saati</a></div>
                   <div><i class="bi bi-geo-alt"></i><a href="#">Adres Bilgisi</a></div>
                 </div>
-                <button class="btn details-button w-100 mt-3" onclick="location.href='/SaglikPusulam/pages/details.html'">Detaylar</button>
+                <button class="btn details-button w-100 mt-3"
+                  onclick="location.href='/SaglikPusulam/pages/details.html'">Detaylar</button>
               </div>
             </div>
           </div>
@@ -330,7 +329,8 @@
                   <div><i class="bi bi-clock"></i><a href="#">Çalışma Saati</a></div>
                   <div><i class="bi bi-geo-alt"></i><a href="#">Adres Bilgisi</a></div>
                 </div>
-                <button class="btn details-button w-100 mt-3" onclick="location.href='/SaglikPusulam/pages/details.html'">Detaylar</button>
+                <button class="btn details-button w-100 mt-3"
+                  onclick="location.href='/SaglikPusulam/pages/details.html'">Detaylar</button>
               </div>
             </div>
           </div>
@@ -367,7 +367,8 @@
                   <div><i class="bi bi-clock"></i><a href="#">Çalışma Saati</a></div>
                   <div><i class="bi bi-geo-alt"></i><a href="#">Adres Bilgisi</a></div>
                 </div>
-                <button class="btn details-button w-100 mt-3" onclick="location.href='/SaglikPusulam/pages/details.html'">Detaylar</button>
+                <button class="btn details-button w-100 mt-3"
+                  onclick="location.href='/SaglikPusulam/pages/details.html'">Detaylar</button>
               </div>
             </div>
           </div>
@@ -404,7 +405,8 @@
                   <div><i class="bi bi-clock"></i><a href="#">Çalışma Saati</a></div>
                   <div><i class="bi bi-geo-alt"></i><a href="#">Adres Bilgisi</a></div>
                 </div>
-                <button class="btn details-button w-100 mt-3" onclick="location.href='/SaglikPusulam/pages/details.html'">Detaylar</button>
+                <button class="btn details-button w-100 mt-3"
+                  onclick="location.href='/SaglikPusulam/pages/details.html'">Detaylar</button>
               </div>
             </div>
           </div>
@@ -412,7 +414,7 @@
         </div>
       </div>
     </section>
-    <section id="contact-section">
+    <section id="contact-section" style="margin-top: 100px; margin-bottom: 100px;">
       <div class="container">
         <i class="bi bi-chat-dots" style="font-size: 40px; color: #007bff;"></i>
         <h2>Yardıma İhtiyacınız mı Var?</h2>
@@ -427,8 +429,8 @@
     <div class="container-fluid">
       <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
         <div class="col mb-3">
-          <a href="/SaglikPusulam/index.html" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
-            style="color: white;">
+          <a href="/SaglikPusulam/index.html"
+            class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" style="color: white;">
             <svg class="bi me-2" width="40" height="32">
               <use xlink:href="#bootstrap"></use>
             </svg>
@@ -437,7 +439,8 @@
           <div style="display: flex; align-items: center;">
             <img src="/SaglikPusulam/assets/img/Footer_logo.svg" alt="Logo"
               style="width: 60px; height: 55px; margin-right: 10px;"> <!--Footer logo-->
-            <h6><a class="navbar-brand no-style" href="/SaglikPusulam/index.html" style="color: white !important;"><b>Sağlık</b>Pusulam</a></h6>
+            <h6><a class="navbar-brand no-style" href="/SaglikPusulam/index.html"
+                style="color: white !important;"><b>Sağlık</b>&nbsp;Pusulam</a></h6>
           </div>
 
         </div>
@@ -448,12 +451,14 @@
         <div class="col mb-3">
           <h6 style="color: white;">KURUMSAL</h6>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="/SaglikPusulam/index.html"
-                style="color: white; text-decoration: none;">Ana Sayfa</a></li>
             <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/about-us.html"
                 style="color: white; text-decoration: none;">Hakkımızda</a></li>
             <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/sss.html"
                 style="color: white; text-decoration: none;">Sıkça Sorulan Sorular</a></li>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/contact.html"
+                style="color: white; text-decoration: none;">İletişim</a></li>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/blog.html"
+                style="color: white; text-decoration: none;">Blog</a></li>
           </ul>
         </div>
 
@@ -466,6 +471,8 @@
                 style="color: white; text-decoration: none;">Kaydol</a></li>
             <li class="nav-item mb-2"><a href="/SaglikPusulam/account/forgot-password.html"
                 style="color: white; text-decoration: none;">Şifremi Unuttum</a></li>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/account/forgot-password.html"
+                style="color: white; text-decoration: none;">Yeni Şifre Oluştur</a></li>
           </ul>
         </div>
 
@@ -518,8 +525,10 @@
     crossorigin="anonymous"></script>
   <script src="/SaglikPusulam/js/jquery-3.7.1.min.js"></script>
   <script src="/SaglikPusulam/js/jquery.chained.selects.js"></script>
+  <script src="/SaglikPusulam/js/sweetalert2.min.js"></script>
   <script src="/SaglikPusulam/js/main.js"></script>
   <script src="/SaglikPusulam/js/loader.js"></script>
+
 
 </body>
 
