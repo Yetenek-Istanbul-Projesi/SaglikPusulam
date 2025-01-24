@@ -1,5 +1,5 @@
 .card {
-    margin: 100px 0px 0px 200px;
+    margin: auto;
     border: none;
 }
 
@@ -8,16 +8,13 @@
 }
 
 /* Inputa stil ekleme */
-input[type="text"] {
+input[type="text"] ,input[type="email"], input[type="password"], input[type="tel"] {
     background-color: #EEEFF1;
     padding: 10px;
     /* İçerideki boşluk değeri */
     border: 1px solid #EEEFF1;
     /* Kenarlık rengi */
     border-radius: 5px;
-    /* Köşeleri yuvarlatma değeri */
-    width: 250px;
-    /* Genişlik */
 }
 
 /* Butonun stilini düzenleme */
@@ -45,7 +42,11 @@ input[type="text"] {
 
 /* Section öğesini sağa yaslamak için */
 #right-content {
-    margin-top: 115px;
+    margin-top: 110px;
+}
+#left-content {
+    margin-top: 50px;
+    margin-bottom: 0;
 }
 
 /*Profile Index.Html */
@@ -96,11 +97,6 @@ input[type="text"] {
 
 /* Profil-Favoriler */
 
-#left-content {
-    padding: 20px;
-    margin-bottom: 0;
-    flex: 1;
-}
 
 .favori_cards #right-content {
     padding: 20px;
@@ -172,3 +168,15 @@ input[type="text"] {
 margin:0;
 padding:10px;
 }
+
+.sc1-card .toggle-container i{
+    font-size: 21px;
+}
+
+.page-display {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
