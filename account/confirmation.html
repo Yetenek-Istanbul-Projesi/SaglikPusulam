@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <link rel="stylesheet" href="/SaglikPusulam/css/style.css">
+  <link rel="stylesheet" href="/SaglikPusulam/css/sweetalert2.min.css">
 
 </head>
 
@@ -25,7 +26,8 @@
         <a href="/SaglikPusulam/index.html">
           <img src="/SaglikPusulam/assets/img/LOGO.svg" width="70px;" height="70px">
         </a>
-        <a class="navbar-brand p-2 no-style" style="color: black;" href="/SaglikPusulam/index.html"><b>Sağlık</b>Pusulam</a>
+        <a class="navbar-brand p-2 no-style" style="color: black;"
+          href="/SaglikPusulam/index.html"><b>Sağlık</b>&nbsp;Pusulam</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -39,6 +41,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/about-us.html">Hakkımızda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/blog.html">Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/pages/contact.html">İletişim</a>
@@ -62,7 +67,7 @@
         <img src="/SaglikPusulam/assets/img/banner_photo.jpg" alt="" style="width: 100%">
       </div>
     </section>
-    <div class="container d-flex justify-content-center">
+    <div class="start container d-flex justify-content-center">
       <!-- Login formu container'ı - minimum ve maximum genişlik sınırlaması -->
       <div style="min-width: 400px; max-width: 1000px;">
         <div class="p-5">
@@ -75,7 +80,7 @@
               <label for="emailPhone" class="form-label"
                 style="margin-top: 50px; border: none; text-align: left;">E-mail Onay Kodu</label>
               <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="emailPhone"
-                placeholder="E-mail onay kodunuz" style="height: 50px; width: 500px; margin-bottom: 20px;">
+                placeholder="E-mail onay kodunuz" style="height: 50px; width: 500px; margin-bottom: 20px;" required>
             </div>
 
             <!-- Cep telefonu onay kodunuz input  -->
@@ -83,10 +88,8 @@
               <label for="emailPhone" class="form-label" style="margin-top: 20px; border: none; text-align: left;">Cep
                 Telefonu Onay Kodu</label>
               <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="emailPhone"
-                placeholder="Cep telefonu onay kodunuz" style="height: 50px; margin-bottom: 20px;">
+                placeholder="Cep telefonu onay kodunuz" style="height: 50px; margin-bottom: 20px;" required>
             </div>
-
-
 
             <!-- Onayla butonu
                          w-100: Tam genişlik -->
@@ -103,8 +106,8 @@
     <div class="container-fluid">
       <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
         <div class="col mb-3">
-          <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
-            style="color: white;">
+          <a href="/SaglikPusulam/index.html"
+            class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" style="color: white;">
             <svg class="bi me-2" width="40" height="32">
               <use xlink:href="#bootstrap"></use>
             </svg>
@@ -113,10 +116,9 @@
           <div style="display: flex; align-items: center;">
             <img src="/SaglikPusulam/assets/img/Footer_logo.svg" alt="Logo"
               style="width: 60px; height: 55px; margin-right: 10px;"> <!--Footer logo-->
-            <h6><a class="navbar-brand no-style" href="#" style="color: white !important;"><b>Sağlık</b>Pusulam</a></h6>
+            <h6><a class="navbar-brand no-style" href="/SaglikPusulam/index.html"
+                style="color: white !important;"><b>Sağlık</b>&nbsp;Pusulam</a></h6>
           </div>
-
-
 
         </div>
 
@@ -126,12 +128,14 @@
         <div class="col mb-3">
           <h6 style="color: white;">KURUMSAL</h6>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="/SaglikPusulam/index.html"
-                style="color: white; text-decoration: none;">Ana Sayfa</a></li>
             <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/about-us.html"
                 style="color: white; text-decoration: none;">Hakkımızda</a></li>
             <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/sss.html"
                 style="color: white; text-decoration: none;">Sıkça Sorulan Sorular</a></li>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/contact.html"
+                style="color: white; text-decoration: none;">İletişim</a></li>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/pages/blog.html"
+                style="color: white; text-decoration: none;">Blog</a></li>
           </ul>
         </div>
 
@@ -144,6 +148,8 @@
                 style="color: white; text-decoration: none;">Kaydol</a></li>
             <li class="nav-item mb-2"><a href="/SaglikPusulam/account/forgot-password.html"
                 style="color: white; text-decoration: none;">Şifremi Unuttum</a></li>
+            <li class="nav-item mb-2"><a href="/SaglikPusulam/account/forgot-password.html"
+                style="color: white; text-decoration: none;">Yeni Şifre Oluştur</a></li>
           </ul>
         </div>
 
@@ -190,6 +196,8 @@
     </div>
   </footer>
   <script src="/SaglikPusulam/js/loader.js"></script>
+  <script src="/SaglikPusulam/js/sweetalert2.min.js"></script>
+  <script src="/SaglikPusulam/js/main.js"></script>
 </body>
 
 </html>

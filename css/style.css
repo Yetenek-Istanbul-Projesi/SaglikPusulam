@@ -5,14 +5,14 @@
 
 
 * {
+  box-sizing: border-box;
   max-width: 100%;
   /* Görsellerin ekranın dışına taşmasını engeller */
   height: auto;
   /* Görsellerin boyutunu orantılı olarak ayarlar */
-  box-sizing: border-box;
-  /* Tüm öğelerin genişlik ve yükseklik hesaplamalarında padding ve border'ı dahil eder */
-
 }
+
+
 
 html,
 body {
@@ -897,6 +897,14 @@ color: red;
   animation: pulse 1.5s ease-in-out infinite;
 }
 
+.medical-loader {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #3465FD;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -1256,20 +1264,78 @@ color: red;
 
 /* Blog Sayfası styel kodları */
 
-#blog_kart_img{
-  height: 100%;
-  border-radius:5px;
-  
+.blog_kart{
+  border:none;
 }
-#blog_kart:hover{
+.blog_kart_img{
+  height: 100%;
+  border-radius:7px;
+  object-fit: cover;
+}
+/*
+.blog_kart:hover{
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-border: none;
-border-radius: 10px;
 background-color: #ffffff;
 overflow: hidden;
 }
-
+*/
 #blog_img{
   border-radius: 10px;
+  width: 70%;
+}
+.blog_img_head{
+  border-radius: 10px;
   width: 100%;
+}
+
+.blog-cards .card {
+border: none;
+background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-cards .card-title {
+  font-weight: bold;
+  }
+
+  .blog-cards .img-src img{
+    object-fit: cover;
+    height: 10.9rem;
+    border-radius: 10px;
+  }
+  .blog-cards .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 7; /* Kaç satır gösterileceğini belirtir */
+    line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+/* About Us Sayfası icin */
+#about-us .section2 {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    padding: 10px;
+    background-color: #f1f8fe;
+    text-align: center;
+    font-size: 17px;
+    height: 100px;
+  /* Flexbox ile dikey ve yatay ortalama */
+    display: flex;
+    justify-content: center; /* Yatayda ortalar */
+    align-items: center; /* Dikeyde ortalar */
+}
+
+#about-us .section2 a {
+    color: #070707;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#about-us .section2 a:hover {
+    text-decoration: underline;
 }
