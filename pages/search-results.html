@@ -65,7 +65,7 @@
     </nav>
   </header>
 
-  <main class="start search-results-container py-4">
+  <main class="search-results-container py-4">
     <div class="container-fluid">
       <div class="row">
         <!-- Filtreleme Bölümü -->
@@ -428,6 +428,12 @@
                 </div>
               </div>
             </div>
+            
+          </div>
+          <div id="loadingMore" class="text-center py-4 d-none">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Yükleniyor...</span>
+            </div>
           </div>
         </div>
       </div>
@@ -532,12 +538,17 @@
   <script src="/SaglikPusulam/js/sweetalert2.min.js"></script>
   <script src="/SaglikPusulam/js/jquery-3.7.1.min.js"></script>
   <script src="/SaglikPusulam/js/main.js"></script>
-  <script>
-   // document.addEventListener('DOMContentLoaded', filterDistance);
-    document.addEventListener('DOMContentLoaded', showSearchResults);
-  </script>
   <script src="/SaglikPusulam/js/loader.js"></script>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Search results sayfasında isek
+      if (document.querySelector('.search-results')) {
+        console.log('Search results page loaded'); // Debug için
+        hasMore = true; // hasMore'u başlangıçta true yap
+        showSearchResults();
+      }
+    });
+  </script>
 </body>
 
 </html>
