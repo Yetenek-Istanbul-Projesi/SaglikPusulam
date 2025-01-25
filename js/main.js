@@ -136,49 +136,60 @@ function shareViaEmail() {
 }
 
 // Search results handler
-function handleSearchResults(results) {
-  if (results.length === 0) {
+let page = 1;
+let loading = false;
+let hasMore = true;
+let totalResults = 0; // Toplam sonuç sayısı
+
+// Arama işlemi
+function handleSearchForm(event) {
+  event.preventDefault();
+
+  const firstSelect = document.querySelector('#firstChain select');
+  
+  if (!firstSelect || !firstSelect.value || firstSelect.value === "Hizmet Seçiniz") {
     Swal.fire({
-      icon: 'info',
-      title: 'Sonuç Bulunamadı',
-      text: 'Aramanızla eşleşen sonuç bulunamadı. Lütfen farklı anahtar kelimeler deneyin.',
-      confirmButtonText: 'Tamam'
+      title: 'Uyarı',
+      text: 'Lütfen bir hizmet seçin',
+      icon: 'warning',
+      confirmButtonText: 'Tamam',
+      confirmButtonColor: '#3465FD'
     });
-  } else if (results.length > 20) {
-    Swal.fire({
-      icon: 'info',
-      title: 'Çok Fazla Sonuç',
-      text: 'Aramanız çok fazla sonuç döndürdü. Daha spesifik aramak ister misiniz?',
-      showCancelButton: true,
-      confirmButtonText: 'Evet',
-      cancelButtonText: 'Hayır'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // Focus on search input
-        document.querySelector('#searchInput').focus();
-      }
-    });
+    return false;
   }
+
+  const secondSelect = document.querySelector('#secondChain select');
+
+  const params = new URLSearchParams();
+  params.append('category', firstSelect.value);
+  
+  if (secondSelect && secondSelect.value && secondSelect.value !== "İl Seçiniz") {
+    params.append('subcategory', secondSelect.value);
+  }
+
+  // Örnek veri sayısı (gerçek API'den gelecek)
+  totalResults = 25;
+  params.append('total', totalResults);
+
+  Swal.fire({
+    title: 'Aranıyor...',
+    html: 'Sağlık hizmetleri bulunuyor',
+    timer: 2000,
+    timerProgressBar: true,
+    showConfirmButton: false,
+    allowOutsideClick: false,
+    willOpen: () => {
+      Swal.showLoading();
+    }
+  }).then((result) => {
+    if (result.dismiss === Swal.DismissReason.timer) {
+      window.location.href = `/SaglikPusulam/pages/search-results.html?${params.toString()}`;
+    }
+  });
+
+  return false;
 }
 
-// Search results notification
-function showSearchResults() {
-  console.log('showSearchResults fonksiyonu başladı');
-  // Arama sonuçlarını say
-  const searchResults = document.querySelectorAll('.hospital-card').length;
-  console.log('Bulunan sonuç sayısı:', searchResults);
-  
-  Swal.fire({
-    title: 'Arama Sonuçları',
-    text: `${searchResults} adet sonuç bulundu`,
-    icon: 'info',
-    toast: true,
-    position: 'top-end',
-    showConfirmButton: false,
-    timer: 7000,
-    timerProgressBar: true
-  });
-}
 
 // Filtre değişikliği bildirimi
 function notifyFilterChange(element) {
@@ -265,6 +276,29 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
+});
+
+// Service status filter event listener
+document.addEventListener('DOMContentLoaded', () => {
+  const serviceStatusCheckbox = document.getElementById('serviceStatus');
+  if (serviceStatusCheckbox) {
+    serviceStatusCheckbox.addEventListener('change', (e) => {
+      const isChecked = e.target.checked;
+      const filterTitle = 'Hizmet Durumu';
+      const filterName = isChecked ? 'Şuan da açık filtresi seçildi' : 'Şuan da kapalı filtresi seçildi';
+      
+      Swal.fire({
+        title: filterTitle,
+        text: filterName,
+        icon: 'success',
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 1500,
+        timerProgressBar: true
+      });
+    });
+  }
 });
 
 // Arama işlemi
@@ -421,7 +455,6 @@ async function loadJson() {
       loggingEnabled: true,
       maxLevels: 5,
       onSelectedCallback: function(id) {
-        console.log("chain1 selected option", id);
       }
     });
 
@@ -430,7 +463,6 @@ async function loadJson() {
       loggingEnabled: true,
       maxLevels: 5,
       onSelectedCallback: function(id) {
-        console.log("chain2 selected option", id);
       }
     });
   } catch (error) {
@@ -479,6 +511,105 @@ function showLoadingAlert(title) {
 function handleRegisterForm(event) {
   event.preventDefault();
   
+  // Form elemanlarını al
+  const firstName = document.getElementById('firstName').value.trim();
+  const lastName = document.getElementById('lastName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const password = document.getElementById('password').value.trim();
+  const passwordConfirm = document.getElementById('passwordConfirm').value.trim();
+  const terms = document.getElementById('terms').checked;
+  const kvkk = document.getElementById('kvkk').checked;
+  
+  // Boş alan kontrolü
+  if (!firstName || !lastName || !email || !phone || !password || !passwordConfirm) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen tüm alanları doldurunuz.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+
+  // Ad ve soyad minimum uzunluk kontrolü
+  if (firstName.length < 2 || lastName.length < 2) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Ad ve soyad en az 2 karakter olmalıdır.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+
+  // Email formatı kontrolü
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen geçerli bir e-posta adresi giriniz.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+
+  // Telefon numarası kontrolü (10 haneli)
+  const phoneRegex = /^[0-9]{10}$/;
+  if (!phoneRegex.test(phone.replace(/\D/g, ''))) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen 10 haneli telefon numaranızı giriniz.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+
+  // Şifre uzunluk kontrolü
+  if (password.length < 6) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Şifre en az 6 karakter olmalıdır.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+
+  // Şifre eşleşme kontrolü
+  if (password !== passwordConfirm) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Şifreler eşleşmiyor.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+
+  // Kullanım şartları kontrolü
+  if (!terms) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen Kullanım Şartlarını kabul ediniz.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+  if (!kvkk) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen KVKK kabul ediniz.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+  
+  // Tüm validasyonlar başarılı ise loading göster
   showLoadingAlert('Kayıt yapılıyor...');
   
   // Simüle edilmiş form işlemi (3 saniye)
@@ -499,6 +630,50 @@ function handleRegisterForm(event) {
 function handleLoginForm(event) {
   event.preventDefault();
   
+  // Form elemanlarını al
+  const emailPhone = document.getElementById('emailPhone').value.trim();
+  const password = document.getElementById('password').value.trim();
+  
+  // Boş alan kontrolü
+  if (!emailPhone || !password) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen tüm alanları doldurunuz.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+
+  // Email/Telefon formatı kontrolü
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^[0-9]{10}$/;
+  
+  const isValidEmail = emailRegex.test(emailPhone);
+  const isValidPhone = phoneRegex.test(emailPhone.replace(/\D/g, ''));
+  
+  if (!isValidEmail && !isValidPhone) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen geçerli bir e-posta adresi veya 10 haneli telefon numarası giriniz.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+
+  // Şifre uzunluk kontrolü (minimum 6 karakter)
+  if (password.length < 6) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Şifre en az 6 karakter olmalıdır.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+  
+  // Tüm validasyonlar başarılı ise loading göster
   showLoadingAlert('Giriş yapılıyor...');
   
   // Simüle edilmiş form işlemi (2 saniye)
@@ -519,13 +694,45 @@ function handleLoginForm(event) {
 function handleForgotPasswordForm(event) {
   event.preventDefault();
   
+  // Form elemanını al
+  const emailPhone = document.getElementById('emailPhone').value.trim();
+  
+  // Boş alan kontrolü
+  if (!emailPhone) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen e-posta adresinizi veya telefon numaranızı giriniz.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+
+  // Email/Telefon formatı kontrolü
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^[0-9]{10}$/;
+  
+  const isValidEmail = emailRegex.test(emailPhone);
+  const isValidPhone = phoneRegex.test(emailPhone.replace(/\D/g, ''));
+  
+  if (!isValidEmail && !isValidPhone) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen geçerli bir e-posta adresi veya 10 haneli telefon numarası giriniz.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+  
+  // Tüm validasyonlar başarılı ise loading göster
   showLoadingAlert('İşleminiz yapılıyor...');
   
   // Simüle edilmiş form işlemi (2 saniye)
   setTimeout(() => {
     showSuccessAlert(
-      'E-posta Gönderildi!',
-      'Şifre sıfırlama bağlantısı e-posta adresinize gönderildi.'
+      'İşlem Başarılı!',
+      'Şifre sıfırlama bağlantısı e-posta adresinize gönderildi. Lütfen e-postanızı kontrol ediniz.'
     );
     
     // Login sayfasına yönlendir
@@ -539,13 +746,51 @@ function handleForgotPasswordForm(event) {
 function handleCreateNewPasswordForm(event) {
   event.preventDefault();
   
-  showLoadingAlert('Şifreniz güncelleniyor...');
+  // Form elemanlarını al
+  const newPassword = document.getElementById('new-password').value.trim();
+  const newPasswordAgain = document.getElementById('new-password-again').value.trim();
+  
+  // Boş alan kontrolü
+  if (!newPassword || !newPasswordAgain) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen tüm alanları doldurunuz.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+
+  // Şifre uzunluk kontrolü (minimum 6 karakter)
+  if (newPassword.length < 6) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Yeni şifre en az 6 karakter olmalıdır.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+
+  // Şifre eşleşme kontrolü
+  if (newPassword !== newPasswordAgain) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Şifreler eşleşmiyor.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+  
+  // Tüm validasyonlar başarılı ise loading göster
+  showLoadingAlert('İşleminiz yapılıyor...');
   
   // Simüle edilmiş form işlemi (2 saniye)
   setTimeout(() => {
     showSuccessAlert(
-      'Şifre Güncellendi!',
-      'Şifreniz başarıyla güncellendi. Giriş sayfasına yönlendiriliyorsunuz.'
+      'İşlem Başarılı!',
+      'Şifreniz başarıyla değiştirildi. Giriş sayfasına yönlendiriliyorsunuz.'
     );
     
     // Login sayfasına yönlendir
@@ -559,9 +804,50 @@ function handleCreateNewPasswordForm(event) {
 function handleProfileUpdateForm(event) {
   event.preventDefault();
   
+  // Form elemanlarını al
+  const name = document.getElementById('name').value.trim();
+  const surname = document.getElementById('surname').value.trim();
+  const email = document.getElementById('profile-email').value.trim();
+  const phone = document.getElementById('profile-number').value.trim();
+  
+  // Boş alan kontrolü
+  if (!name || !surname || !email || !phone) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen tüm alanları doldurunuz.',
+      confirmButtonColor: '#d33'
+    });
+    return;
+  }
+
+  // Email formatı kontrolü
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen geçerli bir email adresi giriniz.',
+      confirmButtonColor: '#d33'
+    });
+    return;
+  }
+
+  // Telefon numarası kontrolü (10 haneli numara)
+  const phoneRegex = /^[0-9]{10}$/;
+  if (!phoneRegex.test(phone.replace(/\D/g, ''))) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen geçerli bir telefon numarası giriniz (10 haneli).',
+      confirmButtonColor: '#d33'
+    });
+    return;
+  }
+  
+  // Tüm kontroller başarılıysa
   showLoadingAlert('Profiliniz güncelleniyor...');
   
-  // Simüle edilmiş form işlemi (2 saniye)
   setTimeout(() => {
     showSuccessAlert(
       'Profil Güncellendi!',
@@ -574,9 +860,47 @@ function handleProfileUpdateForm(event) {
 function handleSecuritySettingsForm(event) {
   event.preventDefault();
   
+  // Form elemanlarını al
+  const currentPassword = document.getElementById('password').value.trim();
+  const newPassword = document.getElementById('new-password').value.trim();
+  const confirmPassword = document.getElementById('confirm-password').value.trim();
+  
+  // Boş alan kontrolü
+  if (!currentPassword || !newPassword || !confirmPassword) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen tüm alanları doldurunuz.',
+      confirmButtonColor: '#d33'
+    });
+    return;
+  }
+
+  // Şifre eşleşme kontrolü
+  if (newPassword !== confirmPassword) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Yeni şifreler eşleşmiyor.',
+      confirmButtonColor: '#d33'
+    });
+    return;
+  }
+
+  // Şifre uzunluk kontrolü
+  if (newPassword.length < 6) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Yeni şifre en az 6 karakter olmalıdır.',
+      confirmButtonColor: '#d33'
+    });
+    return;
+  }
+  
+  // Tüm kontroller başarılıysa
   showLoadingAlert('Güvenlik ayarlarınız güncelleniyor...');
   
-  // Simüle edilmiş form işlemi (2 saniye)
   setTimeout(() => {
     showSuccessAlert(
       'Güvenlik Ayarları Güncellendi!',
@@ -589,17 +913,45 @@ function handleSecuritySettingsForm(event) {
 function handleConfirmationForm(event) {
   event.preventDefault();
   
-  const emailCode = document.getElementById('emailCode').value;
-  const phoneCode = document.getElementById('phoneCode').value;
+  // Form elemanlarını al
+  const emailCode = document.getElementById('email-code').value.trim();
+  const phoneCode = document.getElementById('phone-code').value.trim();
   
+  // Boş alan kontrolü
   if (!emailCode || !phoneCode) {
-    showErrorAlert(
-      'Hata!',
-      'Lütfen hem e-posta hem de telefon onay kodlarını giriniz.'
-    );
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen tüm alanları doldurunuz.',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+
+  // Kod formatı kontrolü (6 haneli sayısal kod)
+  const codeRegex = /^[0-9]{6}$/;
+  
+  if (!codeRegex.test(emailCode)) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen geçerli bir e-posta onay kodu giriniz (6 haneli).',
+      confirmButtonColor: '#3465FD'
+    });
+    return;
+  }
+
+  if (!codeRegex.test(phoneCode)) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Hata!',
+      text: 'Lütfen geçerli bir telefon onay kodu giriniz (6 haneli).',
+      confirmButtonColor: '#3465FD'
+    });
     return;
   }
   
+  // Tüm validasyonlar başarılı ise loading göster
   showLoadingAlert('Hesabınız onaylanıyor...');
   
   // Simüle edilmiş form işlemi (2 saniye)
@@ -650,8 +1002,14 @@ function handleCommentForm(event) {
     
     // Formu temizle
     document.querySelector('textarea').value = '';
-    document.querySelector('input[name="rating"]:checked').checked = false;
     document.querySelector('#anonimCheck').checked = false;
+    // Radio inputları ve yıldızları temizle
+    const stars = document.querySelectorAll('.star-rating');
+    stars.forEach(star => {
+      star.classList.remove('fa-solid');
+      star.classList.add('fa-regular');
+    });
+    rating.checked = false;
   }, 2000);
 }
 
@@ -671,10 +1029,6 @@ function checkPreviousComment() {
   }
 }
 
-// Sayfa değişkenleri
-let page = 1;
-let loading = false;
-let hasMore = true;
 
 // Örnek hastane verisi oluşturma fonksiyonu
 function createHospitalData(index) {
@@ -717,22 +1071,21 @@ function createHospitalCard(hospital) {
                       </a>
                     </div>
                   </div>
+                <div class="hospital-info d-flex flex-wrap gap-4 mb-3">
+                  <span><i class="fa-regular fa-calendar"></i> ${hospital.status}</span>
+                  <span><i class="fa-solid fa-location-dot"></i> ${hospital.address}</span>
+                  <span><i class="fa-solid fa-user-doctor"></i> ${hospital.department}</span>
                 </div>
-              </div>
-              <div class="hospital-info d-flex flex-wrap gap-4 mb-3">
-                <span><i class="fa-regular fa-calendar"></i> ${hospital.status}</span>
-                <span><i class="fa-solid fa-location-dot"></i> ${hospital.address}</span>
-                <span><i class="fa-solid fa-user-doctor"></i> ${hospital.department}</span>
-              </div>
-              <p class="card-text mb-3">${hospital.description}</p>
-              <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
-                <div class="rating">
-                  ${Array(hospital.rating).fill('<i class="fa-solid fa-star text-warning"></i>').join('')}
-                  <span class="ms-2 text-muted">(${hospital.reviews} Değerlendirme)</span>
-                </div>
-                <div class="d-flex gap-2">
-                  <button class="btn btn-outline-primary rounded-pill" onclick="location.href='/SaglikPusulam/pages/details.html'">Detay</button>
-                  <button class="btn btn-primary rounded-pill">Randevu Al</button>
+                <p class="card-text mb-3">${hospital.description}</p>
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                  <div class="rating">
+                    ${Array(hospital.rating).fill('<i class="fa-solid fa-star text-warning"></i>').join('')}
+                    <span class="ms-2 text-muted">(${hospital.reviews} Değerlendirme)</span>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-outline-primary rounded-pill" onclick="location.href='/SaglikPusulam/pages/details.html'">Detay</button>
+                    <button class="btn btn-primary rounded-pill">Randevu Al</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -745,16 +1098,27 @@ function createHospitalCard(hospital) {
 
 // Arama sonuçlarını gösterme
 async function showSearchResults() {
-  const resultsContainer = document.getElementById('searchResults');
-  if (!resultsContainer) return;
-
-  // URL'den parametreleri al
   const urlParams = new URLSearchParams(window.location.search);
   const category = urlParams.get('category');
   const subcategory = urlParams.get('subcategory');
-
-  // İlk yüklemede 4 sonuç göster
-  await loadMoreResults();
+  totalResults = parseInt(urlParams.get('total')) || 4;
+  
+  /*
+  // API'den ilk sayfa verilerini al
+  const response = await fetchSearchResults(category, subcategory, page);
+  totalResults = response.total;*/
+  
+  // Sonuç sayısını göster
+  Swal.fire({
+    icon: 'info',
+    title: 'Arama Sonuçları',
+    text: `"${category || 'Tüm Kategoriler'}" kategorisinde ${totalResults} sonuç bulundu.`,
+    confirmButtonColor: '#3465FD',
+    timer: 3000,
+    position: 'top-end',
+    toast: true,
+    showConfirmButton: false
+  });
 
   // Scroll event listener ekle
   window.addEventListener('scroll', handleScroll);
@@ -762,107 +1126,245 @@ async function showSearchResults() {
 
 // Scroll olayını yönetme
 function handleScroll() {
-  const loadingMore = document.getElementById('loadingMore');
-  if (!loadingMore || loading || !hasMore) return;
+  if (loading || !hasMore) return;
 
-  const rect = loadingMore.getBoundingClientRect();
-  const isNearBottom = rect.top <= window.innerHeight + 100;
+  const resultsContainer = document.querySelector('.search-results');
+  if (!resultsContainer) return;
 
-  if (isNearBottom) {
+  // Sayfanın en altına ne kadar yakın olduğumuzu kontrol et
+  const scrollPosition = window.innerHeight + window.scrollY;
+  const documentHeight = document.documentElement.scrollHeight;
+  const scrollThreshold = 200; // Eşik değerini artıralım
+
+  console.log('Scroll Position:', scrollPosition);
+  console.log('Document Height:', documentHeight);
+  console.log('Threshold:', scrollThreshold);
+  console.log('Is Near Bottom:', scrollPosition + scrollThreshold >= documentHeight);
+
+  if (scrollPosition + scrollThreshold >= documentHeight) {
+    console.log('Loading more results...'); // Debug için
     loadMoreResults();
   }
 }
 
+
 // Daha fazla sonuç yükleme
 async function loadMoreResults() {
-  if (loading || !hasMore) return;
+  if (loading || !hasMore) return; // hasMore kontrolünü ekleyelim
   loading = true;
 
-  // Yükleniyor göstergesini göster
+  // Yükleniyor göstergesini göster ve kartları blurla
   const loadingMore = document.getElementById('loadingMore');
-  loadingMore.classList.remove('d-none');
+  const resultsContainer = document.querySelector('.search-results');
+  
+  if (loadingMore && resultsContainer) {
+    // Kartları blurla
+    resultsContainer.style.filter = 'blur(2px)';
+    resultsContainer.style.opacity = '0.7';
+    // Loading spinner'ı göster
+    loadingMore.classList.remove('d-none');
+  }
 
   try {
-    // API çağrısı simülasyonu
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    // API'ye istek at
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('category');
+    const subcategory = urlParams.get('subcategory');
 
-    // Her seferinde 4 yeni sonuç ekle
-    const resultsContainer = document.getElementById('searchResults');
-    const startIndex = (page - 1) * 4;
-    
-    // Örnek veri - normalde API'den gelecek
-    for (let i = 0; i < 4; i++) {
-      const hospital = createHospitalData(startIndex + i + 1);
-      const cardHtml = createHospitalCard(hospital);
-      resultsContainer.insertAdjacentHTML('beforeend', cardHtml);
+    const response = await fetch(`/api/loadmore?page=${page}&category=${category}&subcategory=${subcategory}`);
+    const data = await response.json();
+
+    // Gelen verileri ekle
+    if (resultsContainer && data.results) {
+      if (data.results.length === 0) {
+        hasMore = false;
+        // Sadece scroll ile tetiklendiyse bildirim göster
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100) {
+          Swal.fire({
+            icon: 'info',
+            title: 'Bilgi',
+            text: 'Daha fazla sonuç bulunamadı.',
+            confirmButtonColor: '#3465FD',
+            timer: 3000,
+            position: 'top-end',
+            toast: true,
+            showConfirmButton: false
+          });
+        }
+      } else {
+        // Sonuçları ekle
+        data.results.forEach(hospital => {
+          const card = createHospitalCard(hospital);
+          resultsContainer.appendChild(card);
+        });
+        page++;
+      }
     }
 
-    // Sayfa numarasını artır
-    page++;
-
-    // 5 sayfadan sonra daha fazla veri olmadığını varsayalım
-    if (page > 5) {
+    // Mevcut kart sayısını kontrol et
+    const currentCards = document.querySelectorAll('.hospital-card').length;
+    if (currentCards >= totalResults) {
       hasMore = false;
-      loadingMore.classList.add('d-none');
     }
+
   } catch (error) {
     console.error('Sonuçlar yüklenirken hata:', error);
+    hasMore = false;
+    // Sadece scroll ile tetiklendiyse hata bildirimi göster
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Hata',
+        text: 'Sonuçlar yüklenirken bir hata oluştu.',
+        confirmButtonColor: '#3465FD',
+        timer: 3000,
+        position: 'top-end',
+        toast: true,
+        showConfirmButton: false
+      });
+    }
   } finally {
-    loading = false;
-    if (hasMore) {
-      loadingMore.classList.add('d-none');
+    // Her durumda loading spinner'ı gizle ve blur'ı kaldır
+    if (loadingMore && resultsContainer) {
+      setTimeout(() => {
+        loadingMore.classList.add('d-none');
+        resultsContainer.style.filter = 'none';
+        resultsContainer.style.opacity = '1';
+        loading = false;
+      }, 500);
     }
   }
 }
-
 // Yıldız tıklama olayını yönet
-function handleStarClick(rating, clickedStar) {
-  // Tüm yıldızları seç
-  const stars = document.querySelectorAll('.star-rating');
-  
-  // Tüm yıldızları boş yap
-  stars.forEach(star => {
-    star.classList.remove('fa-solid');
-    star.classList.add('fa-regular');
-  });
-  
-  // Seçilen yıldıza kadar doldur (soldan sağa)
-  for (let i = 0; i < rating; i++) {
-    stars[i].classList.remove('fa-regular');
-    stars[i].classList.add('fa-solid');
-  }
-  
-  // Puanı kaydet ve bildirim göster
-  Swal.fire({
-    title: 'Başarılı!',
-    text: `Puanınız (${rating} yıldız) başarıyla kaydedildi.`,
-    icon: 'success',
-    confirmButtonText: 'Tamam',
-    confirmButtonColor: '#3465FD'
-  });
-}
-
-// Yıldız hover efekti
 document.addEventListener('DOMContentLoaded', () => {
-  const stars = document.querySelectorAll('.star-rating');
+  const stars = document.querySelectorAll('.star-label input[type="radio"]');
   
-  stars.forEach((star, index) => {
-    star.addEventListener('mouseover', () => {
-      // Hover yapılan yıldıza kadar doldur (soldan sağa)
-      for (let i = 0; i <= index; i++) {
-        stars[i].classList.remove('fa-regular');
-        stars[i].classList.add('fa-solid');
+  stars.forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      const rating = parseInt(e.target.value);
+      const allStars = document.querySelectorAll('.star-rating');
+      
+      // Tüm yıldızları boş yap
+      allStars.forEach(star => {
+        star.classList.remove('fa-solid');
+        star.classList.add('fa-regular');
+      });
+      
+      // Seçilen yıldıza kadar doldur
+      for (let i = 0; i < rating; i++) {
+        allStars[i].classList.remove('fa-regular');
+        allStars[i].classList.add('fa-solid');
       }
-    });
-
-    star.addEventListener('mouseout', () => {
-      // Seçili olmayan yıldızları boşalt
-      stars.forEach(s => {
-        if (!s.classList.contains('selected')) {
-          s.classList.remove('fa-solid');
-          s.classList.add('fa-regular');
-        }
+      
+      // Bildirim göster
+      Swal.fire({
+        title: 'Başarılı!',
+        text: `Puanınız (${rating} yıldız) başarıyla kaydedildi.`,
+        icon: 'success',
+        confirmButtonText: 'Tamam',
+        confirmButtonColor: '#3465FD'
       });
     });
   });
+  
+  // Hover efekti
+  const starContainer = document.querySelector('.star-container');
+  const starLabels = document.querySelectorAll('.star-label');
+  
+  starContainer.addEventListener('mousemove', (e) => {
+    const containerRect = starContainer.getBoundingClientRect();
+    const relativeX = e.clientX - containerRect.left;
+    const containerWidth = containerRect.width;
+    const starCount = Math.ceil((relativeX / containerWidth) * 5);
+    
+    const stars = document.querySelectorAll('.star-rating');
+    stars.forEach((star, i) => {
+      if (i < starCount) {
+        star.classList.remove('fa-regular');
+        star.classList.add('fa-solid');
+      } else {
+        star.classList.remove('fa-solid');
+        star.classList.add('fa-regular');
+      }
+    });
+  });
+  
+  starContainer.addEventListener('mouseleave', () => {
+    const checkedValue = document.querySelector('input[name="rating"]:checked')?.value || 0;
+    const stars = document.querySelectorAll('.star-rating');
+    stars.forEach((star, i) => {
+      if (i < checkedValue) {
+        star.classList.remove('fa-regular');
+        star.classList.add('fa-solid');
+      } else {
+        star.classList.remove('fa-solid');
+        star.classList.add('fa-regular');
+      }
+    });
+  });
 });
+
+// Yorum gönderme işlemi
+function handleCommentForm(event) {
+  event.preventDefault();
+  
+  const rating = document.querySelector('input[name="rating"]:checked');
+  const comment = document.querySelector('textarea').value;
+  
+  if (!rating) {
+    showErrorAlert(
+      'Hata!',
+      'Lütfen bir puan seçiniz.'
+    );
+    return;
+  }
+  
+  if (!comment.trim()) {
+    showErrorAlert(
+      'Hata!',
+      'Lütfen bir yorum yazınız.'
+    );
+    return;
+  }
+  
+  showLoadingAlert('Yorumunuz gönderiliyor...');
+  
+  // Simüle edilmiş form işlemi (2 saniye)
+  setTimeout(() => {
+    showSuccessAlert(
+      'Yorum Gönderildi!',
+      'Değerlendirmeniz için teşekkür ederiz.'
+    );
+    
+    // Formu temizle
+    document.querySelector('textarea').value = '';
+    document.querySelector('#anonimCheck').checked = false;
+    // Radio inputları ve yıldızları temizle
+    const stars = document.querySelectorAll('.star-rating');
+    stars.forEach(star => {
+      star.classList.remove('fa-solid');
+      star.classList.add('fa-regular');
+    });
+    rating.checked = false;
+  }, 2000);
+}
+function showCommentsLoading() {
+  const loader = document.getElementById('commentsLoader');
+  const commentsList = document.querySelector('.comments-list');
+  
+  if (loader && commentsList) {
+    // Yorumları gizle
+    commentsList.style.opacity = '0.5';
+    
+    // Loading göster
+    loader.classList.remove('d-none');
+    
+    // 1 saniye sonra gizle ve yorumları göster
+    setTimeout(() => {
+      loader.classList.add('d-none');
+      commentsList.style.opacity = '1';
+    }, 1000);
+  }
+  
+  return false; // Sayfanın scroll olmasını engelle
+}

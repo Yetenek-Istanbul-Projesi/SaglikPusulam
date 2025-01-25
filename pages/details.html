@@ -98,12 +98,13 @@
 
               <!-- Küçük Resimler -->
               <div class="thumbnail-container">
-                <img class="thumbnail" src="/SaglikPusulam/assets/img/acibadem-1024x640-67937208390ef.webp" alt="Thumbnail 1"
+                <img class="thumbnail" src="/SaglikPusulam/assets/img/acibadem-1024x640-67937208390ef.webp"
+                  alt="Thumbnail 1"
                   onclick="changeImage('/SaglikPusulam/assets/img/acibadem-1024x640-67937208390ef.webp')">
                 <img class="thumbnail" src="/SaglikPusulam/assets/img/acibadem-6793720827950.webp" alt="Thumbnail 2"
                   onclick="changeImage('/SaglikPusulam/assets/img/acibadem-6793720827950.webp')">
-                <img class="thumbnail" src="/SaglikPusulam/assets/img/taksim-egitim-arastirma-hastanesi-6793727b8b894.webp"
-                  alt="Thumbnail 3"
+                <img class="thumbnail"
+                  src="/SaglikPusulam/assets/img/taksim-egitim-arastirma-hastanesi-6793727b8b894.webp" alt="Thumbnail 3"
                   onclick="changeImage('/SaglikPusulam/assets/img/taksim-egitim-arastirma-hastanesi-6793727b8b894.webp')">
                 <img class="thumbnail"
                   src="/SaglikPusulam/assets/img/bakirkoy-dr-sadi-konuk-egitim-ve-arastirma-hastanesi-679372092eb35.webp"
@@ -226,88 +227,101 @@
 
       <div class="col mt-3">
         <h1 class="reviews-title mt-5">Değerlendirmeler</h1>
-
-        <div class="review-card">
-          <div class="review-header">
-            <div class="avatar">
-              <img src="/SaglikPusulam/assets/img/Ellipse 18.png" alt="User Avatar">
-            </div>
-            <div class="name">D**** B**</div>
-            <div class="time">2 dakika önce</div>
-          </div>
-          <div class="review-body">
-            Lorem ipsum dolor sit amet consectetur. Cras sit nunc elementum porttitor id sit lacus commodo cras.
-            Hendrerit adipiscing faucibus dui at.
-          </div>
-          <div class="review-footer">
-            <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <div id="commentsLoader" class="text-center py-4 d-none">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Yükleniyor...</span>
           </div>
         </div>
-
-        <div class="review-card">
-          <div class="review-header">
-            <div class="avatar">
-              <img src="/SaglikPusulam/assets/img/Ellipse 15.png" alt="User Avatar">
+        <div class="comments-list">
+          <div class="review-card">
+            <div class="review-header">
+              <div class="avatar">
+                <img src="/SaglikPusulam/assets/img/Ellipse 18.png" alt="User Avatar">
+              </div>
+              <div class="name">D**** B**</div>
+              <div class="time">2 dakika önce</div>
             </div>
-            <div class="name">M**** Y*****</div>
-            <div class="time">6 dakika önce</div>
+            <div class="review-body">
+              Lorem ipsum dolor sit amet consectetur. Cras sit nunc elementum porttitor id sit lacus commodo cras.
+              Hendrerit adipiscing faucibus dui at.
+            </div>
+            <div class="review-footer">
+              <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            </div>
           </div>
-          <div class="review-body">
-            Lorem ipsum dolor sit amet consectetur. Cras sit nunc elementum porttitor id sit lacus commodo cras.
-            Hendrerit adipiscing faucibus dui at.
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="avatar">
+                <img src="/SaglikPusulam/assets/img/Ellipse 15.png" alt="User Avatar">
+              </div>
+              <div class="name">M**** Y*****</div>
+              <div class="time">6 dakika önce</div>
+            </div>
+            <div class="review-body">
+              Lorem ipsum dolor sit amet consectetur. Cras sit nunc elementum porttitor id sit lacus commodo cras.
+              Hendrerit adipiscing faucibus dui at.
+            </div>
+            <div class="review-footer">
+              <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            </div>
           </div>
-          <div class="review-footer">
-            <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="avatar">
+                <img src="/SaglikPusulam/assets/img/Ellipse 16.png" alt="User Avatar">
+              </div>
+              <div class="name">S**** V***</div>
+              <div class="time">15 dakika önce</div>
+            </div>
+            <div class="review-body">
+              Lorem ipsum dolor sit amet consectetur. Cras sit nunc elementum porttitor id sit lacus commodo cras.
+              Hendrerit adipiscing faucibus dui at.
+            </div>
+            <div class="review-footer">
+              <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="avatar">
+                <img src="/SaglikPusulam/assets/img/Ellipse 17.png" alt="User Avatar">
+              </div>
+              <div class="name">E** Z****</div>
+              <div class="time">6 saat önce</div>
+            </div>
+            <div class="review-body">
+              Lorem ipsum dolor sit amet consectetur. Cras sit nunc elementum porttitor id sit lacus commodo cras.
+              Hendrerit adipiscing faucibus dui at.
+            </div>
+            <div class="review-footer">
+              <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            </div>
           </div>
         </div>
-
-        <div class="review-card">
-          <div class="review-header">
-            <div class="avatar">
-              <img src="/SaglikPusulam/assets/img/Ellipse 16.png" alt="User Avatar">
-            </div>
-            <div class="name">S**** V***</div>
-            <div class="time">15 dakika önce</div>
-          </div>
-          <div class="review-body">
-            Lorem ipsum dolor sit amet consectetur. Cras sit nunc elementum porttitor id sit lacus commodo cras.
-            Hendrerit adipiscing faucibus dui at.
-          </div>
-          <div class="review-footer">
-            <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-header">
-            <div class="avatar">
-              <img src="/SaglikPusulam/assets/img/Ellipse 17.png" alt="User Avatar">
-            </div>
-            <div class="name">E** Z****</div>
-            <div class="time">6 saat önce</div>
-          </div>
-          <div class="review-body">
-            Lorem ipsum dolor sit amet consectetur. Cras sit nunc elementum porttitor id sit lacus commodo cras.
-            Hendrerit adipiscing faucibus dui at.
-          </div>
-          <div class="review-footer">
-            <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-          </div>
-        </div>
-
-        <nav aria-label="Page navigation">
-          <ul class="pagination pagination-lg justify-content-center">
+        <nav aria-label="Sayfalama">
+          <ul class="pagination justify-content-center">
             <li class="page-item">
-              <a class="page-link" href="javascript:void(0);" aria-label="Previous">
+              <a class="page-link" href="#" onclick="return showCommentsLoading();" aria-label="Previous">
                 <span aria-hidden="true">&larr;</span>
               </a>
             </li>
-            <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
-            <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
-            <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
-            <li class="page-item"><a class="page-link" href="javascript:void(0);">4</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#" onclick="return showCommentsLoading();">1</a>
+            </li>
             <li class="page-item">
-              <a class="page-link" href="javascript:void(0);" aria-label="Next">
+              <a class="page-link" href="#" onclick="return showCommentsLoading();">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" onclick="return showCommentsLoading();">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" onclick="return showCommentsLoading();">4</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" onclick="return showCommentsLoading();" aria-label="Next">
                 <span aria-hidden="true">&rarr;</span>
               </a>
             </li>
@@ -349,16 +363,38 @@
                             Anonim olarak yorum yap
                           </label>
                         </div>
-                        
+
                         <div class="d-flex gap-4 align-items-center">
                           <!-- Yıldızlı puanlama sistemi -->
                           <div class="rating">
                             <div class="stars d-inline-block">
-                              <i class="fa-regular fa-star star-rating" onclick="handleStarClick(1, this)" style="font-size: 24px; cursor: pointer;"></i>
-                              <i class="fa-regular fa-star star-rating" onclick="handleStarClick(2, this)" style="font-size: 24px; cursor: pointer;"></i>
-                              <i class="fa-regular fa-star star-rating" onclick="handleStarClick(3, this)" style="font-size: 24px; cursor: pointer;"></i>
-                              <i class="fa-regular fa-star star-rating" onclick="handleStarClick(4, this)" style="font-size: 24px; cursor: pointer;"></i>
-                              <i class="fa-regular fa-star star-rating" onclick="handleStarClick(5, this)" style="font-size: 24px; cursor: pointer;"></i>
+                              <div class="star-container" style="display: inline-block;">
+                                <label class="star-label">
+                                  <input type="radio" name="rating" value="1" class="d-none">
+                                  <i class="fa-regular fa-star star-rating"
+                                    style="font-size: 24px; cursor: pointer;"></i>
+                                </label>
+                                <label class="star-label">
+                                  <input type="radio" name="rating" value="2" class="d-none">
+                                  <i class="fa-regular fa-star star-rating"
+                                    style="font-size: 24px; cursor: pointer;"></i>
+                                </label>
+                                <label class="star-label">
+                                  <input type="radio" name="rating" value="3" class="d-none">
+                                  <i class="fa-regular fa-star star-rating"
+                                    style="font-size: 24px; cursor: pointer;"></i>
+                                </label>
+                                <label class="star-label">
+                                  <input type="radio" name="rating" value="4" class="d-none">
+                                  <i class="fa-regular fa-star star-rating"
+                                    style="font-size: 24px; cursor: pointer;"></i>
+                                </label>
+                                <label class="star-label">
+                                  <input type="radio" name="rating" value="5" class="d-none">
+                                  <i class="fa-regular fa-star star-rating"
+                                    style="font-size: 24px; cursor: pointer;"></i>
+                                </label>
+                              </div>
                             </div>
                           </div>
                           <button class="btn btn-primary rounded-pill">Değerlendir</button>
@@ -472,6 +508,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/SaglikPusulam/js/jquery-3.7.1.min.js"></script>
   <script src="/SaglikPusulam/js/sweetalert2.min.js"></script>
   <script src="/SaglikPusulam/js/main.js"></script>
   <script src="/SaglikPusulam/js/loader.js"></script>
