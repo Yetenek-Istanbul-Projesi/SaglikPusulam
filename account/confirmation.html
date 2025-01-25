@@ -73,21 +73,19 @@
         <div class="p-5">
           <!-- Form başlığı -->
           <h2 class="text-center text-primary fw-bold mb-4" style="margin: 50px 0px 80px 0px;">Onay Kodu</h2>
-          <form>
+          <form class="needs-validation" novalidate onsubmit="handleConfirmationForm(event)">
 
             <!-- E-mail Onay Kodu input  -->
             <div class="mb-3">
-              <label for="emailPhone" class="form-label"
-                style="margin-top: 50px; border: none; text-align: left;">E-mail Onay Kodu</label>
-              <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="emailPhone"
+              <label for="email-code" class="form-label" style="margin-top: 50px; border: none; text-align: left;">E-mail Onay Kodu</label>
+              <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="email-code"
                 placeholder="E-mail onay kodunuz" style="height: 50px; width: 500px; margin-bottom: 20px;" required>
             </div>
-
+            
             <!-- Cep telefonu onay kodunuz input  -->
             <div class="mb-3">
-              <label for="emailPhone" class="form-label" style="margin-top: 20px; border: none; text-align: left;">Cep
-                Telefonu Onay Kodu</label>
-              <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="emailPhone"
+              <label for="phone-code" class="form-label" style="margin-top: 20px; border: none; text-align: left;">Cep Telefonu Onay Kodu</label>
+              <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="phone-code"
                 placeholder="Cep telefonu onay kodunuz" style="height: 50px; margin-bottom: 20px;" required>
             </div>
 

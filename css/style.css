@@ -984,7 +984,22 @@ color: red;
 .breadcrumb-item a:hover {
     color: #3465FD;
 }
-
+/* Load More */
+.search-results {
+  transition: all 0.3s ease;
+}
+/*
+#loadingMore {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}*/
 /* Search Results Page Styles */
 .search-results-container {
     --spacing-unit: 1rem;
