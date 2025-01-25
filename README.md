@@ -3,7 +3,6 @@
 
 Sağlık kuruluşlarını kolayca bulmanızı ve karşılaştırmanızı sağlayan modern bir web uygulaması şablonu.
 
-**[Canlı Demo](https://yetenek-istanbul-projesi.github.io/SaglikPusulam/)** 
 
 ## 🚀 Özellikler
 
