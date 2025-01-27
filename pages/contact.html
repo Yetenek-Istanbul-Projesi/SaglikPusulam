@@ -1,40 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>İletişim</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
   <link rel="stylesheet" href="/SaglikPusulam/css/style.css">
-  <link rel="stylesheet" href="/SaglikPusulam/css/sweetalert2.min.css">
-
 </head>
-
 <body>
-  <div class="loader-container">
-    <div class="medical-loader"></div>
-  </div>
-  <!--header-->
+     
+    <!--header-->
   <header>
     <nav class="navbar navbar-expand-lg bg-body-white p-4" style="border-bottom: 5px solid hsla(0, 0%, 80%, 0.2);">
       <div class="container-fluid mb-3">
         <a href="/SaglikPusulam/index.html">
           <img src="/SaglikPusulam/assets/img/LOGO.svg" width="70px;" height="70px">
         </a>
-        <a class="navbar-brand p-2 no-style" style="color: black;"
-          href="/SaglikPusulam/index.html"><b>Sağlık</b>&nbsp;Pusulam</a>
+        <a class="navbar-brand p-2 no-style" style="color: black;" href="/SaglikPusulam/index.html"><b>Sağlık</b>&nbsp;Pusulam</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
-
-          <!-- Align Home and Pricing to the right -->
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-5">
             <li class="nav-item">
               <a class="nav-link fw-bold text-dark" href="/SaglikPusulam/index.html">Ana Sayfa</a>
@@ -61,63 +50,76 @@
     </nav>
   </header>
 
-  <main>
-    <section>
-      <div class="section-photo">
-        <img src="/SaglikPusulam/assets/img/banner_photo.jpg" alt="" style="margin: 0px 10px 50px 0px; width: 100%;">
-      </div>
-    </section>
+  
+<section>
+    <div class="container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.003236349192!2d-122.4442901846816!3d37.741224279762276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808e6c418f91%3A0x18fa2059c4d4b1b6!2sMission%20District!5e0!3m2!1sen!2sus!4v1640629527922!5m2!1sen!2sus"
+              width="100%" height="900px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
 
-    <div class="start container d-flex justify-content-center">
-      <!-- Login formu container'ı - minimum ve maximum genişlik sınırlaması -->
-      <div style="min-width: 400px; max-width: 1000px;">
+  <main>
+    <div class="container d-flex justify-content-between" style="text-align: left;">
+      <!-- İletişim Formu ve Bize Ulaşın alanlarını yan yana hizalamak için flexbox kullanıyoruz -->
+      
+      <!-- Bize Ulaşın alanı -->
+      <div style="flex: 1; padding-top: 30px; text-align: left; margin-left:40px; margin-top: 70px">
+        <h3 class="text-primary fw-bold mb-4">Bize Ulaşın</h3>
+        
+        <!-- Adres -->
+        <div class="d-flex align-items-center mb-3">
+            <img src="/SaglikPusulam/assets/img/entypo_address.png" alt="" style="width: 30px; margin-right: 10px;">
+            <p>Adres: Küçükbakkalköy Mah. Küçük Sok. </br>PK: 34750 Denge Panorama - PENDİK / İSTANBUL</p>
+        </div>
+        
+        <!-- Telefon -->
+        <div class="d-flex align-items-center mb-3">
+            <img src="/SaglikPusulam/assets/img/mingcute_phone-fill.png" alt="" style="width: 30px; margin-right: 10px;">
+            <p>0555-555-55-5</p>
+        </div>
+    
+        <!-- Çalışma Saatleri -->
+        <div class="d-flex align-items-center mb-3">
+            <img src="/SaglikPusulam/assets/img/mdi_archive-time.png" alt="" style="width: 30px; margin-right: 10px;">
+            <p>Pazartesi - Cuma (09.00 - 18.00)</p>
+        </div>
+      </div>
+      
+      <!-- İletişim Formu alanı -->
+      <div style="min-width: 400px; max-width: 800px; flex: 1; margin-top: 50px;">
         <div class="p-5">
           <!-- Form başlığı -->
-          <h2 class="text-center text-primary fw-bold mb-4" style="margin: 20px 0px 0px 0px;">İletişim</h2>
-          <form id="contactForm" onsubmit="handleFormSubmit(event, 'contactForm')">
-            <!-- E-mail input  -->
+          <h2 class="text-left text-primary fw-bold mb-4">İletişim Formu</h2>
+          <form>
+
+            <!-- Ad - Soyad input -->
             <div class="mb-3">
-              <label for="emailPhone" class="form-label" style="margin-top: 50px; border: none; text-align: left;"">Ad - Soyad</label>
-                <input type=" text" required class="form-control border-0 bg-secondary-subtle text-secondary" id="emailPhone"
-                placeholder="Ad - Soyad" style="height: 50px; width: 500px; margin-bottom: 20px;">
+              <label for="emailPhone" class="form-label">Ad - Soyad</label>
+              <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="emailPhone"
+                placeholder="Ad - Soyad" style="height: 50px; width: 100%; margin-bottom: 20px;">
             </div>
 
-            <!-- E-mail input  -->
+            <!-- E-mail input -->
             <div class="mb-3">
-              <label for="emailPhone" class="form-label"
-                style="margin-top: 20px; border: none; text-align: left;">E-mail</label>
-              <input type="text" required class="form-control border-0 bg-secondary-subtle text-secondary" id="emailPhone"
+              <label for="emailPhone" class="form-label">E-mail</label>
+              <input type="text" class="form-control border-0 bg-secondary-subtle text-secondary" id="emailPhone"
                 placeholder="E-mail" style="height: 50px; margin-bottom: 20px;">
             </div>
 
             <!-- Mesaj input -->
             <div class="mb-3">
-              <label for="message" class="form-label"
-                style="margin-top: 20px; border: none; text-align: left;">Mesaj</label>
-              <textarea class="form-control border-0 bg-secondary-subtle w-100" id="message" required placeholder="Mesaj"
-                style="height: 200px; text-align: left; vertical-align: top;"></textarea>
+              <label for="password" class="form-label">Mesaj</label>
+              <textarea class="form-control border-0 bg-secondary-subtle  w-100" id="password" placeholder="Mesaj"
+                style="height: 200px;"></textarea>
             </div>
 
-
-            <!-- Gönder butonu
-                         w-100: Tam genişlik -->
-            <button type="submit" class="btn btn-primary w-100 mb-3"
-              style="margin-top: 30px; height: 50px;">Gönder</button>
+            <!-- Gönder butonu -->
+            <button type="submit" class="btn btn-primary w-100 mb-3" style="margin-top: 30px; height: 50px;">Gönder</button>
 
           </form>
         </div>
       </div>
     </div>
-    <!-- Bize ulaşın mesajının alanı. -->
-    <section2 class="contact-info">
-      <div class="contact-info" style="position: relative; display: inline-block;">
-        <img src="/SaglikPusulam/assets/img/Rectangle 86.png" alt="" class="w-100">
-        <p class="overlay-text">Soru ve sorunlarınız için saglikpusulam@gov.tr adresimizi kullanarak bize
-          ulaşabilirsiniz.
-        </p>
-      </div>
-    </section2>
-
   </main>
   <!--footer-->
   <footer style="background-color:#3465FD;">
@@ -214,8 +216,6 @@
     </div>
   </footer>
   <script src="/SaglikPusulam/js/loader.js"></script>
-  <script src="/SaglikPusulam/js/main.js"></script>
-  <script src="/SaglikPusulam/js/sweetalert2.min.js"></script>
 </body>
 
 </html>
