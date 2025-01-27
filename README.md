@@ -1,5 +1,5 @@
 # SağlıkPusulam 🏥
-**Version 1.2.1**
+**Version 1.2.2**
 
 Sağlık kuruluşlarını kolayca bulmanızı ve karşılaştırmanızı sağlayan modern bir web uygulaması şablonu.
 
